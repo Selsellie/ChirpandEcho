@@ -1,0 +1,63 @@
+# Python environments
+venv/
+.venv/
+
+# Python bytecode and build output
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+
+# Downloaded model weights and caches
+.cache/
+*.pth
+*.pth.tar
+*.pt
+
+# Runtime data: database, spectrograms, logs, and temporary audio
+/data/
+/logs/
+.run/
+*.wav
+*.wav.processing
+*.wav.tmp
+*.png
+*.sqlite3*
+*.db
+*.db-wal
+*.db-shm
+*.log
+*.log.*
+*.pid
+
+# Local settings and credentials; keep the example configuration
+.env*
+!.env.example
+*.secret.yaml
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Local deployment files, backups, and copied recovery history
+/ops/
+/.recovery/
+
+# Test, coverage, and analysis artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

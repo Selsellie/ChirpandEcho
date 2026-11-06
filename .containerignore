@@ -1,0 +1,16 @@
+.git
+.env
+.recovery
+.agents
+venv
+.venv
+data
+logs
+ops
+tests
+**/__pycache__
+**/*.pyc
+*.wav
+*.sqlite3*
+*.db
+*.png
