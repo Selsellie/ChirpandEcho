@@ -34,9 +34,10 @@ _ROWS = [
 ('Branta canadensis','Canada Goose'),('Cygnus olor','Mute Swan'),
 ]
 from urllib.parse import quote
+from chirpecho.common.field_art import BIRD_ART
 
 SPECIES = tuple(dict(number=i,name=name,scientific=scientific,group='Western European birds',
-                     note='BirdNET predicts this species from three-second analysis windows. Review predictions before treating them as confirmed records.',
+                     note=BIRD_ART[i-1][6],
                      habitat='See the species profile for its habitat and range.',
                      supported=True,source='https://www.gbif.org/species/search?q='+quote(scientific))
                 for i,(scientific,name) in enumerate(_ROWS,1))

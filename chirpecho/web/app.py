@@ -16,6 +16,8 @@ configure_logging('webapp')
 from flask import Flask, abort, jsonify, redirect, render_template, request, send_file
 from chirpecho.echo.catalogue import SPECIES, LABELS, normalize_label
 from chirpecho.chirp.catalogue import SPECIES as BIRD_SPECIES
+from chirpecho.web.portraits import profile
+
 
 DB_PATH = os.environ.get('DB_PATH', str(ROOT / 'data/db/detections.sqlite3'))
 DETECTIONS_DIR = os.environ.get('DETECTIONS_DIR', str(ROOT / 'data/detections'))
@@ -24,6 +26,7 @@ BIRD_DB_PATH = os.environ.get('BIRD_DB_PATH', str(Path(DB_PATH).parent.parent / 
 BIRD_DETECTIONS_DIR = os.environ.get('BIRD_DETECTIONS_DIR', str(Path(DB_PATH).parent.parent / 'chirp/detections'))
 ZONE = ZoneInfo(os.environ.get('TZ', 'Europe/Amsterdam'))
 app = Flask(__name__)
+app.jinja_env.globals['creature_profile'] = profile
 
 
 @app.context_processor
@@ -270,7 +273,7 @@ def species_guide():
         abort(400)
     bird = request.path.startswith('/chirp')
     catalogue = BIRD_SPECIES if bird else SPECIES
-    labels = {normalize_label(value):item['number'] for item in catalogue for value in (item['name'], item['scientific'])} if bird else LABELS
+    labels = {normalize_label(value):item['number'] for item in catalogue for value in (item['name'], item['scientific'], item['scientific'] + '_' + item['name'])} if bird else LABELS
     entries = {item['number']: dict(item, calls=0, first=None, last=None, best=0, labels=[]) for item in catalogue}
     rows = query('SELECT species, COUNT(*) AS calls, MIN(detected_at) AS first, '
                  'MAX(detected_at) AS last, MAX(confidence) AS best FROM detections GROUP BY species')

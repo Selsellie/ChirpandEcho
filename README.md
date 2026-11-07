@@ -3,8 +3,11 @@
 
 **Birds by song. Bats by echo. A little eavesdropping on both shifts.**
 
-[BatsDropping](https://github.com/Selsellie/BatsDropping) started with a question: who’s fluttering around after sunset?
-Chirp & Echo brings the birds into the conversation too. **Chirp** listens for
+I made Chirp & Echo to record all the birds and bats in and around my house.
+I wanted to find out who visits during the day, who flies past at night, and
+build a lasting record of the wildlife sharing my home and garden.
+
+**Chirp** listens for
 birdsong with BirdNET 2.4; **Echo** looks for bat calls with BatDetect2.
 Together they turn microphone recordings into species predictions, timestamps,
 confidence scores, and pictures of sound.
@@ -76,6 +79,18 @@ The species collection has **24 Western European bats** and a starter list of
 Some bat cards are field guide entries outside the bundled model’s abilities;
 those are marked. The birds are a selection, not a complete regional checklist.
 A card in the guide doesn’t mean its owner has visited the microphone.
+
+## A Pokédex for the wildlife around my house
+
+I borrowed the collection idea from Pokémon’s **Pokédex**: discover a species,
+unlock its entry, and gradually fill the collection with real birds and bats.
+Each of the 80 guide species has its own cartoon portrait and custom description.
+Undiscovered species appear as dark silhouettes; their colours, descriptions,
+and field notes are revealed after a retained detection unlocks the card.
+
+It gives me a playful reason to keep listening and learn about each visitor.
+The discoveries are classifier predictions rather than confirmed sightings,
+and the counts represent detection records, not individual animals.
 
 ## No mountain of WAVs
 
