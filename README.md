@@ -1,127 +1,192 @@
-<img width="373" height="74" alt="image" src="https://github.com/user-attachments/assets/3a350c67-b19c-463f-9432-717216c29750" />
+# Chirp & Echo 🐦 🦇
 
+**Birds by song. Bats by echo. A little eavesdropping on both shifts.**
 
-**A little eavesdropping on the night shift.**
+BatsDropping started with a question: who’s fluttering around after sunset?
+Chirp & Echo brings the birds into the conversation too. **Chirp** listens for
+birdsong with BirdNET 2.4; **Echo** looks for bat calls with BatDetect2.
+Together they turn microphone recordings into species predictions, timestamps,
+confidence scores, and pictures of sound.
 
-I built BatsDropping to find out who’s fluttering around after sunset.
-It captures ultrasonic activity, looks for bat calls
-with [BatDetect2](https://github.com/macaodha/batdetect2), and turns detections
-into species predictions, timestamps, confidence scores, and spectrograms.
-My ears miss the conversation. BatsDropping takes notes.
+My ears miss half the conversation. Chirp & Echo takes notes.
 
 ## An extra pair of ears: Vleermic 🎙️
 
-I use a **Vleermic USB 384 kHz ultrasonic microphone** to pick up the
-high-frequency sounds bats make. This project has been tested with that
-microphone, with a default recording rate of **384 kHz**.
+I use a **Vleermic USB 384 kHz ultrasonic microphone** on a Raspberry Pi.
+One microphone feeds both listeners: an audible stream for Chirp and an
+ultrasonic stream for Echo. No microphone custody battle required.
 
-An ordinary microphone generally won’t capture these ultrasonic frequencies. Another
-ultrasonic microphone may work, provided it supports the configured sample
-rate and the input settings are adjusted for it.
+The default recording rate is **384 kHz**. Another microphone may work if it
+supports the configured input settings; an ordinary microphone generally
+won’t capture the ultrasonic frequencies Echo needs.
 
-## What’s in the bat bag?
+## What’s in the field bag?
 
-- **An ear for brief calls.** Short activity windows help catch quick signals
-  inside five-second audio chunks.
-- **A bat-call detective.** BatDetect2 searches candidate audio for calls and
-  predicts their species.
-- **A little breathing room.** A ten-second cooldown follows each saved
-  activity chunk, reducing how much audio needs to be processed on busy nights.
-- **Pictures of sound.** PNG spectrograms show the frequency and timing of
-  each retained call.
-- **Field notes that stick around.** SQLite keeps species predictions,
-  timestamps, confidence scores, call probabilities, and frequency ranges.
+- **Two wildlife detectives.** BirdNET listens for birds; BatDetect2 searches
+  candidate recordings for bat calls.
+- **An ear for brief calls.** Echo checks short activity windows inside each
+  five-second chunk, helping catch quick ultrasonic signals.
+- **A little breathing room.** Echo takes a ten-second cooldown after saving
+  an activity chunk. Chirp keeps getting audio regardless of that cooldown.
+- **Pictures of sound.** PNG spectrograms let you inspect retained predictions.
+- **Field notes that stick around.** Separate SQLite archives keep the bird
+  and bat predictions, timestamps, confidence scores, and processing details.
 - **Some storage housekeeping.** Older images make way when space runs low,
-  while their observation data stays in the archive.
+  while their detection records stay in the archive.
 
-## From flutter to field note
+## From flutter or tweet to field note
 
-1. **Listen:** the Vleermic continuously captures ultrasonic audio.
-2. **Spot some activity:** the gate selects candidate chunks.
-3. **Investigate:** BatDetect2 looks for calls and predicts their species.
-4. **Take notes:** qualifying detections become database records and PNGs.
-5. **Have a look:** the dashboard brings the encounters and their images together.
+1. **Listen:** the shared recorder captures five-second chunks at 384 kHz.
+2. **Split the conversation:** Chirp gets a filtered, resampled 48 kHz copy
+   before Echo’s gate or cooldown is applied.
+3. **Investigate:** Echo checks activity between 15 and 100 kHz and sends
+   candidate chunks to BatDetect2. BirdNET analyses Chirp’s audio in
+   three-second windows.
+4. **Take notes:** qualifying predictions become database records and
+   spectrograms. My deployment retains bird predictions at 70% confidence
+   or higher.
+5. **Have a look:** the dashboard brings both collections together.
 
-The activity gate can also react to other ultrasonic sounds. A trigger doesn’t
-automatically mean “bat spotted!” The cooldown starts when an activity chunk
-is saved, before classification confirms whether there are any qualifying calls.
+Both listeners run continuously. Switching the website view changes what
+you see, not who’s on microphone duty.
 
-## A window into the night 🌙
+Echo’s activity gate can react to other ultrasonic sounds, so a trigger
+doesn’t automatically mean “bat spotted!” Its cooldown starts when audio is
+saved, before classification confirms any qualifying calls. Chirp’s windows
+can overlap, so its counts are predictions, not individual calls or birds.
 
-The dashboard makes the field notes easy to explore, with:
+## A window into the wings 🌙
 
-- A spectrogram gallery with larger image previews.
-- Species search and confidence filters.
-- Pages of past encounters to browse.
-- Activity charts, species summaries, and confidence statistics.
-- A detection ledger with timestamps, frequencies, and call probabilities.
-- Microphone, processing, and storage status.
-- A remembered light, dark, or system appearance setting.
-- A Logs tab with recent recording and classification summaries, warnings,
-  and explanations when a recording contains no qualifying bat calls.
-- A Health tab checking recorder and detector heartbeats, database access,
-  and storage reserves. Healthy services do not guarantee bat activity.
-- Batlas, a searchable collection of 24 Western European bat species with
-  habitat notes and conservation sources. Retained predictions unlock cards
-  and show call counts, first/last records, and best confidence. The seven
-  species outside the bundled classifier are marked as field guide entries.
-- A clear note when an image has been cleared but its observation data remains.
+The dashboard gives each listener its own **Detections** and **Species** views,
+with shared **Logs** and **Health** pages:
 
-## The detective work stays local
+- Browse spectrograms, open larger previews, and page through past encounters.
+- Search species and filter predictions by confidence.
+- Explore activity charts, species summaries, and detection details.
+- Check recent recording and classification summaries, including warnings
+  and recordings with no qualifying predictions.
+- Inspect recorder and classifier heartbeats, database access, and storage.
+  Healthy services don’t guarantee wildlife activity.
+- Choose light, dark, or system appearance and let the dashboard remember it.
+- Keep browsing the field notes even after an older image has been cleared.
 
-Classification stays local. BatDetect2 uses its bundled model, and
-BatsDropping does not upload recordings to a cloud classification service.
-Once the software is installed, listening, classification, image generation,
-and dashboard use do not require an Internet connection. Installing or
-updating dependencies may require downloads.
-
-The dashboard uses local assets, without external fonts, scripts, or
-analytics. Network access controls are separate from the processing code;
-local inference alone does not enforce a network block.
+The species collection has **24 Western European bats** and a starter list of
+**56 Western European birds**, with habitat notes and recorded activity.
+Some bat cards are field guide entries outside the bundled model’s abilities;
+those are marked. The birds are a selection, not a complete regional checklist.
+A card in the guide doesn’t mean its owner has visited the microphone.
 
 ## No mountain of WAVs
 
-Audio waits temporarily in **RAM** instead of building a permanent WAV
-collection. Successfully processed audio is deleted. Failed or pending audio
-stays in a bounded retry buffer and expires after ten minutes by default.
-Unprocessed audio can be lost on a restart or power failure.
+Audio waits temporarily in **RAM**, rather than becoming a permanent recording
+collection. Successfully processed WAVs are deleted. Pending or failed audio
+uses a bounded buffer and expires after ten minutes by default. Unprocessed
+audio can be lost on a restart or power failure.
 
-The lasting collection is **PNG spectrograms and detection metadata**. By
-default, image cleanup starts at **85% disk usage** and aims for **80%**.
-A **1 GiB free-space reserve** also triggers cleanup. The oldest images go
-first, but their species, timestamps, confidence scores, and frequency data
-remain searchable. Optional age-based image expiry is disabled by default.
+The lasting collection is **PNG spectrograms and detection metadata**.
+By default, image cleanup starts at **85% disk usage**, aims for **80%**, and
+also protects a **1 GiB free-space reserve**. Each archive clears its oldest
+images first while keeping the detection records. Optional age-based image
+expiry is disabled by default.
 
-If there’s still no room after the images have been cleared, new recording
-and processing pause until space becomes available. Even bat field notes
-need somewhere to live.
+When buffers fill, new chunks can be dropped; when disk space is too low,
+recording and processing can pause. Even wildlife gossip needs somewhere to live.
+
+## The detective work stays local
+
+Inference runs locally; audio isn’t uploaded to a classification service.
+BirdNET’s model and labels are downloaded and checksum-verified during the
+image build. Runtime inference doesn’t need Internet access.
+
+The dashboard uses local assets, without external fonts, scripts, or analytics.
+My Kubernetes configuration limits incoming access to the LAN and monitoring,
+and blocks outbound pod connections. Those network controls belong to the
+deployment; the image alone doesn’t enforce them.
 
 ## A small reality check
 
-Species labels are predictions, not confirmed sightings. Microphone
-placement, recording quality, background noise, and the classifier all affect
-the result. Confidence scores are useful clues when reviewing an encounter.
+Species labels are predictions, not confirmed sightings. Microphone placement,
+recording quality, background noise, and the models all affect the results.
+Confidence scores are clues for reviewing an encounter, not proof of a visit.
 
-Busy nights also mean more work. The buffer, cooldown, and storage limits help
-manage demand, but heavy activity can still delay results or cause audio
-chunks to be discarded.
+Busy mornings and busy nights also mean more work. Buffers and cooldowns help
+manage demand, but heavy activity can delay results or cause audio to be dropped.
+
+## Project structure
+
+```text
+Chirp&Echo/
+├── chirpecho/
+│   ├── capture.py          # shared microphone service
+│   ├── worker.py           # shared classification/archive worker
+│   ├── common/             # logging, status, storage limits and image cleanup
+│   ├── chirp/              # audible audio, BirdNET adapter and bird catalogue
+│   ├── echo/               # ultrasonic gate, BatDetect2 adapter and bat catalogue
+│   └── web/                # Flask app, templates and static assets
+├── scripts/
+│   └── download_birdnet.py # verified model download during the image build
+├── Containerfile
+├── requirements.txt        # direct application dependencies
+├── requirements.lock.txt   # pinned base dependencies
+├── THIRD_PARTY.md
+└── data/                   # ignored live data, outside the image
+```
+
+Chirp's additional inference dependencies are pinned in
+`chirpecho/chirp/requirements.lock.txt` and installed as a separate image layer.
+
+## Containers and storage
+
+One image runs as four containers:
+
+| Container | Command | Role |
+| --- | --- | --- |
+| Recorder | `python -m chirpecho.capture` | Owns the microphone and writes both audio queues. |
+| Echo detector | `python -m chirpecho.worker --watch` | Uses BatDetect2 by default. |
+| Chirp detector | Same worker, with `DETECTOR_ENGINE=bird` | Uses the bundled BirdNET model. |
+| Website | Image default: Gunicorn serving `chirpecho.web.app:app` | Reads the archives and serves port 8090. |
+
+Containers share persistent `/data`, a RAM-backed `/audio` volume, and `/status`
+for heartbeats. Only the recorder needs microphone access through `/dev/snd`.
+Configure `BIRD_ENABLED=1` on the recorder to feed Chirp. Each detector needs its
+own inbox and archive paths:
+
+| Pipeline | Audio inbox | Database | Spectrograms |
+| --- | --- | --- | --- |
+| Echo | `/audio/incoming` | `/data/db/detections.sqlite3` | `/data/detections` |
+| Chirp | `/audio/chirp` | `/data/chirp/db/detections.sqlite3` | `/data/chirp/detections` |
+
+Set `INCOMING_DIR`, `DB_PATH`, and `DETECTIONS_DIR` per detector. The website uses
+`BIRD_DB_PATH` and `BIRD_DETECTIONS_DIR` to locate Chirp's archive. Mounted directories
+must be writable by UID/GID 1000; read-only containers also need writable `/tmp`.
 
 ## How to deploy
 
-I deploy BatsDropping on a Raspberry Pi using K3s. My deployment script builds
-the application's Containerfile with Podman, imports the image into K3s, backs
-up the detection database, and applies the Kubernetes manifest.
+I run Chirp & Echo on an ARM64 Raspberry Pi with Linux, K3s, and a Vleermic.
+My deployment script builds this Containerfile with Podman, imports the image
+into K3s, backs up both databases, applies the manifest, and restarts the app.
 
-Build the image from the Containerfile and provide your own Kubernetes or 
-Compose configuration to make it work. The complete system needs three 
-services: the recorder, detector, and website, with shared storage and 
-microphone access. The image's default command starts only the website. 
+To build the image yourself, run this from the project root:
 
-Docker/Compose deployment has not been tested.
+```bash
+podman build -f Containerfile -t chirp-echo .
+```
+
+Supply your own Kubernetes or Compose configuration for the four containers,
+shared storage, device permissions, and LAN access. The image’s default command
+starts only the website. Docker/Compose deployment has not been tested.
+
+## A nod to the birds behind BirdNET
+
+BirdNET was developed by the K. Lisa Yang Center for Conservation Bioacoustics
+at the Cornell Lab of Ornithology and Chemnitz University of Technology. The
+[BirdNET 2.4 model](https://zenodo.org/records/15050749) is published under
+**CC BY-NC 4.0**, separately from this application’s code. See
+[THIRD_PARTY.md](THIRD_PARTY.md) for attribution and licence details.
 
 ## Under the wings
 
-Built with Vleermic, Python, BatDetect2, PyTorch, NumPy, SciPy, sounddevice,
-SoundFile, Matplotlib, SQLite, Flask, and Gunicorn.
+Built with Vleermic, Python, BirdNET, LiteRT, BatDetect2, PyTorch, NumPy, SciPy,
+sounddevice, SoundFile, Matplotlib, SQLite, Flask, and Gunicorn.
 
-Happy Batsdropping!
+Happy Chirping & Echoing!

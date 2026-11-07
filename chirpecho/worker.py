@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bat monitor detector.
+Shared archive worker for Echo (BatDetect2) and Chirp (BirdNET).
 
 Can be run once as a scheduled task or continuously with ``--watch``. Each scan:
   1. Scans INCOMING_DIR for finished WAV chunks (written atomically by the
@@ -38,9 +38,8 @@ import fcntl
 import shutil
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from runtime import DEFAULT_AUDIO_DIR, configure_logging, write_status
-from storage import init_archive_schema, manage_archive
+from chirpecho.common.runtime import ROOT, DEFAULT_AUDIO_DIR, configure_logging, write_status as publish_status
+from chirpecho.common.storage import init_archive_schema, manage_archive
 
 # Set limits before importing numerical libraries and PyTorch.
 os.environ.setdefault('OMP_NUM_THREADS', os.environ.get('DETECTOR_THREADS', '2'))
@@ -53,16 +52,25 @@ matplotlib.use("Agg")  # headless - no display is needed to render PNG files
 import matplotlib.pyplot as plt
 from scipy import signal
 
-import torch
-torch.set_num_threads(int(os.environ.get('DETECTOR_THREADS', '2')))
-torch.set_num_interop_threads(1)
-from batdetect2 import api as bd_api
+ENGINE = os.environ.get('DETECTOR_ENGINE', 'bat')
+COMPONENT = 'chirp_detector' if ENGINE == 'bird' else 'detector'
+if ENGINE == 'bird':
+    from chirpecho.chirp.model import BirdAPI
+    model_api = None
+elif ENGINE == 'bat':
+    from chirpecho.echo import model as model_api
+else:
+    raise ValueError('DETECTOR_ENGINE must be bat or bird')
+
+
+def write_status(component, **details):
+    publish_status(COMPONENT, **details)
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_DIR = str(ROOT)
 DATA_DIR = os.path.join(PROJECT_DIR, "data")
 INCOMING_DIR = os.environ.get("INCOMING_DIR", str(DEFAULT_AUDIO_DIR))
 DETECTIONS_DIR = os.environ.get("DETECTIONS_DIR", os.path.join(DATA_DIR, "detections"))
@@ -73,7 +81,7 @@ SPECTROGRAM_PADDING_SECONDS = float(os.environ.get("SPECTROGRAM_PADDING_SECONDS"
 LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO")
 SCAN_INTERVAL_SECONDS = float(os.environ.get("SCAN_INTERVAL_SECONDS", "10"))
 
-log = configure_logging('detector')
+log = configure_logging(COMPONENT)
 
 # Recorder writes files named like: 20260716T214752_c319cfb3.wav
 _FILENAME_TS_RE = re.compile(r"^(\d{8}T\d{6})_")
@@ -179,7 +187,7 @@ def save_spectrogram_png(audio: np.ndarray, fs: int, out_path: str,
               extent=(0, len(audio) / fs, 0, fs / 2000), interpolation='nearest')
     ax.set_ylabel("Frequency (kHz)")
     ax.set_xlabel("Time (s)")
-    ax.set_ylim(0, min(fs / 2, 120000) / 1000.0)
+    ax.set_ylim(0, min(fs / 2, float(os.environ.get('SPECTROGRAM_MAX_HZ', '120000'))) / 1000.0)
     ax.axvspan(start_time, end_time, color="white", alpha=0.15)  # highlight the call
     try:
         fig.tight_layout()
@@ -211,14 +219,14 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
     write_status('detector', state='processing', source_file=source_file)
 
     try:
-        result = bd_api.process_file(filepath, config=bd_api.get_config(
+        result = model_api.process_file(filepath, config=model_api.get_config(
             detection_threshold=DETECTION_THRESHOLD))
     except Exception as e:
-        log.exception("batdetect2 failed on %s: %s", filepath, e)
+        log.exception("Classification failed on %s: %s", filepath, e)
         return False
 
     if not isinstance(result, dict):
-        log.error("batdetect2 returned an unexpected result for %s", filepath)
+        log.error("Classifier returned an unexpected result for %s", filepath)
         return False
     annotations = result.get("pred_dict", {}).get("annotation", []) or []
     kept = [
@@ -400,7 +408,8 @@ def recover_interrupted():
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Classify completed bat recordings")
+    global model_api
+    parser = argparse.ArgumentParser(description="Classify completed wildlife recordings")
     parser.add_argument("--watch", action="store_true", help="keep scanning instead of exiting")
     parser.add_argument(
         "--interval", type=float, default=SCAN_INTERVAL_SECONDS,
@@ -431,6 +440,10 @@ def main(argv=None):
     except BlockingIOError:
         raise SystemExit('Another detector already owns this inbox')
     conn = init_db()
+    if ENGINE == 'bird':
+        write_status(COMPONENT, state='loading_model')
+        model_api = BirdAPI()
+        log.info('BirdNET 2.4 ready: %d Western European bird species', len(model_api.allowed))
     recover_interrupted()
 
     stopping = False

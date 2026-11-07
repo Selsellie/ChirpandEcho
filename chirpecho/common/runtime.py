@@ -7,8 +7,8 @@ import shutil
 import json
 import time
 
-ROOT = Path(__file__).resolve().parent
-DEFAULT_AUDIO_DIR = Path('/dev/shm') / f'batsdropping-{os.getuid()}' / 'incoming'
+ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_AUDIO_DIR = Path('/dev/shm') / f'chirp-echo-{os.getuid()}' / 'incoming'
 STATUS_DIR = Path(os.environ.get('STATUS_DIR', ROOT / 'data/status'))
 
 

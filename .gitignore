@@ -14,6 +14,7 @@ dist/
 *.pth
 *.pth.tar
 *.pt
+*.tflite
 
 # Runtime data: database, spectrograms, logs, and temporary audio
 /data/

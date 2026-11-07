@@ -8,21 +8,57 @@ import re
 from pathlib import Path
 import shutil
 import sqlite3
-import sys
 import time
 from zoneinfo import ZoneInfo
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from runtime import ROOT, configure_logging
+from chirpecho.common.runtime import ROOT, configure_logging
 configure_logging('webapp')
-from flask import Flask, abort, jsonify, render_template, request, send_file
-from webapp.species import SPECIES, LABELS, normalize_label
+from flask import Flask, abort, jsonify, redirect, render_template, request, send_file
+from chirpecho.echo.catalogue import SPECIES, LABELS, normalize_label
+from chirpecho.chirp.catalogue import SPECIES as BIRD_SPECIES
 
 DB_PATH = os.environ.get('DB_PATH', str(ROOT / 'data/db/detections.sqlite3'))
 DETECTIONS_DIR = os.environ.get('DETECTIONS_DIR', str(ROOT / 'data/detections'))
 INCOMING_DIR = os.environ.get('INCOMING_DIR', str(ROOT / 'data/incoming'))
+BIRD_DB_PATH = os.environ.get('BIRD_DB_PATH', str(Path(DB_PATH).parent.parent / 'chirp/db/detections.sqlite3'))
+BIRD_DETECTIONS_DIR = os.environ.get('BIRD_DETECTIONS_DIR', str(Path(DB_PATH).parent.parent / 'chirp/detections'))
 ZONE = ZoneInfo(os.environ.get('TZ', 'Europe/Amsterdam'))
 app = Flask(__name__)
+
+
+@app.context_processor
+def listening_mode():
+    bird = request.path == '/chirp' or request.path.startswith('/chirp/')
+    shared = request.path in ('/logs', '/status')
+    selected_bird = bird or (shared and request.cookies.get('wildlife-mode') == 'chirp')
+    tail = request.path.rstrip('/').split('/')[-1]
+    section = tail if tail == 'species' else ''
+    paths = dict(overview='/', species='/species', logs='/logs', health='/status')
+    return dict(mode='shared' if shared else 'chirp' if bird else 'echo',
+                bird=bird,
+                mode_name='System' if shared else 'Chirp' if bird else 'Echo',
+                navigation={key: '/chirp' + (value if value != '/' else '') if selected_bird and key in ('overview', 'species') else value
+                            for key, value in paths.items()},
+                chirp_url='/chirp' + ('/' + section if section else ''),
+                echo_url='/' + section)
+
+
+@app.after_request
+def remember_wildlife_mode(response):
+    if request.path in ('/', '/species', '/chirp', '/chirp/species') and response.status_code == 200:
+        response.set_cookie('wildlife-mode', 'chirp' if request.path.startswith('/chirp') else 'echo',
+                            max_age=365 * 24 * 3600, httponly=True, samesite='Lax')
+    return response
+
+
+@app.get('/chirp')
+@app.get('/chirp/species', endpoint='chirp_species')
+@app.get('/chirp/logs', endpoint='chirp_logs')
+@app.get('/chirp/status', endpoint='chirp_status')
+def chirp():
+    if request.path in ('/chirp/logs', '/chirp/status'):
+        return redirect('/' + request.path.rsplit('/', 1)[-1])
+    return species_guide() if request.path.endswith('/species') else index()
 
 
 def local_time(value):
@@ -35,10 +71,11 @@ def local_time(value):
         return None
 
 
-def query(sql, parameters=()):
-    if not Path(DB_PATH).exists():
+def query(sql, parameters=(), database=None):
+    database = database or (BIRD_DB_PATH if request.path.startswith('/chirp') else DB_PATH)
+    if not Path(database).exists():
         return []
-    conn = sqlite3.connect(Path(DB_PATH).resolve().as_uri() + '?mode=ro', uri=True, timeout=5)
+    conn = sqlite3.connect(Path(database).resolve().as_uri() + '?mode=ro', uri=True, timeout=5)
     conn.row_factory = sqlite3.Row
     conn.create_function('local_hour', 1, lambda value: local_time(value).hour if local_time(value) else 0)
     try:
@@ -55,7 +92,7 @@ def image_path(filename):
     if not filename:
         return None
     path = Path(filename).resolve()
-    return path if path.parent == Path(DETECTIONS_DIR).resolve() and path.is_file() else None
+    return path if path.parent == Path(BIRD_DETECTIONS_DIR if request.path.startswith('/chirp') else DETECTIONS_DIR).resolve() and path.is_file() else None
 
 
 def pipeline_status(component):
@@ -81,13 +118,13 @@ def storage_status():
                 high_water=int(os.environ.get('STORAGE_HIGH_WATER_PERCENT', '85')))
 
 
-def log_summary():
+def log_summary(bird=False):
     """Read a bounded tail only; never load an unbounded log into a request."""
     directory = Path(os.environ.get('LOG_DIR', ROOT / 'data/logs'))
     totals = dict(checked=0, saved=0, cooldown=0, processed=0, raw=0, accepted=0)
     events, periods = [], []
     warnings = 0
-    for component in ('recorder', 'detector'):
+    for component in (('chirp_recorder', 'chirp_detector') if bird else ('recorder', 'detector')):
         try:
             with (directory / f'{component}.log').open('rb') as handle:
                 handle.seek(0, 2)
@@ -105,6 +142,8 @@ def log_summary():
             if match:
                 for key, value in zip(('checked', 'saved', 'cooldown'), match.groups()):
                     totals[key] += int(value)
+            if bird and component == 'chirp_recorder' and ' wrote ' in line:
+                totals['saved'] += 1
             result = re.search(r'(\d+) raw detections, (\d+) above confidence threshold', line)
             if result:
                 totals['processed'] += 1
@@ -112,10 +151,10 @@ def log_summary():
                 totals['accepted'] += int(result[2])
             warning = ' WARNING ' in line or ' ERROR ' in line or ' CRITICAL ' in line
             warnings += int(warning)
-            if warning or result or ' INFO recorder wrote ' in line:
-                message = ('Sound recorded; waiting for classification.' if ' INFO recorder wrote ' in line else
-                           'Sound recorded, no qualifying bat calls.' if result and int(result[2]) == 0 else
-                           f'{result[2]} qualifying bat calls found.' if result else line[24:])
+            if warning or result or ' wrote ' in line:
+                message = ('Sound recorded; waiting for classification.' if ' wrote ' in line else
+                           ('Sound recorded, no qualifying bird predictions.' if bird else 'Sound recorded, no qualifying bat calls.') if result and int(result[2]) == 0 else
+                           f'{result[2]} qualifying {"bird predictions" if bird else "bat calls"} found.' if result else line[24:])
                 events.append(dict(time=line[:23], component=component, warning=warning,
                                    message=message, detail=line[:2000]))
     return dict(totals=totals, warnings=warnings, periods=periods,
@@ -151,10 +190,20 @@ def index():
     tab = 'logs' if request.path == '/logs' else 'health' if request.path == '/status' else 'overview'
     if tab != 'overview':
         recorder, detector, storage = pipeline_status('recorder'), pipeline_status('detector'), storage_status()
+        bird_recorder, bird_detector = pipeline_status('chirp_recorder'), pipeline_status('chirp_detector')
         checks = health_checks(recorder, detector, storage) if tab == 'health' else []
+        if tab == 'health':
+            try:
+                bird_database = bool(query("SELECT name FROM sqlite_master WHERE name='image_archive'", database=BIRD_DB_PATH))
+            except sqlite3.Error:
+                bird_database = False
+            checks += [dict(name='Chirp · Audio capture', ok=bird_recorder['fresh'] and bird_recorder.get('state') not in ('error','buffer_full'), detail='Audible audio from the shared microphone. State: '+bird_recorder.get('state','starting')),
+                       dict(name='Chirp · BirdNET classifier', ok=bird_detector['fresh'] and bird_detector.get('state') in ('ready','processing'), detail='BirdNET 2.4 local inference. State: '+bird_detector.get('state','starting')),
+                       dict(name='Chirp · Bird database', ok=bird_database, detail='Bird records are stored separately from Echo records.')]
+
         return render_template('index.html', tab=tab, logs=log_summary() if tab == 'logs' else None,
-                               checks=checks, healthy=all(check['ok'] for check in checks),
-                               recorder=recorder, detector=detector, now=dt.datetime.now(ZONE))
+                               checks=checks, bird_logs=log_summary(bird=True) if tab == 'logs' else None, healthy=all(check['ok'] for check in checks),
+                               recorder=recorder, detector=detector, bird_recorder=bird_recorder, bird_detector=bird_detector, now=dt.datetime.now(ZONE))
     search = request.args.get('q', '').strip()[:100]
     try:
         minimum = float(request.args.get('confidence', '0'))
@@ -191,7 +240,8 @@ def index():
     archived = query('SELECT COUNT(*) AS total FROM image_archive')
     image_total = query('SELECT COUNT(*) AS total FROM detections d LEFT JOIN image_archive a '
                        'ON a.detection_id=d.id WHERE a.detection_id IS NULL')
-    recorder, detector, storage = pipeline_status('recorder'), pipeline_status('detector'), storage_status()
+    bird = request.path.startswith('/chirp')
+    recorder, detector, storage = pipeline_status('chirp_recorder' if bird else 'recorder'), pipeline_status('chirp_detector' if bird else 'detector'), storage_status()
     return render_template('index.html', tab=tab,
                            stats=stats, detections=detections, species=species,
                            hourly=hourly, peak=max(peak, 1), storage=storage,
@@ -203,6 +253,7 @@ def index():
 
 
 @app.get('/spectrogram/<detection_id>.png')
+@app.get('/chirp/spectrogram/<detection_id>.png', endpoint='chirp_spectrogram')
 def spectrogram(detection_id):
     rows = query('SELECT png_path FROM detections WHERE id=?', (detection_id,))
     path = image_path(rows[0]['png_path']) if rows else None
@@ -217,12 +268,15 @@ def species_guide():
     collection = request.args.get('collection', 'all')
     if collection not in ('all', 'recorded', 'undiscovered'):
         abort(400)
-    entries = {item['number']: dict(item, calls=0, first=None, last=None, best=0, labels=[]) for item in SPECIES}
+    bird = request.path.startswith('/chirp')
+    catalogue = BIRD_SPECIES if bird else SPECIES
+    labels = {normalize_label(value):item['number'] for item in catalogue for value in (item['name'], item['scientific'])} if bird else LABELS
+    entries = {item['number']: dict(item, calls=0, first=None, last=None, best=0, labels=[]) for item in catalogue}
     rows = query('SELECT species, COUNT(*) AS calls, MIN(detected_at) AS first, '
                  'MAX(detected_at) AS last, MAX(confidence) AS best FROM detections GROUP BY species')
     unmatched = 0
     for row in rows:
-        number = LABELS.get(normalize_label(row['species']))
+        number = labels.get(normalize_label(row['species']))
         if number is None:
             unmatched += row['calls']
             continue
@@ -238,15 +292,17 @@ def species_guide():
     visible = [item for item in entries.values()
                if (not search or search.casefold() in ' '.join((item['name'], item['scientific'], item['group'], item['habitat'])).casefold())
                and (collection == 'all' or (item['calls'] > 0) == (collection == 'recorded'))]
-    return render_template('index.html', tab='species', catalogue=visible, catalogue_total=len(SPECIES),
+    return render_template('index.html', tab='species', catalogue=visible, catalogue_total=len(catalogue),
                            recorded=recorded, unmatched=unmatched, search=search, collection=collection,
-                           recorder=pipeline_status('recorder'), detector=pipeline_status('detector'),
+                           recorder=pipeline_status('chirp_recorder' if bird else 'recorder'), detector=pipeline_status('chirp_detector' if bird else 'detector'),
                            now=dt.datetime.now(ZONE))
 
 
 @app.get('/health')
 def health():
     ready = bool(query("SELECT name FROM sqlite_master WHERE name='image_archive'"))
+    if os.environ.get('BIRD_ENABLED') == '1':
+        ready = ready and bool(query("SELECT name FROM sqlite_master WHERE name='image_archive'", database=BIRD_DB_PATH))
     return jsonify(ready=ready), 200 if ready else 503
 
 
@@ -254,8 +310,11 @@ def health():
 def metrics():
     rows = query('SELECT COUNT(*) AS total FROM detections')
     archive = query('SELECT COUNT(*) AS total FROM image_archive')
+    bird_rows = query('SELECT COUNT(*) AS total FROM detections', database=BIRD_DB_PATH)
     return ('# TYPE batsdropping_detections_total counter\n'
             f'batsdropping_detections_total {rows[0]["total"] if rows else 0}\n'
+            '# TYPE chirp_detections_total counter\n'
+            f'chirp_detections_total {bird_rows[0]["total"] if bird_rows else 0}\n'
             '# TYPE batsdropping_archived_images_total counter\n'
             f'batsdropping_archived_images_total {archive[0]["total"] if archive else 0}\n'
             '# TYPE batsdropping_disk_used_ratio gauge\n'

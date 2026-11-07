@@ -6,13 +6,15 @@ WORKDIR /app
 COPY requirements.lock.txt /app/requirements.lock.txt
 RUN python3 -m venv /opt/venv && /opt/venv/bin/pip install --only-binary=:all: \
     -r /app/requirements.lock.txt && /opt/venv/bin/pip check
-COPY --chown=1000:1000 runtime.py storage.py /app/
-COPY --chown=1000:1000 recorder /app/recorder
-COPY --chown=1000:1000 detector /app/detector
-COPY --chown=1000:1000 webapp /app/webapp
+COPY chirpecho/chirp/requirements.lock.txt /app/bird-requirements.lock.txt
+RUN /opt/venv/bin/pip install --no-cache-dir --only-binary=:all: -r /app/bird-requirements.lock.txt && /opt/venv/bin/pip check
+COPY scripts/download_birdnet.py /tmp/download_bird_model.py
+RUN python3 /tmp/download_bird_model.py /opt/birdnet-v24 && rm /tmp/download_bird_model.py
+COPY --chown=1000:1000 chirpecho /app/chirpecho
+COPY THIRD_PARTY.md /app/THIRD_PARTY.md
 ENV PATH=/opt/venv/bin:$PATH DB_PATH=/data/db/detections.sqlite3 \
     DETECTIONS_DIR=/data/detections LOG_DIR=/data/logs INCOMING_DIR=/audio/incoming \
     OUTPUT_DIR=/audio/incoming STATUS_DIR=/status COOLDOWN_STATE=/data/.cooldown \
     MPLCONFIGDIR=/tmp/matplotlib NUMBA_CACHE_DIR=/tmp/numba TZ=Europe/Amsterdam
 USER 1000:1000
-CMD ["python", "-m", "gunicorn", "--workers", "1", "--threads", "2", "--bind", "0.0.0.0:8090", "--chdir", "webapp", "app:app"]
+CMD ["python", "-m", "gunicorn", "--workers", "1", "--threads", "2", "--bind", "0.0.0.0:8090", "chirpecho.web.app:app"]
