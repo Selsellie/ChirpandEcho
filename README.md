@@ -1,4 +1,5 @@
-# 🦇 BatsDropping
+<img width="373" height="74" alt="image" src="https://github.com/user-attachments/assets/3a350c67-b19c-463f-9432-717216c29750" />
+
 
 **A little eavesdropping on the night shift.**
 
@@ -55,6 +56,15 @@ The dashboard makes the field notes easy to explore, with:
 - Activity charts, species summaries, and confidence statistics.
 - A detection ledger with timestamps, frequencies, and call probabilities.
 - Microphone, processing, and storage status.
+- A remembered light, dark, or system appearance setting.
+- A Logs tab with recent recording and classification summaries, warnings,
+  and explanations when a recording contains no qualifying bat calls.
+- A Health tab checking recorder and detector heartbeats, database access,
+  and storage reserves. Healthy services do not guarantee bat activity.
+- Batlas, a searchable collection of 24 Western European bat species with
+  habitat notes and conservation sources. Retained predictions unlock cards
+  and show call counts, first/last records, and best confidence. The seven
+  species outside the bundled classifier are marked as field guide entries.
 - A clear note when an image has been cleared but its observation data remains.
 
 ## The detective work stays local
