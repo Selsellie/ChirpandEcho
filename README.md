@@ -106,6 +106,19 @@ Busy nights also mean more work. The buffer, cooldown, and storage limits help
 manage demand, but heavy activity can still delay results or cause audio
 chunks to be discarded.
 
+## How to deploy
+
+I deploy BatsDropping on a Raspberry Pi using K3s. My deployment script builds
+the application's Containerfile with Podman, imports the image into K3s, backs
+up the detection database, and applies the Kubernetes manifest.
+
+Build the image from the Containerfile and provide your own Kubernetes or 
+Compose configuration to make it work. The complete system needs three 
+services: the recorder, detector, and website, with shared storage and 
+microphone access. The image's default command starts only the website. 
+
+Docker/Compose deployment has not been tested.
+
 ## Under the wings
 
 Built with Vleermic, Python, BatDetect2, PyTorch, NumPy, SciPy, sounddevice,
