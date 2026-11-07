@@ -1,8 +1,9 @@
-# Chirp & Echo 🐦 🦇
+<img width="346" height="86" alt="image" src="https://github.com/user-attachments/assets/e8c89b2e-0179-4b39-afbd-5e93ab15a349" />
+
 
 **Birds by song. Bats by echo. A little eavesdropping on both shifts.**
 
-BatsDropping started with a question: who’s fluttering around after sunset?
+[BatsDropping](https://github.com/Selsellie/BatsDropping) started with a question: who’s fluttering around after sunset?
 Chirp & Echo brings the birds into the conversation too. **Chirp** listens for
 birdsong with BirdNET 2.4; **Echo** looks for bat calls with BatDetect2.
 Together they turn microphone recordings into species predictions, timestamps,
@@ -176,13 +177,23 @@ Supply your own Kubernetes or Compose configuration for the four containers,
 shared storage, device permissions, and LAN access. The image’s default command
 starts only the website. Docker/Compose deployment has not been tested.
 
-## A nod to the birds behind BirdNET
+## A nod to our wildlife detectives
 
 BirdNET was developed by the K. Lisa Yang Center for Conservation Bioacoustics
 at the Cornell Lab of Ornithology and Chemnitz University of Technology. The
 [BirdNET 2.4 model](https://zenodo.org/records/15050749) is published under
-**CC BY-NC 4.0**, separately from this application’s code. See
-[THIRD_PARTY.md](THIRD_PARTY.md) for attribution and licence details.
+**CC BY-NC 4.0**, separately from this application’s code.
+
+Echo’s bat detective is [BatDetect2](https://github.com/macaodha/batdetect2/tree/v1.3.1),
+developed by Oisin Mac Aodha, Santiago Martínez Balvanera, and collaborators.
+The project uses version 1.3.1 and its bundled pretrained UK bat model;
+the [upstream licence](https://github.com/macaodha/batdetect2/blob/v1.3.1/LICENSE.md)
+is **CC BY-NC 4.0**. Their research is described in
+[Towards a General Approach for Bat Echolocation Detection and Classification](https://www.biorxiv.org/content/10.1101/2022.12.14.520490v1)
+(Mac Aodha et al., 2022).
+
+See [THIRD_PARTY.md](THIRD_PARTY.md) for attribution and licence details
+for both listeners.
 
 ## Under the wings
 
