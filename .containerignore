@@ -1,5 +1,6 @@
 .git
 .env
+.env.*
 .recovery
 .agents
 venv
@@ -7,6 +8,9 @@ venv
 data
 logs
 ops
+homelab
+backups
+secrets
 tests
 **/__pycache__
 **/*.pyc
