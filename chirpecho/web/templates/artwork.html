@@ -1,0 +1,10 @@
+<section class="heading"><div><span class="eyebrow">The wildlife artwork collection</span><h1>Artwork</h1><p class="muted">Browse the full collection. Open an illustration to see it at full size.</p></div></section>
+<form class="filters" method="get" action="{{ navigation.artwork }}">
+  <div class="search"><input type="search" name="q" value="{{ search }}" placeholder="Find a species…" aria-label="Search species"></div>
+  <select name="kind" aria-label="Wildlife mode">{% for value,label in [('all','Birds and bats'),('bird','Birds'),('bat','Bats')] %}<option value="{{ value }}" {% if artwork_kind==value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select>
+  <button class="filter-button" type="submit">Apply filters</button><span class="result-count">{{ artwork_entries|length }} / {{ artwork_total }} species shown</span>
+</form>
+<div class="gallery artwork-gallery">{% for item in artwork_entries %}<article class="card artwork-card" data-kind="{{ item.kind }}">
+  <a href="{{ url_for('static',filename='species/'+item.creature.portrait+'-pokemon.webp',v=item.creature.portrait_version) }}" target="_blank" rel="noopener"><img class="artwork-portrait" src="{{ url_for('static',filename='species/'+item.creature.portrait+'-pokemon.webp',v=item.creature.portrait_version) }}" alt="{{ item.name }}" loading="lazy" width="300" height="200"></a>
+  <h2>{{ item.name }}</h2><p class="latin">{{ item.scientific }}</p><small class="muted">{{ 'Bird' if item.kind=='bird' else 'Bat' }} · #{{ '%03d'|format(item.number) }}</small>
+</article>{% else %}<div class="empty"><h3>No species match this search</h3></div>{% endfor %}</div>

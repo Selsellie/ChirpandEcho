@@ -51,3 +51,7 @@ for entry in SPECIES:
 # The bundled model contains this spelling; retain the accepted genus on cards.
 LABELS[normalize_label('Barbastellus barbastellus')] = 15
 LABELS[normalize_label('Common noctule')] = 4
+
+# Collection rarity is a game mechanic, not a biological assessment.
+from chirpecho.common.rarity import rarity_for
+SPECIES = tuple(dict(item, rarity=rarity_for('bat', item['number'])) for item in SPECIES)

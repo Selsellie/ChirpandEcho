@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ language }}" data-timezone="{{ timezone }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Delete observation · Chirp &amp; Echo</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='brand.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='language.css') }}">
+  <style>
+    body{max-width:680px;margin:8vh auto;padding:24px;font:16px/1.55 system-ui,sans-serif;color:#183138;background:#f3f4ed}
+    main{padding:28px;border:1px solid #dce2da;border-radius:18px;background:white}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    button,a{font:inherit;padding:10px 16px;border-radius:9px}
+    button{border:0;background:#a53636;color:white;cursor:pointer}
+    a{color:inherit;border:1px solid #9ca9a3;text-decoration:none}
+    .warning{color:#7f2828}
+  </style>
+</head>
+<body>{% include 'language_control.html' %}
+<main>
+  <p class="warning"><strong>Are you sure?</strong></p>
+  <h1>Delete this observation?</h1>
+  <p>This removes <strong>{{ detection.species }}</strong>, detected {{ detection.detected_at|localdate }}, from the archive. Its spectrogram is deleted too. Any saved WAV is deleted if no other observation uses it.</p>
+  <p>This cannot be undone.</p>
+  <div class="actions">
+    <form method="post" action="{{ url_for('chirp_delete_observation' if bird else 'delete_observation',detection_id=detection.id) }}">
+      <button type="submit" name="confirm" value="delete">Yes, delete observation</button>
+    </form>
+    <a href="{{ navigation.overview }}#archive">Cancel</a>
+  </div>
+</main>
+<script src="{{ url_for('static', filename='language.js') }}" defer></script>
+</body></html>

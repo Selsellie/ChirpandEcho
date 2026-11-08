@@ -1,0 +1,14 @@
+{% set creature = creature_profile(detection.species, bird) %}
+<article class="card detection encounter">
+  <div class="encounter-art">{% include 'portrait.html' %}</div>
+  <div class="encounter-details">
+    <div class="encounter-name"><a href="{{ navigation.species }}{% if creature.number %}#bat-{{ creature.number }}{% endif %}">{{ creature.name }}</a><span class="rarity rarity-{{ creature.rarity.key }}" title="Collection game tier; not a measure of local rarity">{{ creature.rarity.stars }} {{ creature.rarity.label }}</span></div>
+    <p class="encounter-note">{{ creature.note }}</p>
+    <div class="encounter-facts"><time datetime="{{ detection.detected_at }}">{{ detection.detected_at|localdate }}</time><span>{{ '%.0f'|format(detection.confidence*100) }}% confidence</span></div>
+  </div>
+  <div class="encounter-controls">
+    {% if detection.has_image %}<a href="{{ url_for('chirp_spectrogram' if bird else 'spectrogram', detection_id=detection.id) }}">Signal ↗</a>{% endif %}
+    {% if detection.audio_available %}<details class="encounter-recording"><summary>Listen</summary><div class="audio-popover"><audio controls preload="none" src="{{ url_for('chirp_observation_audio' if bird else 'observation_audio', detection_id=detection.id) }}" aria-label="Recording of {{ creature.name }}"></audio></div></details>{% endif %}
+  </div>
+  <details class="encounter-actions"><summary aria-label="Encounter actions" title="Encounter actions">⋯</summary><div class="actions-menu"><a href="{{ url_for('chirp_delete_confirmation' if bird else 'delete_confirmation',detection_id=detection.id) }}">Delete encounter...</a></div></details>
+</article>

@@ -13,10 +13,12 @@ from zoneinfo import ZoneInfo
 
 from chirpecho.common.runtime import ROOT, configure_logging
 configure_logging('webapp')
-from flask import Flask, abort, jsonify, redirect, render_template, request, send_file
+from flask import Flask, abort, jsonify, redirect, render_template, request, send_file, url_for
 from chirpecho.echo.catalogue import SPECIES, LABELS, normalize_label
 from chirpecho.chirp.catalogue import SPECIES as BIRD_SPECIES
 from chirpecho.web.portraits import profile
+from chirpecho.common.rarity import TIERS
+from chirpecho.web.i18n import language, language_return_url, localize_html, safe_return_url, translate
 
 
 DB_PATH = os.environ.get('DB_PATH', str(ROOT / 'data/db/detections.sqlite3'))
@@ -24,31 +26,65 @@ DETECTIONS_DIR = os.environ.get('DETECTIONS_DIR', str(ROOT / 'data/detections'))
 INCOMING_DIR = os.environ.get('INCOMING_DIR', str(ROOT / 'data/incoming'))
 BIRD_DB_PATH = os.environ.get('BIRD_DB_PATH', str(Path(DB_PATH).parent.parent / 'chirp/db/detections.sqlite3'))
 BIRD_DETECTIONS_DIR = os.environ.get('BIRD_DETECTIONS_DIR', str(Path(DB_PATH).parent.parent / 'chirp/detections'))
+ECHO_AUDIO_ARCHIVE_DIR = os.environ.get('AUDIO_ARCHIVE_DIR', str(Path(DETECTIONS_DIR) / 'audio'))
+BIRD_AUDIO_ARCHIVE_DIR = os.environ.get('BIRD_AUDIO_ARCHIVE_DIR', str(Path(BIRD_DETECTIONS_DIR) / 'audio'))
 ZONE = ZoneInfo(os.environ.get('TZ', 'Europe/Amsterdam'))
 app = Flask(__name__)
 app.jinja_env.globals['creature_profile'] = profile
+RARITY_OPTIONS = {key: value for key, value in TIERS.items() if key != 'unranked'}
+app.jinja_env.globals['rarity_options'] = RARITY_OPTIONS
+
+
+def selected_rarity():
+    value = request.args.get('rarity', 'all')
+    if value != 'all' and value not in RARITY_OPTIONS:
+        abort(400)
+    return value
 
 
 @app.context_processor
 def listening_mode():
     bird = request.path == '/chirp' or request.path.startswith('/chirp/')
-    shared = request.path in ('/logs', '/status')
+    shared = request.path in ('/status', '/artwork')
     selected_bird = bird or (shared and request.cookies.get('wildlife-mode') == 'chirp')
     tail = request.path.rstrip('/').split('/')[-1]
-    section = tail if tail == 'species' else ''
-    paths = dict(overview='/', species='/species', logs='/logs', health='/status')
+    section = tail if tail in ('species', 'logs') else ''
+    paths = dict(overview='/', species='/species', artwork='/artwork', logs='/logs', health='/status')
     return dict(mode='shared' if shared else 'chirp' if bird else 'echo',
-                bird=bird,
+                bird=bird, timezone=ZONE.key, language=language(), language_return=language_return_url(),
                 mode_name='System' if shared else 'Chirp' if bird else 'Echo',
-                navigation={key: '/chirp' + (value if value != '/' else '') if selected_bird and key in ('overview', 'species') else value
+                navigation={key: '/chirp' + (value if value != '/' else '') if selected_bird and key in ('overview', 'species', 'logs') else value
                             for key, value in paths.items()},
                 chirp_url='/chirp' + ('/' + section if section else ''),
                 echo_url='/' + section)
 
 
+@app.post('/language')
+def set_language():
+    selected = request.form.get('lang', 'en')
+    if selected not in ('en', 'nl'):
+        abort(400)
+    response = redirect(safe_return_url(request.form.get('next', '/')), code=303)
+    response.set_cookie('chirpecho-language', selected, max_age=365*24*3600, httponly=True, samesite='Lax')
+    return response
+
+
+@app.after_request
+def translate_page(response):
+    if response.mimetype == 'text/html':
+        selected = language()
+        if selected == 'nl':
+            response.set_data(localize_html(response.get_data(as_text=True)))
+        response.headers['Content-Language'] = selected
+        response.vary.add('Cookie')
+        if request.args.get('lang') in ('en', 'nl'):
+            response.set_cookie('chirpecho-language', selected, max_age=365*24*3600, httponly=True, samesite='Lax')
+    return response
+
+
 @app.after_request
 def remember_wildlife_mode(response):
-    if request.path in ('/', '/species', '/chirp', '/chirp/species') and response.status_code == 200:
+    if request.path in ('/', '/species', '/chirp', '/chirp/species', '/logs', '/chirp/logs') and response.status_code == 200:
         response.set_cookie('wildlife-mode', 'chirp' if request.path.startswith('/chirp') else 'echo',
                             max_age=365 * 24 * 3600, httponly=True, samesite='Lax')
     return response
@@ -59,7 +95,7 @@ def remember_wildlife_mode(response):
 @app.get('/chirp/logs', endpoint='chirp_logs')
 @app.get('/chirp/status', endpoint='chirp_status')
 def chirp():
-    if request.path in ('/chirp/logs', '/chirp/status'):
+    if request.path == '/chirp/status':
         return redirect('/' + request.path.rsplit('/', 1)[-1])
     return species_guide() if request.path.endswith('/species') else index()
 
@@ -190,7 +226,7 @@ def localdate(value, pattern='%d %b · %H:%M:%S'):
 @app.get('/logs', endpoint='logs')
 @app.get('/status', endpoint='status')
 def index():
-    tab = 'logs' if request.path == '/logs' else 'health' if request.path == '/status' else 'overview'
+    tab = 'logs' if request.path.endswith('/logs') else 'health' if request.path == '/status' else 'overview'
     if tab != 'overview':
         recorder, detector, storage = pipeline_status('recorder'), pipeline_status('detector'), storage_status()
         bird_recorder, bird_detector = pipeline_status('chirp_recorder'), pipeline_status('chirp_detector')
@@ -204,10 +240,14 @@ def index():
                        dict(name='Chirp · BirdNET classifier', ok=bird_detector['fresh'] and bird_detector.get('state') in ('ready','processing'), detail='BirdNET 2.4 local inference. State: '+bird_detector.get('state','starting')),
                        dict(name='Chirp · Bird database', ok=bird_database, detail='Bird records are stored separately from Echo records.')]
 
-        return render_template('index.html', tab=tab, logs=log_summary() if tab == 'logs' else None,
-                               checks=checks, bird_logs=log_summary(bird=True) if tab == 'logs' else None, healthy=all(check['ok'] for check in checks),
-                               recorder=recorder, detector=detector, bird_recorder=bird_recorder, bird_detector=bird_detector, now=dt.datetime.now(ZONE))
+        bird = request.path.startswith('/chirp')
+        return render_template('index.html', tab=tab, logs=log_summary(bird=bird) if tab == 'logs' else None,
+                               checks=checks, storage=storage, healthy=all(check['ok'] for check in checks),
+                               recorder=bird_recorder if bird and tab == 'logs' else recorder,
+                               detector=bird_detector if bird and tab == 'logs' else detector,
+                               bird_recorder=bird_recorder, bird_detector=bird_detector, now=dt.datetime.now(ZONE))
     search = request.args.get('q', '').strip()[:100]
+    rarity_filter = selected_rarity()
     try:
         minimum = float(request.args.get('confidence', '0'))
         if not math.isfinite(minimum) or not 0 <= minimum <= 1:
@@ -219,18 +259,39 @@ def index():
                        'AVG(confidence) AS avg_confidence, MAX(detected_at) AS last_heard, '
                        "SUM(datetime(detected_at)>=datetime('now','-1 day')) AS last_24h FROM detections")
     stats = stats_rows[0] if stats_rows else dict(total=0, species_count=0, avg_confidence=0, last_heard=None, last_24h=0)
-    filtered = query('SELECT COUNT(*) AS total FROM detections WHERE species LIKE ? AND confidence>=?',
-                     (f'%{search}%', minimum))
+    bird = request.path.startswith('/chirp')
+    where = 'species LIKE ? AND confidence>=?'
+    parameters = [f'%{search}%', minimum]
+    known_labels = query('SELECT DISTINCT species FROM detections') if search or rarity_filter != 'all' else []
+    if search:
+        localized = [row['species'] for row in known_labels if search.casefold() in translate(profile(row['species'], bird)['name']).casefold()]
+        if localized:
+            where = '(species LIKE ? OR species IN (' + ','.join('?' for _ in localized) + ')) AND confidence>=?'
+            parameters = [f'%{search}%', *localized, minimum]
+    if rarity_filter != 'all':
+        # Match actual stored labels, including scientific and legacy aliases,
+        # before applying LIMIT so counts and pagination stay accurate.
+        matching = [row['species'] for row in known_labels
+                    if profile(row['species'], bird)['rarity']['key'] == rarity_filter]
+        if matching:
+            where += ' AND species IN (' + ','.join('?' for _ in matching) + ')'
+            parameters.extend(matching)
+        else:
+            where += ' AND 0'
+    filtered = query('SELECT COUNT(*) AS total FROM detections WHERE ' + where, parameters)
     matched = filtered[0]['total'] if filtered else 0
     pages = max(1, math.ceil(matched / 24))
     page = min(page, pages)
     detections = query('SELECT d.*, a.reason AS archive_reason FROM detections d '
-                       'LEFT JOIN image_archive a ON a.detection_id=d.id '
-                       'WHERE d.species LIKE ? AND d.confidence>=? '
-                       'ORDER BY d.detected_at DESC LIMIT 24 OFFSET ?',
-                       (f'%{search}%', minimum, (page - 1) * 24))
+                       'LEFT JOIN image_archive a ON a.detection_id=d.id WHERE ' + where +
+                       ' ORDER BY d.detected_at DESC LIMIT 24 OFFSET ?',
+                       (*parameters, (page - 1) * 24))
     for row in detections:
         row['has_image'] = image_path(row['png_path']) is not None
+        row['has_spectrum_data'] = row['has_image'] and row['png_path'].endswith('.spec')
+        audio_dir = BIRD_AUDIO_ARCHIVE_DIR if bird else ECHO_AUDIO_ARCHIVE_DIR
+        audio_name = Path(row.get('source_file') or '').name
+        row['audio_available'] = bool(audio_name and (Path(audio_dir) / audio_name).is_file())
     species = query('SELECT species, COUNT(*) AS calls, AVG(confidence) AS confidence '
                     'FROM detections GROUP BY species ORDER BY calls DESC LIMIT 8')
     hourly_rows = query("SELECT local_hour(detected_at) AS hour, COUNT(*) AS calls FROM detections "
@@ -251,23 +312,117 @@ def index():
                            recorder=recorder, detector=detector,
                            archived=archived[0]['total'] if archived else 0,
                            image_total=image_total[0]['total'] if image_total else 0,
-                           search=search, minimum=minimum, page=page, pages=pages, matched=matched,
+                           search=search, minimum=minimum, page=page, pages=pages, matched=matched, rarity_filter=rarity_filter,
                            now=now, cooldown=os.environ.get('COOLDOWN_SECONDS', '10'))
 
 
-@app.get('/spectrogram/<detection_id>.png')
-@app.get('/chirp/spectrogram/<detection_id>.png', endpoint='chirp_spectrogram')
-def spectrogram(detection_id):
-    rows = query('SELECT png_path FROM detections WHERE id=?', (detection_id,))
+def spectrum_record(detection_id):
+    rows = query('SELECT * FROM detections WHERE id=?', (detection_id,))
     path = image_path(rows[0]['png_path']) if rows else None
     if path is None:
         abort(404)
+    return rows[0], path
+
+
+def archive_audio_path(row, bird):
+    filename = Path(row.get('source_file') or '').name
+    directory = Path(BIRD_AUDIO_ARCHIVE_DIR if bird else ECHO_AUDIO_ARCHIVE_DIR).resolve()
+    path = (directory / filename).resolve()
+    return path if filename and path.parent == directory and path.suffix.lower() == '.wav' else None
+
+
+@app.get('/observation/<detection_id>/delete')
+@app.get('/chirp/observation/<detection_id>/delete', endpoint='chirp_delete_confirmation')
+def delete_confirmation(detection_id):
+    rows = query('SELECT id,species,detected_at FROM detections WHERE id=?', (detection_id,))
+    if not rows:
+        abort(404)
+    return render_template('delete_observation.html', detection=rows[0], bird=request.path.startswith('/chirp'))
+
+
+@app.post('/observation/<detection_id>/delete')
+@app.post('/chirp/observation/<detection_id>/delete', endpoint='chirp_delete_observation')
+def delete_observation(detection_id):
+    if request.form.get('confirm') != 'delete':
+        abort(400)
+    bird = request.path.startswith('/chirp')
+    database = BIRD_DB_PATH if bird else DB_PATH
+    detections_dir = Path(BIRD_DETECTIONS_DIR if bird else DETECTIONS_DIR).resolve()
+    conn = sqlite3.connect(database, timeout=10)
+    conn.row_factory = sqlite3.Row
+    spectrum = audio = None
+    try:
+        row = conn.execute('SELECT * FROM detections WHERE id=?', (detection_id,)).fetchone()
+        if row is None:
+            abort(404)
+        spectrum = Path(row['png_path']).resolve()
+        if spectrum.parent != detections_dir:
+            spectrum = None
+        conn.execute('BEGIN IMMEDIATE')
+        conn.execute('DELETE FROM detections WHERE id=?', (detection_id,))
+        conn.execute('DELETE FROM image_archive WHERE detection_id=?', (detection_id,))
+        conn.execute('DELETE FROM image_cleanup_queue WHERE detection_id=?', (detection_id,))
+        still_referenced = conn.execute('SELECT 1 FROM detections WHERE source_file=? LIMIT 1',
+                                        (row['source_file'],)).fetchone()
+        if not still_referenced:
+            audio = archive_audio_path(dict(row), bird)
+        conn.commit()
+    except sqlite3.Error:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
+    for path in (spectrum, audio):
+        if path is not None:
+            try:
+                path.unlink(missing_ok=True)
+            except OSError:
+                app.logger.exception('Could not remove media for deleted observation')
+    return redirect(('/chirp' if bird else '/') + '#archive', code=303)
+
+
+@app.get('/observation/<detection_id>/audio')
+@app.get('/chirp/observation/<detection_id>/audio', endpoint='chirp_observation_audio')
+def observation_audio(detection_id):
+    bird = request.path.startswith('/chirp')
+    rows = query('SELECT * FROM detections WHERE id=?', (detection_id,))
+    path = archive_audio_path(rows[0], bird) if rows else None
+    if path is None or not path.is_file():
+        abort(404)
+    return send_file(path, mimetype='audio/wav', conditional=True, max_age=0)
+
+
+@app.get('/spectrogram/<detection_id>')
+@app.get('/chirp/spectrogram/<detection_id>', endpoint='chirp_spectrogram')
+def spectrogram(detection_id):
+    detection, path = spectrum_record(detection_id)
+    return render_template('spectrogram.html', detection=detection, compact=path.suffix == '.spec')
+
+
+@app.get('/spectrogram/<detection_id>/data')
+@app.get('/chirp/spectrogram/<detection_id>/data', endpoint='chirp_spectrogram_data')
+def spectrogram_data(detection_id):
+    _, path = spectrum_record(detection_id)
+    if path.suffix != '.spec':
+        abort(404)
+    response = send_file(path, mimetype='application/json', conditional=True, max_age=3600)
+    response.headers['Content-Encoding'] = 'gzip'
+    return response
+
+
+@app.get('/spectrogram/<detection_id>.png')
+@app.get('/chirp/spectrogram/<detection_id>.png', endpoint='chirp_legacy_spectrogram')
+def legacy_spectrogram(detection_id):
+    _, path = spectrum_record(detection_id)
+    if path.suffix == '.spec':
+        return redirect(url_for('chirp_spectrogram' if request.path.startswith('/chirp') else 'spectrogram', detection_id=detection_id))
     return send_file(path, mimetype='image/png', conditional=True, max_age=3600)
 
 
 @app.get('/species')
 def species_guide():
     search = request.args.get('q', '').strip()[:100]
+    rarity_filter = selected_rarity()
     collection = request.args.get('collection', 'all')
     if collection not in ('all', 'recorded', 'undiscovered'):
         abort(400)
@@ -293,12 +448,39 @@ def species_guide():
             item['last'] = row['last']
     recorded = sum(item['calls'] > 0 for item in entries.values())
     visible = [item for item in entries.values()
-               if (not search or search.casefold() in ' '.join((item['name'], item['scientific'], item['group'], item['habitat'])).casefold())
-               and (collection == 'all' or (item['calls'] > 0) == (collection == 'recorded'))]
+               if (not search or search.casefold() in ' '.join((item['name'], item['scientific'], item['group'], item['habitat'], translate(item['name']), translate(item['group']), translate(item['habitat']))).casefold())
+               and (collection == 'all' or (item['calls'] > 0) == (collection == 'recorded'))
+               and (rarity_filter == 'all' or item['rarity']['key'] == rarity_filter)]
     return render_template('index.html', tab='species', catalogue=visible, catalogue_total=len(catalogue),
-                           recorded=recorded, unmatched=unmatched, search=search, collection=collection,
+                           recorded=recorded, unmatched=unmatched, search=search, collection=collection, rarity_filter=rarity_filter,
                            recorder=pipeline_status('chirp_recorder' if bird else 'recorder'), detector=pipeline_status('chirp_detector' if bird else 'detector'),
                            now=dt.datetime.now(ZONE))
+
+
+@app.get('/artwork')
+def artwork():
+    search = request.args.get('q', '').strip()[:100]
+    kind = request.args.get('kind', 'all')
+    if kind not in ('all', 'bird', 'bat'):
+        abort(400)
+    entries = []
+    for group, catalogue in [('bird', BIRD_SPECIES), ('bat', SPECIES)]:
+        for item in catalogue:
+            if kind != 'all' and kind != group:
+                continue
+            if search and search.casefold() not in ' '.join((item['name'], translate(item['name']), item['scientific'])).casefold():
+                continue
+            entries.append(dict(item, kind=group, creature=profile(item['name'], group == 'bird')))
+    return render_template('index.html', tab='artwork', artwork_entries=entries,
+                           artwork_total=len(BIRD_SPECIES)+len(SPECIES), search=search, artwork_kind=kind,
+                           recorder=pipeline_status('recorder'), detector=pipeline_status('detector'),
+                           now=dt.datetime.now(ZONE))
+
+
+@app.get('/static/artwork-preview.html')
+def artwork_preview_bookmark():
+    filters = {key: request.args[key] for key in ('lang', 'kind', 'q') if key in request.args}
+    return redirect(url_for('artwork', **filters))
 
 
 @app.get('/health')

@@ -1,0 +1,1 @@
+<select name="rarity" aria-label="Species rarity"><option value="all" {% if rarity_filter == 'all' %}selected{% endif %}>All rarities</option>{% for key, tier in rarity_options.items() %}<option value="{{ key }}" {% if rarity_filter == key %}selected{% endif %}>{{ tier.stars }} {{ tier.label }}</option>{% endfor %}</select>

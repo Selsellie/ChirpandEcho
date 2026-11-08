@@ -32,12 +32,67 @@ _ROWS = [
 ('Fulica atra','Eurasian Coot'),('Larus argentatus','European Herring Gull'),
 ('Chroicocephalus ridibundus','Black-headed Gull'),('Anser anser','Greylag Goose'),
 ('Branta canadensis','Canada Goose'),('Cygnus olor','Mute Swan'),
+('Accipiter nisus', 'Eurasian Sparrowhawk'),
+('Pyrrhula pyrrhula', 'Eurasian Bullfinch'),
+('Emberiza citrinella', 'Yellowhammer'),
+('Coccothraustes coccothraustes', 'Hawfinch'),
+('Ciconia ciconia', 'White Stork'),
+('Motacilla flava', 'Western Yellow Wagtail'),
+('Linaria cannabina', 'Common Linnet'),
+('Columba oenas', 'Stock Dove'),
+('Haliaeetus albicilla', 'White-tailed Eagle'),
+('Alcedo atthis', 'Common Kingfisher'),
+('Sterna hirundo', 'Common Tern'),
+('Pernis apivorus', 'European Honey-buzzard'),
+('Circus aeruginosus', 'Western Marsh Harrier'),
 ]
+
+# eBird species codes from the Cornell Lab's eBird taxonomy (v2026).
+# A few accepted scientific names differ from BirdNET's training labels;
+# these codes were matched by scientific-name aliases where needed.
+_EBIRD_CODES = {
+    'Turdus merula':'eurbla','Erithacus rubecula':'eurrob1',
+    'Parus major':'gretit1','Cyanistes caeruleus':'blutit',
+    'Passer domesticus':'houspa','Passer montanus':'eutspa',
+    'Fringilla coelebs':'comcha','Chloris chloris':'eurgre1',
+    'Carduelis carduelis':'eurgol','Prunella modularis':'dunnoc1',
+    'Troglodytes troglodytes':'winwre4','Sturnus vulgaris':'eursta',
+    'Pica pica':'eurmag1','Corvus monedula':'eurjac',
+    'Corvus corone':'carcro1','Corvus frugilegus':'rook1',
+    'Garrulus glandarius':'eurjay1','Columba palumbus':'cowpig1',
+    'Columba livia':'rocpig','Streptopelia decaocto':'eucdov',
+    'Dendrocopos major':'grswoo','Picus viridis':'eugwoo2',
+    'Sitta europaea':'eurnut2','Certhia brachydactyla':'shttre1',
+    'Aegithalos caudatus':'lottit1','Periparus ater':'coatit2',
+    'Poecile palustris':'martit2','Regulus regulus':'goldcr1',
+    'Turdus philomelos':'sonthr1','Turdus viscivorus':'misthr1',
+    'Turdus iliacus':'redwin','Turdus pilaris':'fieldf',
+    'Sylvia atricapilla':'blackc1','Phylloscopus collybita':'comchi1',
+    'Phylloscopus trochilus':'wlwwar','Cuculus canorus':'comcuc',
+    'Apus apus':'comswi','Hirundo rustica':'barswa',
+    'Delichon urbicum':'comhom1','Motacilla alba':'whiwag',
+    'Alauda arvensis':'skylar','Buteo buteo':'combuz1',
+    'Falco tinnunculus':'eurkes','Strix aluco':'tawowl1',
+    'Athene noctua':'litowl1','Asio otus':'loeowl','Tyto alba':'webowl1',
+    'Anas platyrhynchos':'mallar3','Ardea cinerea':'graher1',
+    'Gallinula chloropus':'commoo3','Fulica atra':'eurcoo',
+    'Larus argentatus':'euhgul1','Chroicocephalus ridibundus':'bkhgul',
+    'Anser anser':'gragoo','Branta canadensis':'cangoo','Cygnus olor':'mutswa',
+}
+_EBIRD_CODES.update({'Accipiter nisus': 'eurspa1', 'Pyrrhula pyrrhula': 'eurbul', 'Emberiza citrinella': 'yellow2', 'Coccothraustes coccothraustes': 'hawfin', 'Ciconia ciconia': 'whisto1', 'Motacilla flava': 'eaywag1', 'Linaria cannabina': 'eurlin1', 'Columba oenas': 'stodov1'})
+_EBIRD_CODES.update({'Haliaeetus albicilla': 'whteag', 'Alcedo atthis': 'comkin1', 'Sterna hirundo': 'comter', 'Pernis apivorus': 'euhbuz1', 'Circus aeruginosus': 'wemhar1'})
+assert len(_EBIRD_CODES) == len(_ROWS)
 from urllib.parse import quote
 from chirpecho.common.field_art import BIRD_ART
 
 SPECIES = tuple(dict(number=i,name=name,scientific=scientific,group='Western European birds',
                      note=BIRD_ART[i-1][6],
                      habitat='See the species profile for its habitat and range.',
-                     supported=True,source='https://www.gbif.org/species/search?q='+quote(scientific))
+                     supported=True,source='https://www.gbif.org/species/search?q='+quote(scientific),
+                     ebird_code=_EBIRD_CODES[scientific],
+                     ebird_url='https://ebird.org/species/'+_EBIRD_CODES[scientific]+'?continue')
                 for i,(scientific,name) in enumerate(_ROWS,1))
+
+# Collection rarity is a game mechanic, not a biological assessment.
+from chirpecho.common.rarity import rarity_for
+SPECIES = tuple(dict(item, rarity=rarity_for('bird', item['number'])) for item in SPECIES)

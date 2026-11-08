@@ -7,17 +7,17 @@ Can be run once as a scheduled task or continuously with ``--watch``. Each scan:
      recorder, so any .wav file found here is complete).
   2. Runs BatDetect2 on each one.
   3. For every detection above CONFIDENCE_THRESHOLD: generates a small
-     spectrogram PNG of just that call (with padding) and writes a row to
+     compact spectrogram of just that call (with padding) and writes a row to
      SQLite (timestamp, species, confidence, frequency range, png path).
   4. Deletes the original WAV after successful processing. Failed files are
      restored for a later retry.
 
 Environment variables:
     INCOMING_DIR       - where the recorder drops WAV chunks (default <project>/data/incoming)
-    DETECTIONS_DIR      - where spectrogram PNGs are written (default <project>/data/detections)
+    DETECTIONS_DIR      - where compact spectrograms are written (default <project>/data/detections)
     DB_PATH             - SQLite database file (default <project>/data/db/detections.sqlite3)
     CONFIDENCE_THRESHOLD- minimum class_prob to keep a detection (default 0.5)
-    SPECTROGRAM_PADDING_SECONDS - padding around each call for the PNG (default 0.5)
+    SPECTROGRAM_PADDING_SECONDS - padding around each call for the spectrogram (default 0.5)
     SCAN_INTERVAL_SECONDS - delay between scans in watch mode (default 10)
     LOG_LEVEL           - default INFO
 """
@@ -40,6 +40,9 @@ from pathlib import Path
 
 from chirpecho.common.runtime import ROOT, DEFAULT_AUDIO_DIR, configure_logging, write_status as publish_status
 from chirpecho.common.storage import init_archive_schema, manage_archive
+from chirpecho.common.notifications import init_notifications, queue_discovery, deliver_pending
+from chirpecho.common.spectrograms import save_audio_spectrum, migrate_legacy, restore_legacy_axes
+from chirpecho.common.audio_archive import retain_detection_audio, prune_audio
 
 # Set limits before importing numerical libraries and PyTorch.
 os.environ.setdefault('OMP_NUM_THREADS', os.environ.get('DETECTOR_THREADS', '2'))
@@ -47,10 +50,6 @@ os.environ.setdefault('OPENBLAS_NUM_THREADS', '1')
 
 import numpy as np
 import soundfile as sf
-import matplotlib
-matplotlib.use("Agg")  # headless - no display is needed to render PNG files
-import matplotlib.pyplot as plt
-from scipy import signal
 
 ENGINE = os.environ.get('DETECTOR_ENGINE', 'bat')
 COMPONENT = 'chirp_detector' if ENGINE == 'bird' else 'detector'
@@ -74,6 +73,7 @@ PROJECT_DIR = str(ROOT)
 DATA_DIR = os.path.join(PROJECT_DIR, "data")
 INCOMING_DIR = os.environ.get("INCOMING_DIR", str(DEFAULT_AUDIO_DIR))
 DETECTIONS_DIR = os.environ.get("DETECTIONS_DIR", os.path.join(DATA_DIR, "detections"))
+AUDIO_ARCHIVE_DIR = os.environ.get('AUDIO_ARCHIVE_DIR', os.path.join(DETECTIONS_DIR, 'audio'))
 DB_PATH = os.environ.get("DB_PATH", os.path.join(DATA_DIR, "db", "detections.sqlite3"))
 CONFIDENCE_THRESHOLD = float(os.environ.get("CONFIDENCE_THRESHOLD", "0.5"))
 DETECTION_THRESHOLD = float(os.environ.get('DETECTION_THRESHOLD', '0.3'))
@@ -127,6 +127,7 @@ def init_db():
                  '(source_file TEXT PRIMARY KEY, attempts INTEGER NOT NULL)')
     conn.commit()
     init_archive_schema(conn)
+    init_notifications(conn, ENGINE)
     return conn
 
 
@@ -142,6 +143,7 @@ def insert_detection(conn, row: dict):
         """,
         row,
     )
+    queue_discovery(conn, row, ENGINE)
 
 
 # ---------------------------------------------------------------------------
@@ -168,32 +170,9 @@ def chunk_start_time(filepath: str) -> dt.datetime:
 # Spectrogram generation
 # ---------------------------------------------------------------------------
 
-def save_spectrogram_png(audio: np.ndarray, fs: int, out_path: str,
-                          start_time: float, end_time: float):
-    """Render a spectrogram of the given audio segment and save as PNG.
-    start_time/end_time are only used as axis labels (seconds within the
-    padded segment), not for slicing - audio passed in is already the
-    padded segment."""
-    freqs, times, sxx = signal.spectrogram(
-        audio, fs=fs, nperseg=min(512, len(audio)),
-        noverlap=min(256, len(audio) // 2), scaling="spectrum"
-    )
-    # Avoid log(0) warnings/artifacts in quiet bins.
-    sxx_db = 10 * np.log10(sxx + 1e-12)
-
-    fig, ax = plt.subplots(figsize=(6, 3), dpi=80)
-    # imshow avoids constructing thousands of mesh polygons per call.
-    ax.imshow(sxx_db, origin='lower', aspect='auto', cmap='magma',
-              extent=(0, len(audio) / fs, 0, fs / 2000), interpolation='nearest')
-    ax.set_ylabel("Frequency (kHz)")
-    ax.set_xlabel("Time (s)")
-    ax.set_ylim(0, min(fs / 2, float(os.environ.get('SPECTROGRAM_MAX_HZ', '120000'))) / 1000.0)
-    ax.axvspan(start_time, end_time, color="white", alpha=0.15)  # highlight the call
-    try:
-        fig.tight_layout()
-        fig.savefig(out_path)
-    finally:
-        plt.close(fig)
+def save_spectrogram_data(audio, fs, out_path, start_time, end_time, window_start_at=None):
+    return save_audio_spectrum(audio, fs, out_path, start_time, end_time,
+                               float(os.environ.get('SPECTROGRAM_MAX_HZ', '120000')), window_start_at)
 
 
 # ---------------------------------------------------------------------------
@@ -212,7 +191,7 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
                     (source_file,)).fetchone():
         Path(filepath).unlink(missing_ok=True)
         return True
-    # Pause before generating PNGs when the disk reserve is exhausted.
+    # Pause before generating spectrograms when the disk reserve is exhausted.
     if shutil.disk_usage(DETECTIONS_DIR).free < int(os.environ.get('MIN_FREE_MB', '1024')) * 1024 ** 2:
         raise OSError('Disk reserve reached; detector paused')
     started = time.monotonic()
@@ -255,7 +234,8 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
 
         os.makedirs(DETECTIONS_DIR, exist_ok=True)
 
-        created_pngs = []
+        created_spectra = []
+        saved_detection = False
         try:
             for ann in kept:
                 call_start = max(0.0, float(ann["start_time"]))
@@ -276,13 +256,14 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
                 detection_id = hashlib.sha256(
                     f'{source_file}:{ann["start_time"]}:{ann["end_time"]}:{ann.get("class")}'.encode()
                 ).hexdigest()[:32]
-                png_path = os.path.join(DETECTIONS_DIR, f"{detection_id}.png")
+                png_path = os.path.join(DETECTIONS_DIR, f"{detection_id}.spec")
 
-                created_pngs.append(png_path)
-                save_spectrogram_png(
+                created_spectra.append(png_path)
+                save_spectrogram_data(
                     segment, fs, png_path,
                     start_time=call_start - seg_start,
                     end_time=call_end - seg_start,
+                    window_start_at=(chunk_start + dt.timedelta(seconds=seg_start)).isoformat(),
                 )
 
                 detected_at = chunk_start + dt.timedelta(seconds=call_start)
@@ -299,13 +280,14 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
                     "source_file": os.path.basename(filepath).removesuffix(".processing"),
                     "created_at": dt.datetime.now().astimezone().isoformat(),
                 })
+                saved_detection = True
                 log.info(
                     "  -> detection: %s conf=%.2f at %s",
                     ann.get("class", "unknown"), ann.get("class_prob", 0.0), detected_at.isoformat(),
                 )
         except Exception as e:
             conn.rollback()
-            for png_path in created_pngs:
+            for png_path in created_spectra:
                 try:
                     os.remove(png_path)
                 except OSError:
@@ -322,7 +304,9 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
     conn.commit()
     log.info('processed %s in %.2fs', source_file, time.monotonic() - started)
     write_status('detector', state='ready', last_processing_seconds=round(time.monotonic() - started, 2))
-    # Audio is not retained after a successful classification attempt.
+    # Preserve a detected source recording for review, then remove the RAM copy.
+    if kept and saved_detection:
+        retain_detection_audio(filepath, AUDIO_ARCHIVE_DIR, source_file)
     try:
         os.remove(filepath)
     except OSError as e:
@@ -339,6 +323,11 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
 
 def scan_once(conn: sqlite3.Connection, stopping=lambda: False):
     """Claim and process every completed WAV currently in the inbox."""
+    deliver_pending(conn)
+    prune_audio(AUDIO_ARCHIVE_DIR)
+    converted, _ = migrate_legacy(conn, DETECTIONS_DIR)
+    if converted:
+        restore_legacy_axes(conn, DETECTIONS_DIR, ENGINE)
     manage_archive(conn, DETECTIONS_DIR)
     ttl = int(os.environ.get('AUDIO_BUFFER_TTL_SECONDS', '600'))
     for path in Path(INCOMING_DIR).rglob('*'):
@@ -440,6 +429,7 @@ def main(argv=None):
     except BlockingIOError:
         raise SystemExit('Another detector already owns this inbox')
     conn = init_db()
+    restore_legacy_axes(conn, DETECTIONS_DIR, ENGINE)
     if ENGINE == 'bird':
         write_status(COMPONENT, state='loading_model')
         model_api = BirdAPI()

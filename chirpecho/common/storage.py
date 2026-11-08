@@ -1,4 +1,4 @@
-"""Reclaim PNG files while retaining every detection row and a durable audit trail."""
+"""Reclaim spectrogram files while retaining every detection row and a durable audit trail."""
 import datetime as dt
 import logging
 import os
@@ -85,5 +85,5 @@ def manage_archive(conn, directory):
                 queue_image(conn, row, 'disk pressure')
                 removed += drain_queue(conn, directory)
     if removed:
-        log.info('Reclaimed %d PNGs; detection metadata retained', removed)
+        log.info('Reclaimed %d spectrograms; detection metadata retained', removed)
     return removed
