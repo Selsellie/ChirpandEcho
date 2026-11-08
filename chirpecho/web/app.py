@@ -17,6 +17,7 @@ from flask import Flask, abort, jsonify, redirect, render_template, request, sen
 from chirpecho.echo.catalogue import SPECIES, LABELS, normalize_label
 from chirpecho.chirp.catalogue import SPECIES as BIRD_SPECIES
 from chirpecho.web.portraits import profile
+from chirpecho.web.collection import collection_history, weekly_report, milestone_report
 from chirpecho.common.rarity import TIERS
 from chirpecho.web.i18n import language, language_return_url, localize_html, safe_return_url, translate
 
@@ -42,21 +43,40 @@ def selected_rarity():
     return value
 
 
+def selected_collection_kind():
+    default = 'bat' if request.cookies.get('wildlife-mode') == 'echo' else 'bird'
+    kind = request.args.get('kind', default)
+    if kind == 'all':
+        kind = default
+    if kind not in ('bird', 'bat'):
+        abort(400)
+    return kind
+
+
 @app.context_processor
 def listening_mode():
     bird = request.path == '/chirp' or request.path.startswith('/chirp/')
-    shared = request.path in ('/status', '/artwork')
+    shared = request.path in ('/status', '/artwork', '/calendar', '/milestones')
     selected_bird = bird or (shared and request.cookies.get('wildlife-mode') == 'chirp')
+    if request.path == '/artwork':
+        selected_bird = selected_collection_kind() == 'bird'
     tail = request.path.rstrip('/').split('/')[-1]
     section = tail if tail in ('species', 'logs') else ''
-    paths = dict(overview='/', species='/species', artwork='/artwork', logs='/logs', health='/status')
-    return dict(mode='shared' if shared else 'chirp' if bird else 'echo',
+    paths = dict(overview='/', species='/species', artwork='/artwork', logs='/logs', health='/status', calendar='/calendar', milestones='/milestones')
+    chirp_url = '/chirp' + ('/' + section if section else '')
+    echo_url = '/' + section
+    if request.path == '/artwork':
+        filters = {key: request.args[key] for key in ('q', 'lang') if key in request.args}
+        endpoint = 'artwork'
+        chirp_url = url_for(endpoint, kind='bird', **filters)
+        echo_url = url_for(endpoint, kind='bat', **filters)
+    return dict(active_wildlife_mode='chirp' if selected_bird else 'echo',
+                mode='shared' if shared else 'chirp' if bird else 'echo',
                 bird=bird, timezone=ZONE.key, language=language(), language_return=language_return_url(),
                 mode_name='System' if shared else 'Chirp' if bird else 'Echo',
                 navigation={key: '/chirp' + (value if value != '/' else '') if selected_bird and key in ('overview', 'species', 'logs') else value
                             for key, value in paths.items()},
-                chirp_url='/chirp' + ('/' + section if section else ''),
-                echo_url='/' + section)
+                chirp_url=chirp_url, echo_url=echo_url)
 
 
 @app.post('/language')
@@ -84,6 +104,9 @@ def translate_page(response):
 
 @app.after_request
 def remember_wildlife_mode(response):
+    if request.path == '/artwork' and response.status_code == 200:
+        response.set_cookie('wildlife-mode', 'chirp' if selected_collection_kind() == 'bird' else 'echo',
+                            max_age=365 * 24 * 3600, httponly=True, samesite='Lax')
     if request.path in ('/', '/species', '/chirp', '/chirp/species', '/logs', '/chirp/logs') and response.status_code == 200:
         response.set_cookie('wildlife-mode', 'chirp' if request.path.startswith('/chirp') else 'echo',
                             max_age=365 * 24 * 3600, httponly=True, samesite='Lax')
@@ -116,6 +139,7 @@ def query(sql, parameters=(), database=None):
         return []
     conn = sqlite3.connect(Path(database).resolve().as_uri() + '?mode=ro', uri=True, timeout=5)
     conn.row_factory = sqlite3.Row
+    conn.create_function('local_day', 1, lambda value: local_time(value).date().isoformat() if local_time(value) else None)
     conn.create_function('local_hour', 1, lambda value: local_time(value).hour if local_time(value) else 0)
     try:
         return [dict(row) for row in conn.execute(sql, parameters).fetchall()]
@@ -433,10 +457,13 @@ def species_guide():
     rows = query('SELECT species, COUNT(*) AS calls, MIN(detected_at) AS first, '
                  'MAX(detected_at) AS last, MAX(confidence) AS best FROM detections GROUP BY species')
     unmatched = 0
+    pending_species = []
     for row in rows:
         number = labels.get(normalize_label(row['species']))
         if number is None:
             unmatched += row['calls']
+            if bird:
+                pending_species.append(dict(row, profile=profile(row['species'], True)))
             continue
         item = entries[number]
         item['calls'] += row['calls']
@@ -452,7 +479,7 @@ def species_guide():
                and (collection == 'all' or (item['calls'] > 0) == (collection == 'recorded'))
                and (rarity_filter == 'all' or item['rarity']['key'] == rarity_filter)]
     return render_template('index.html', tab='species', catalogue=visible, catalogue_total=len(catalogue),
-                           recorded=recorded, unmatched=unmatched, search=search, collection=collection, rarity_filter=rarity_filter,
+                           recorded=recorded, unmatched=unmatched, pending_species=pending_species, search=search, collection=collection, rarity_filter=rarity_filter,
                            recorder=pipeline_status('chirp_recorder' if bird else 'recorder'), detector=pipeline_status('chirp_detector' if bird else 'detector'),
                            now=dt.datetime.now(ZONE))
 
@@ -460,9 +487,7 @@ def species_guide():
 @app.get('/artwork')
 def artwork():
     search = request.args.get('q', '').strip()[:100]
-    kind = request.args.get('kind', 'all')
-    if kind not in ('all', 'bird', 'bat'):
-        abort(400)
+    kind = selected_collection_kind()
     entries = []
     for group, catalogue in [('bird', BIRD_SPECIES), ('bat', SPECIES)]:
         for item in catalogue:
@@ -472,7 +497,7 @@ def artwork():
                 continue
             entries.append(dict(item, kind=group, creature=profile(item['name'], group == 'bird')))
     return render_template('index.html', tab='artwork', artwork_entries=entries,
-                           artwork_total=len(BIRD_SPECIES)+len(SPECIES), search=search, artwork_kind=kind,
+                           artwork_total=len(BIRD_SPECIES if kind == 'bird' else SPECIES), search=search, artwork_kind=kind,
                            recorder=pipeline_status('recorder'), detector=pipeline_status('detector'),
                            now=dt.datetime.now(ZONE))
 
@@ -505,6 +530,59 @@ def metrics():
             '# TYPE batsdropping_disk_used_ratio gauge\n'
             f'batsdropping_disk_used_ratio {storage_status()["used_percent"] / 100}\n',
             200, {'Content-Type': 'text/plain; version=0.0.4'})
+
+
+
+def collection_databases():
+    return {'bird': BIRD_DB_PATH, 'bat': DB_PATH}
+
+
+@app.get('/calendar')
+def calendar():
+    now = dt.datetime.now(ZONE)
+    try:
+        requested = dt.date.fromisoformat(request.args.get('week', now.date().isoformat()))
+        start = requested - dt.timedelta(days=requested.weekday())
+        # Keep navigation dates inside the supported date range.
+        previous, following = start - dt.timedelta(days=7), start + dt.timedelta(days=7)
+        selected_day = dt.date.fromisoformat(request.args.get('day', requested.isoformat()))
+        if not start <= selected_day < following:
+            selected_day = start
+    except (ValueError, OverflowError):
+        abort(400)
+    history = collection_history(query, collection_databases())
+    report = weekly_report(history, start, selected_day)
+    hourly, events = {'bird': [0] * 24, 'bat': [0] * 24}, []
+    for kind, database in collection_databases().items():
+        for row in query('SELECT local_hour(detected_at) AS hour, COUNT(*) AS calls FROM detections '
+                         'WHERE local_day(detected_at)=? GROUP BY hour',
+                         (selected_day.isoformat(),), database=database):
+            hourly[kind][row['hour']] = row['calls']
+        for row in query('SELECT * FROM detections '
+                         'WHERE local_day(detected_at)=? ORDER BY julianday(detected_at) DESC LIMIT 30',
+                         (selected_day.isoformat(),), database=database):
+            audio = archive_audio_path(row, kind == 'bird')
+            spectrum = Path(row['png_path']).resolve() if row.get('png_path') else None
+            directory = Path(BIRD_DETECTIONS_DIR if kind == 'bird' else DETECTIONS_DIR).resolve()
+            events.append(dict(row, kind=kind, profile=profile(row['species'], kind == 'bird'),
+                               instant=local_time(row['detected_at']).timestamp(),
+                               audio_available=bool(audio and audio.is_file()),
+                               has_image=bool(spectrum and spectrum.parent == directory and spectrum.is_file())))
+    events.sort(key=lambda row: row['instant'], reverse=True)
+    peak = max(1, *hourly['bird'], *hourly['bat'])
+    return render_template('index.html', tab='calendar', report=report, start=start,
+                           week_end=following - dt.timedelta(days=1), previous=previous,
+                           following=following, selected_day=selected_day, hourly=hourly,
+                           timeline_peak=peak, events=events[:30], now=now,
+                           recorder=pipeline_status('recorder'), detector=pipeline_status('detector'))
+
+
+@app.get('/milestones')
+def milestones():
+    history = collection_history(query, collection_databases())
+    return render_template('index.html', tab='milestones', achievements=milestone_report(history),
+                           now=dt.datetime.now(ZONE), recorder=pipeline_status('recorder'),
+                           detector=pipeline_status('detector'))
 
 
 if __name__ == '__main__':

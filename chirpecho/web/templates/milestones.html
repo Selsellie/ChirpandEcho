@@ -1,0 +1,31 @@
+<section class="heading"><div><span class="eyebrow">Your growing collection</span><h1>Milestones.</h1><p class="muted">Collect familiar faces. Complete a set. Discover your next favourite.</p></div><a class="field-link" href="{{ navigation.calendar }}">Explore the calendar →</a></section>
+<section class="stats milestone-stats" aria-label="Collection progress">
+  <article class="card stat accent"><div class="stat-label">Achievements unlocked</div><div class="stat-number">{{ achievements.unlocked }} <span>/ {{ achievements.total }}</span></div><div class="stat-note">A little closer with every discovery</div></article>
+  <article class="card stat"><div class="stat-label">Species collected</div><div class="stat-number">{{ achievements.species }}</div><div class="stat-note">Birds and bats combined</div></article>
+  <article class="card stat"><div class="stat-label">Longest streak</div><div class="stat-number">{{ achievements.longest }} <span>days</span></div><div class="stat-note">Consecutive days with activity</div></article>
+</section>
+{% for category in achievements.categories %}
+<section class="milestone-section" aria-labelledby="milestone-section-{{ loop.index }}">
+  <div class="section-top milestone-section-heading"><h2 id="milestone-section-{{ loop.index }}">{{ category.title }}</h2><span class="small muted">{{ category.cards|selectattr('unlocked')|list|length }} / {{ category.cards|length }} unlocked</span></div>
+  {% if category.title in ('Bird collecting sets', 'Bat collecting sets') %}<p class="muted small">{{ 'A few feathered friends that belong together. Open a checklist to see who is still missing.' if category.kind == 'bird' else 'Meet the night shift. Open a checklist to see which bats are still missing.' }}</p>{% endif %}
+  <div class="milestone-grid">
+    {% for item in category.cards %}
+    <article class="card milestone-card {{ 'unlocked' if item.unlocked else 'locked' }}" id="{{ item.id }}">
+      <div class="milestone-art scene-{{ loop.index0 % 4 }}">
+        <span class="milestone-state">{{ '✓ Unlocked' if item.unlocked else 'In progress' }}</span>
+        <div class="milestone-portraits portraits-{{ item.artwork|length }}" aria-hidden="true">
+          {% for creature in item.artwork %}<img src="{{ url_for('static', filename='species/' + creature.portrait + '-pokemon.webp', v=creature.portrait_version) }}" alt="" width="300" height="200" loading="lazy">{% endfor %}
+        </div>
+      </div>
+      <div class="milestone-body">
+        <h3>{{ item.title }}</h3><p>{{ item.description }}</p>
+        <div class="milestone-progress-label"><span>{{ '{:,}'.format([item.value, item.target]|min) }} / {{ '{:,}'.format(item.target) }}</span><strong>{{ 'Completed' if item.unlocked else ('%.0f'|format(item.percent) ~ '%') }}</strong></div>
+        <div class="milestone-meter" role="progressbar" aria-label="{{ item.title }}" aria-valuemin="0" aria-valuemax="{{ item.target }}" aria-valuenow="{{ [item.value, item.target]|min }}"><span style="width:{{ item.percent }}%"></span></div>
+        {% if item.members %}<details class="milestone-checklist"><summary>See the species <span>{{ item.value }} / {{ item.target }}</span></summary><ul>{% for member in item.members %}<li class="{{ 'collected' if member.recorded else '' }}"><span class="checklist-check" aria-label="{{ 'Recorded' if member.recorded else 'Not recorded yet' }}">{{ '✓' if member.recorded else '○' }}</span><a href="{{ url_for('chirp_species' if item.kind == 'bird' else 'species_guide') }}#bat-{{ member.profile.number }}">{{ member.profile.name }}</a></li>{% endfor %}</ul></details>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+<p class="collection-footnote">Collecting sets are playful themes from the catalogue. Each species counts once, even if it has been recorded many times. Milestones use retained automatic predictions; deleting observations can change progress.</p>

@@ -121,6 +121,11 @@ def init_db():
         "CREATE INDEX IF NOT EXISTS idx_detections_species "
         "ON detections(species)"
     )
+    columns = {row[1] for row in conn.execute('PRAGMA table_info(detections)')}
+    for name, kind in [('identification_model', 'TEXT'), ('sample_rate_hz', 'INTEGER'),
+                       ('call_duration_seconds', 'REAL')]:
+        if name not in columns:
+            conn.execute(f'ALTER TABLE detections ADD COLUMN {name} {kind}')
     conn.execute('CREATE TABLE IF NOT EXISTS processed_files '
                  '(source_file TEXT PRIMARY KEY, processed_at TEXT NOT NULL)')
     conn.execute('CREATE TABLE IF NOT EXISTS failed_files '
@@ -136,10 +141,12 @@ def insert_detection(conn, row: dict):
         """
         INSERT INTO detections
             (id, detected_at, species, confidence, det_prob,
-             low_freq_hz, high_freq_hz, png_path, source_file, created_at)
+             low_freq_hz, high_freq_hz, png_path, source_file, created_at,
+             identification_model, sample_rate_hz, call_duration_seconds)
         VALUES
             (:id, :detected_at, :species, :confidence, :det_prob,
-             :low_freq_hz, :high_freq_hz, :png_path, :source_file, :created_at)
+             :low_freq_hz, :high_freq_hz, :png_path, :source_file, :created_at,
+             :identification_model, :sample_rate_hz, :call_duration_seconds)
         """,
         row,
     )
@@ -270,6 +277,9 @@ def process_file(filepath: str, conn: sqlite3.Connection) -> bool:
 
                 insert_detection(conn, {
                     "id": detection_id,
+                    "identification_model": "BirdNET 2.4" if ENGINE == "bird" else "BatDetect2",
+                    "sample_rate_hz": fs,
+                    "call_duration_seconds": call_end - call_start,
                     "detected_at": detected_at.isoformat(),
                     "species": ann.get("class") or "unknown",
                     "confidence": float(ann.get("class_prob", 0.0)),
@@ -433,7 +443,7 @@ def main(argv=None):
     if ENGINE == 'bird':
         write_status(COMPONENT, state='loading_model')
         model_api = BirdAPI()
-        log.info('BirdNET 2.4 ready: %d Western European bird species', len(model_api.allowed))
+        log.info('BirdNET 2.4 ready: %d bird labels (including birds outside the catalogue)', len(model_api.allowed))
     recover_interrupted()
 
     stopping = False

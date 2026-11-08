@@ -15,6 +15,12 @@ def profile(label, bird=False):
     if not entry and not bird:
         entry = next((item for item in entries if item['number'] == LABELS.get(key)), None)
     result = dict(entry) if entry else dict(name=label, scientific='', number=None, group='Bird' if bird else 'Bat', note='This prediction is outside the starter field guide. Explore its spectrogram and review the identification.', habitat='Not available in the starter guide.')
+    result['in_catalogue'] = entry is not None
+    if bird and not entry:
+        scientific, separator, common = label.partition('_')
+        if separator:
+            result.update(name=common, scientific=scientific)
+        result['note'] = 'BirdNET prediction outside the Bird Atlas. Review the identification and add this bird to the catalogue.'
     result['artwork'] = 'Stylised species portrait'
     result['portrait'] = ('bird' if bird else 'bat') + '-%03d' % result['number'] if result['number'] else None
     result['portrait_version'] = _VERSIONS.get(result['portrait'], '')

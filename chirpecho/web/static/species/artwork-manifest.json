@@ -649,5 +649,12 @@
     "width": 1200,
     "height": 800,
     "sha256": "c5f6e2cd4277dd4229a91ce9570e7aa9a88932efa9d95639385f66ddd9455f43"
+  },
+  "bird-070": {
+    "source": "exec-a8b39ff5-1c4b-4476-8d25-8f7b7a545462.png",
+    "file": "bird-070-pokemon.webp",
+    "width": 1200,
+    "height": 1097,
+    "sha256": "0d624d05316bac6c2222ac6cbdae61c26f5c518c10987aa57195a3d1d2639735"
   }
 }

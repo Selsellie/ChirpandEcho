@@ -5,6 +5,7 @@ import numpy as np
 import soundfile as sf
 from scipy.special import expit
 from chirpecho.chirp.catalogue import SPECIES
+from chirpecho.chirp.labels import bird_labels
 
 
 class BirdAPI:
@@ -19,8 +20,8 @@ class BirdAPI:
         self.input=next(item for item in inputs if tuple(item['shape'])==(1,144000))
         self.output=next(item for item in outputs if int(item['shape'][-1])==len(self.labels))
         names={entry['scientific']:entry['name'] for entry in SPECIES}
-        self.allowed={i:names[label.split('_',1)[0]] for i,label in enumerate(self.labels) if label.split('_',1)[0] in names}
-        if len(self.allowed)!=len(SPECIES):
+        self.allowed=bird_labels(self.labels)
+        if not set(names).issubset({label.split('_',1)[0] for label in self.labels}):
             missing=set(names)-{label.split('_',1)[0] for label in self.labels}
             raise ValueError('Bird catalogue has unsupported model labels: '+', '.join(sorted(missing)))
 

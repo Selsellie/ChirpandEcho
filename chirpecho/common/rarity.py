@@ -19,6 +19,7 @@ BIRD_TIERS = (
 )
 BIRD_TIERS += ('rare', 'rare', 'uncommon', 'epic', 'rare', 'uncommon', 'uncommon', 'uncommon')
 BIRD_TIERS += ('legendary', 'rare', 'rare', 'epic', 'rare')
+BIRD_TIERS += ('uncommon',)
 BAT_TIERS = (
     'common','uncommon','rare','uncommon','rare','uncommon',
     'uncommon','rare','rare','epic','legendary','legendary',

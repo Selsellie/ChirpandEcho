@@ -99,26 +99,64 @@ The Discord Secret is configured separately from the image and Git checkout.
 ## Recording retention and storage
 
 WAVs that produce a saved prediction are copied from the RAM buffer to each
-archive's `audio` directory on persistent storage. They expire after 24 hours.
+archive's `audio` directory on persistent storage. They have no age or archive-size
+limit. Under disk pressure, the oldest WAVs are removed first until the storage
+target is reached. Spectrogram cleanup also reclaims space; detection rows remain.
+The former `AUDIO_ARCHIVE_TTL_SECONDS` and `AUDIO_ARCHIVE_MAX_MB` settings are ignored.
 
 | Setting | Default | Purpose |
 | --- | --- | --- |
-| `AUDIO_ARCHIVE_TTL_SECONDS` | `86400` | Maximum clip age. |
-| `AUDIO_ARCHIVE_MAX_MB` | `512` | Per-pipeline cap; oldest clips may expire earlier. |
 | `AUDIO_BUFFER_TTL_SECONDS` | `600` | Pending/failed RAM buffer expiry. |
 | `MIN_FREE_MB` | `1024` | Free-space reserve. |
-| `STORAGE_HIGH_WATER_PERCENT` | `85` | Start spectrogram cleanup. |
+| `STORAGE_HIGH_WATER_PERCENT` | `85` | Start WAV/spectrogram cleanup. |
 | `STORAGE_LOW_WATER_PERCENT` | `80` | Cleanup target. |
 
 Recordings without saved predictions are discarded after processing. Pending
-audio in RAM can be lost during a restart or power failure. Spectrogram cleanup
-preserves detection metadata. Explicit encounter deletion removes the selected
+audio in RAM can be lost during a restart or power failure. WAV and spectrogram
+cleanup preserve detection metadata. Explicit encounter deletion removes the selected
 record, its spectrogram, and its WAV if no other encounter shares that recording.
 
 ## Dashboard
 
+The **Detection ledger** (observation register) includes **Listen** for available
+WAVs, the frequency range in Hz, identification model, sample rate, call duration,
+source recording filename and storage timestamp, alongside species, detection
+time and confidence. Echo also shows call probability. Chirp shows its three-second
+analysis window and 0–15000 Hz model band; this is not a measured bird-call
+frequency range.
+
+New detections store the model (BirdNET 2.4 or BatDetect2), sample rate and call
+duration. The worker adds these columns to existing databases at startup. Older
+rows show unavailable for missing values. **Listen** is available only while the
+WAV remains on disk; metadata remains visible after storage cleanup.
+
 Use **Logs** with the bird/bat switch to inspect each pipeline. **Health** shows
 both services and the **A lighter footprint** storage panel. The **Artwork** tab
 supports the same English/Dutch switch as the rest of the website.
+
+### Calendar and milestones
+
+The **Calendar** tab (`/calendar`) combines both archives into Monday–Sunday
+weekly reports, including first-time species, the most-heard species, and daily
+activity totals. Select a day to view bird and bat counts by local hour and its
+30 most recent encounters, using the same portrait cards and playback controls
+as Detections. The weekly report expands below the day view. Use the week arrows
+or “Choose another week” date picker to browse history.
+Dates use the website's configured `TZ` (Europe/Amsterdam by default); repeated
+hours during the autumn clock change are combined.
+
+The **Milestones** tab (`/milestones`) tracks 37 illustrated achievements across
+both collections. Twelve collecting sets cover tits, geese, owls, corvids,
+woodpeckers, finches, thrushes, daytime raptors, pigeons and doves, sparrows,
+waterside birds and aerial acrobats. Expand each checklist to see collected and
+missing species. Five bat sets cover pipistrelles, open-air hunters, Myotis,
+long-eared bats and horseshoe bats. Bat targets use only the 17 species supported
+by the bundled classifier. Listening goals track bird and bat progress separately.
+Calendar, Health and Milestones show a shared introduction without a species
+selector; both collections remain visible on those pages. Catalogue aliases count as one species.
+These pages calculate progress from retained prediction metadata, including
+existing records. Explicitly deleting encounters can change reports and milestone
+progress; clearing audio or spectrograms does not. No database migration is needed.
+Both tabs support English/Dutch and light/dark appearance.
 
 Back to the [README](README.md).

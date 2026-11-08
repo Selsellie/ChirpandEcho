@@ -71,11 +71,12 @@ def queue_discovery(conn, row, engine):
     from chirpecho.common.rarity import rarity_for
     entry = next((item for item in (BIRDS if bird else BATS) if item['scientific'] == key), None)
     rarity = entry['rarity'] if entry else rarity_for(engine)
+    catalogue_note = '\nNot in catalogue — needs to be added. Review the identification.' if bird and entry is None else ''
     payload = {
         'allowed_mentions': {'parse': []},
         'embeds': [{
             'title': '🐦 New bird species discovered!' if bird else '🦇 New bat species discovered!',
-            'description': f"**{name[:200]}**\n" + ('A new voice joins your bird collection!' if bird else 'A new night visitor joins your bat collection!'),
+            'description': f"**{name[:200]}**\n" + ('A new voice joins your bird collection!' if bird else 'A new night visitor joins your bat collection!') + catalogue_note,
             'color': int(rarity['color'][1:], 16),
             'fields': [
                 {'name': 'Type', 'value': 'Bird · Chirp' if bird else 'Bat · Echo', 'inline': True},

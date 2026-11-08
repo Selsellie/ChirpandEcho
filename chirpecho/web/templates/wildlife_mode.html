@@ -1,0 +1,7 @@
+<div class="wrap modebar">
+  <div><span class="eyebrow">One observatory. Two worlds.</span><p class="mode-description">{{ 'Birds and bats · Your listening diary' if tab == 'calendar' else 'Birds and bats · Observatory status' if tab == 'health' else 'Birds and bats · Your growing collection' if tab == 'milestones' else 'Birds · The daytime chorus' if active_wildlife_mode == 'chirp' else 'Bats · The night shift' }}</p></div>
+  {% if tab not in ('calendar', 'health', 'milestones') %}<nav class="mode-switch" aria-label="Wildlife mode">
+    <a href="{{ chirp_url }}" {% if active_wildlife_mode == 'chirp' %}aria-current="true"{% endif %}><span aria-hidden="true">☀</span> Chirp <small>Birds</small></a>
+    <a href="{{ echo_url }}" {% if active_wildlife_mode == 'echo' %}aria-current="true"{% endif %}><span aria-hidden="true">☾</span> Echo <small>Bats</small></a>
+  </nav>{% endif %}
+</div>

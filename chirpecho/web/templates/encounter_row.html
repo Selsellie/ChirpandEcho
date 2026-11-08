@@ -3,6 +3,7 @@
   <div class="encounter-art">{% include 'portrait.html' %}</div>
   <div class="encounter-details">
     <div class="encounter-name"><a href="{{ navigation.species }}{% if creature.number %}#bat-{{ creature.number }}{% endif %}">{{ creature.name }}</a><span class="rarity rarity-{{ creature.rarity.key }}" title="Collection game tier; not a measure of local rarity">{{ creature.rarity.stars }} {{ creature.rarity.label }}</span></div>
+    {% if bird and not creature.in_catalogue %}<p class="encounter-note"><strong>Not in catalogue — needs to be added</strong></p>{% endif %}
     <p class="encounter-note">{{ creature.note }}</p>
     <div class="encounter-facts"><time datetime="{{ detection.detected_at }}">{{ detection.detected_at|localdate }}</time><span>{{ '%.0f'|format(detection.confidence*100) }}% confidence</span></div>
   </div>

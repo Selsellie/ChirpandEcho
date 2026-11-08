@@ -1,7 +1,7 @@
 <section class="heading"><div><span class="eyebrow">The wildlife artwork collection</span><h1>Artwork</h1><p class="muted">Browse the full collection. Open an illustration to see it at full size.</p></div></section>
 <form class="filters" method="get" action="{{ navigation.artwork }}">
   <div class="search"><input type="search" name="q" value="{{ search }}" placeholder="Find a species…" aria-label="Search species"></div>
-  <select name="kind" aria-label="Wildlife mode">{% for value,label in [('all','Birds and bats'),('bird','Birds'),('bat','Bats')] %}<option value="{{ value }}" {% if artwork_kind==value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select>
+  <input type="hidden" name="kind" value="{{ artwork_kind }}">
   <button class="filter-button" type="submit">Apply filters</button><span class="result-count">{{ artwork_entries|length }} / {{ artwork_total }} species shown</span>
 </form>
 <div class="gallery artwork-gallery">{% for item in artwork_entries %}<article class="card artwork-card" data-kind="{{ item.kind }}">

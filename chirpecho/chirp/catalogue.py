@@ -45,6 +45,7 @@ _ROWS = [
 ('Sterna hirundo', 'Common Tern'),
 ('Pernis apivorus', 'European Honey-buzzard'),
 ('Circus aeruginosus', 'Western Marsh Harrier'),
+('Anser albifrons', 'Greater White-fronted Goose'),
 ]
 
 # eBird species codes from the Cornell Lab's eBird taxonomy (v2026).
@@ -81,6 +82,7 @@ _EBIRD_CODES = {
 }
 _EBIRD_CODES.update({'Accipiter nisus': 'eurspa1', 'Pyrrhula pyrrhula': 'eurbul', 'Emberiza citrinella': 'yellow2', 'Coccothraustes coccothraustes': 'hawfin', 'Ciconia ciconia': 'whisto1', 'Motacilla flava': 'eaywag1', 'Linaria cannabina': 'eurlin1', 'Columba oenas': 'stodov1'})
 _EBIRD_CODES.update({'Haliaeetus albicilla': 'whteag', 'Alcedo atthis': 'comkin1', 'Sterna hirundo': 'comter', 'Pernis apivorus': 'euhbuz1', 'Circus aeruginosus': 'wemhar1'})
+_EBIRD_CODES['Anser albifrons'] = 'gwfgoo'
 assert len(_EBIRD_CODES) == len(_ROWS)
 from urllib.parse import quote
 from chirpecho.common.field_art import BIRD_ART

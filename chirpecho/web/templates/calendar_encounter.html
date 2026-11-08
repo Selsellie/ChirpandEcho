@@ -1,0 +1,14 @@
+{% set creature = event.profile %}
+<article class="card detection encounter">
+  <div class="encounter-art">{% include 'portrait.html' %}</div>
+  <div class="encounter-details">
+    <div class="encounter-name"><a href="{{ '/chirp' if event.kind == 'bird' else '/' }}?{{ {'q': event.species}|urlencode }}#archive">{{ creature.name }}</a><span class="rarity rarity-{{ creature.rarity.key }}">{{ creature.rarity.stars }} {{ creature.rarity.label }}</span></div>
+    <div class="encounter-facts"><time datetime="{{ event.detected_at }}">{{ event.detected_at|localdate('%H:%M:%S') }}</time><span>{{ 'Bird' if event.kind == 'bird' else 'Bat' }}</span><span>{{ '%.0f'|format(event.confidence*100) }}% confidence</span></div>
+    {% if not creature.in_catalogue %}<p class="encounter-note">Not in catalogue — needs to be added</p>{% endif %}
+  </div>
+  <div class="encounter-controls">
+    {% if event.has_image %}<a href="{{ url_for('chirp_spectrogram' if event.kind == 'bird' else 'spectrogram', detection_id=event.id) }}">Signal ↗</a>{% endif %}
+    {% if event.audio_available %}<details class="encounter-recording"><summary>Listen</summary><div class="audio-popover"><audio controls preload="none" src="{{ url_for('chirp_observation_audio' if event.kind == 'bird' else 'observation_audio', detection_id=event.id) }}" aria-label="Recording of {{ creature.name }}"></audio></div></details>{% endif %}
+    <a href="{{ '/chirp' if event.kind == 'bird' else '/' }}?{{ {'q': event.species}|urlencode }}#archive" aria-label="View detections for {{ creature.name }}">↗</a>
+  </div>
+</article>

@@ -61,6 +61,8 @@ BIRDS.extend([('Sperwer', 'Een behendige roofvogel met korte ronde vleugels en e
 
 BIRDS.extend([('Zeearend', 'Een enorme arend met brede gevingerde vleugels, een korte wigvormige witte staart, lichte kop en grote gele haaksnavel. Volwassen vogels hebben een donkerbruin lichaam en gele poten.'), ('IJsvogel', 'Een compacte waterjager met een felblauwe rug en vleugels, oranje borst, witte keel en wangvlek, korte staart en lange rechte donkere snavel.'), ('Visdief', 'Een slanke zeevogel met lichtgrijze rug, witte buik, zwarte kap, rode poten en rode snavel met zwarte punt. De vleugels zijn lang en spits en de staart is diep gevorkt.'), ('Wespendief', 'Een bosroofvogel met een kleine grijze duifachtige kop, slanke nek, lange gebandeerde staart en brede vleugels. Het mannetje heeft een bruine rug, lichte gebandeerde buik en gele ogen.'), ('Bruine kiekendief', 'Een moerasroofvogel met lange vleugels, lange staart en gele poten. Een volwassen vrouwtje is chocoladebruin met een opvallend roomkleurige kruin, keel en schoudervlekken.')])
 
+BIRDS.append(('Kolgans', 'Een grijsbruine gans met een witte bles rond de roze snavel en opvallende zwarte dwarsstrepen over de buik van volwassen vogels. Op oranje poten graast hij in open graslanden, waar groepen in de winter samenkomen.'))
+
 BATS = [
 ('Gewone dwergvleermuis','Een piepkleine vleermuis die vaak rond gebouwen jaagt. De roepen overlappen met die van andere dwergvleermuizen.'),
 ('Kleine dwergvleermuis','Een kleine dwergvleermuis die vaak bij water leeft. De roepen zijn doorgaans hoger dan die van de gewone dwergvleermuis.'),
