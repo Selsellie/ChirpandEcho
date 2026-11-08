@@ -46,6 +46,7 @@ _ROWS = [
 ('Pernis apivorus', 'European Honey-buzzard'),
 ('Circus aeruginosus', 'Western Marsh Harrier'),
 ('Anser albifrons', 'Greater White-fronted Goose'),
+('Anser brachyrhynchus', 'Pink-footed Goose'),
 ]
 
 # eBird species codes from the Cornell Lab's eBird taxonomy (v2026).
@@ -83,11 +84,30 @@ _EBIRD_CODES = {
 _EBIRD_CODES.update({'Accipiter nisus': 'eurspa1', 'Pyrrhula pyrrhula': 'eurbul', 'Emberiza citrinella': 'yellow2', 'Coccothraustes coccothraustes': 'hawfin', 'Ciconia ciconia': 'whisto1', 'Motacilla flava': 'eaywag1', 'Linaria cannabina': 'eurlin1', 'Columba oenas': 'stodov1'})
 _EBIRD_CODES.update({'Haliaeetus albicilla': 'whteag', 'Alcedo atthis': 'comkin1', 'Sterna hirundo': 'comter', 'Pernis apivorus': 'euhbuz1', 'Circus aeruginosus': 'wemhar1'})
 _EBIRD_CODES['Anser albifrons'] = 'gwfgoo'
+_EBIRD_CODES['Anser brachyrhynchus'] = 'pifgoo'
 assert len(_EBIRD_CODES) == len(_ROWS)
 from urllib.parse import quote
 from chirpecho.common.field_art import BIRD_ART
 
-SPECIES = tuple(dict(number=i,name=name,scientific=scientific,group='Western European birds',
+# Browsing groups for the field guide, rather than taxonomic ranks.
+_GENUS_GROUPS = {
+    'Anser': 'Geese and swans', 'Branta': 'Geese and swans', 'Cygnus': 'Geese and swans',
+    'Anas': 'Ducks',
+    'Buteo': 'Birds of prey', 'Falco': 'Birds of prey', 'Accipiter': 'Birds of prey',
+    'Haliaeetus': 'Birds of prey', 'Pernis': 'Birds of prey', 'Circus': 'Birds of prey',
+    'Strix': 'Owls', 'Athene': 'Owls', 'Asio': 'Owls', 'Tyto': 'Owls',
+    'Corvus': 'Crows and jays', 'Pica': 'Crows and jays', 'Garrulus': 'Crows and jays',
+    'Columba': 'Pigeons and doves', 'Streptopelia': 'Pigeons and doves',
+    'Dendrocopos': 'Woodpeckers', 'Picus': 'Woodpeckers',
+    'Apus': 'Swifts and swallows', 'Hirundo': 'Swifts and swallows', 'Delichon': 'Swifts and swallows',
+    'Larus': 'Gulls and terns', 'Chroicocephalus': 'Gulls and terns', 'Sterna': 'Gulls and terns',
+    'Ardea': 'Herons and storks', 'Ciconia': 'Herons and storks',
+    'Gallinula': 'Rails and coots', 'Fulica': 'Rails and coots',
+    'Cuculus': 'Cuckoos', 'Alcedo': 'Kingfishers',
+}
+
+SPECIES = tuple(dict(number=i,name=name,scientific=scientific,
+                     group=_GENUS_GROUPS.get(scientific.split()[0], 'Songbirds'),
                      note=BIRD_ART[i-1][6],
                      habitat='See the species profile for its habitat and range.',
                      supported=True,source='https://www.gbif.org/species/search?q='+quote(scientific),

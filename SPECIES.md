@@ -1,6 +1,6 @@
 # Species and collection rarity
 
-The collection contains 70 birds and 24 bats. Rarity is a fixed game tier,
+The collection contains 71 birds and 24 bats. Rarity is a fixed game tier,
 not a scientific measure of local occurrence or conservation status.
 
 ## Birds
@@ -77,6 +77,7 @@ not a scientific measure of local occurrence or conservation status.
 | #068 | European Honey-buzzard | *Pernis apivorus* | ★★★★ Epic | Included |
 | #069 | Western Marsh Harrier | *Circus aeruginosus* | ★★★ Rare | Included |
 | #070 | Greater White-fronted Goose | *Anser albifrons* | ★★ Uncommon | Included |
+| #071 | Pink-footed Goose | *Anser brachyrhynchus* | ★★★ Rare | Included |
 
 ## Bats
 

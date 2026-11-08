@@ -1,6 +1,6 @@
 # Wildlife character artwork
 
-The collection uses individual illustrations for 70 birds and 24 bats. The jay
+The collection uses individual illustrations for 71 birds and 24 bats. The jay
 and tawny owl previews approved by the owner are the style references. Their
 original WebP previews remain alongside the collection assets.
 
@@ -31,3 +31,12 @@ scientific identification drawings. Undiscovered cards use the same WebP artwork
 
 The mistle thrush and barn swallow were edited to remove an extra folded wing;
 both now have exactly two wings. Corrected artwork uses content-versioned URLs.
+
+## Pink-footed Goose (#071)
+
+Generated with the built-in image generation tool and saved as
+`chirpecho/web/static/species/bird-071-pokemon.webp`.
+
+Prompt:
+
+> Create one original creature-collecting game portrait for the Chirp & Echo bird atlas: a Pink-footed Goose (Anser brachyrhynchus). Crisp dark outlines, angular feather tufts, expressive confident pose and layered cel shading, Pokémon-inspired wildlife illustration. Full body three-quarter standing pose, both pink webbed feet fully visible, wings folded naturally. Accurate distinguishing plumage: dark chocolate brown head and relatively short neck, pale grey back with layered pale-edged feathers, buff pale unbarred breast and belly, white tail edge. Short dark black bill with a distinct pink band across the middle. No white forehead patch and no black belly bars. Plenty of transparent margin around all extremities. One animal on genuinely transparent background; no scenery, gradient, glow, cast shadow, text, border or logo.

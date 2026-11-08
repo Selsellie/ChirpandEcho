@@ -383,8 +383,8 @@ TEXT.update({'Collect familiar faces. Complete a set. Discover your next favouri
  'Collect all five tits in this set, including the long-tailed tit.': 'Verzamel alle vijf mezen uit deze '
                                                                       'set, inclusief de staartmees.',
  'Goose parade': 'Ganzenparade',
- 'Collect the greylag, Canada and greater white-fronted goose.': 'Verzamel de grauwe gans, Canadese gans en '
-                                                                 'kolgans.',
+ 'Collect the greylag, Canada, greater white-fronted and pink-footed goose.':
+     'Verzamel de grauwe gans, Canadese gans, kolgans en kleine rietgans.',
  'Owl patrol': 'Uilenpatrouille',
  'Collect the tawny, little, long-eared and barn owl.': 'Verzamel de bosuil, steenuil, ransuil en kerkuil.',
  'The crow crew': 'De kraaienbende',
@@ -510,6 +510,56 @@ TEXT.update({'Birds and bats · Your listening diary': 'Vogels en vleermuizen ·
  'Batlas explorer': 'Batlasverkenner',
  'Record all 17 bat species supported by the bundled classifier.': 'Leg alle 17 vleermuissoorten vast die '
                                                                    'het meegeleverde model kan herkennen.'})
+TEXT.update({'Not available': 'Niet beschikbaar',
+ 'starting': 'start op',
+ 'buffer_full': 'buffer vol',
+ 'stopped': 'gestopt',
+ 'idle': 'in rust',
+ 'error': 'fout',
+ 'Detection spectrogram for': 'Spectrogram van de waarneming van',
+ 'Chirp and Echo home': 'Chirp en Echo startpagina',
+ 'Detection summary': 'Overzicht van waarnemingen',
+ 'Selected legacy spectrogram': 'Geselecteerd oud spectrogram',
+ 'Detector starting': 'Detector start op',
+ 'Night watch': 'Nachtwacht',
+ '3 seconds · 0–15000 Hz model band': '3 seconden · modelbereik 0–15000 Hz',
+ 'confidence': 'zekerheid',
+ 'Dutch mammal species profiles': 'Nederlandse soortinformatie over zoogdieren',
+ 'and': 'en',
+ 'Detection database': 'Waarnemingendatabase',
+ 'The archive is readable.': 'Het archief is leesbaar.'})
+TEXT.update({'Species type': 'Soortgroep',
+ 'All species types': 'Alle soortgroepen',
+ 'Geese and swans': 'Ganzen en zwanen',
+ 'Ducks': 'Eenden',
+ 'Birds of prey': 'Roofvogels',
+ 'Owls': 'Uilen',
+ 'Crows and jays': 'Kraaien en gaaien',
+ 'Pigeons and doves': 'Duiven',
+ 'Woodpeckers': 'Spechten',
+ 'Swifts and swallows': 'Gierzwaluwen en zwaluwen',
+ 'Gulls and terns': 'Meeuwen en sterns',
+ 'Herons and storks': 'Reigers en ooievaars',
+ 'Rails and coots': 'Rallen en koeten',
+ 'Cuckoos': 'Koekoeken',
+ 'Kingfishers': 'IJsvogels',
+ 'Songbirds': 'Zangvogels',
+ 'Try another name, species type, rarity, or collection status. Your collection grows when qualifying predictions are saved.': 'Probeer '
+                                                                                                                               'een '
+                                                                                                                               'andere '
+                                                                                                                               'naam, '
+                                                                                                                               'soortgroep, '
+                                                                                                                               'zeldzaamheid '
+                                                                                                                               'of '
+                                                                                                                               'collectiestatus. '
+                                                                                                                               'Je '
+                                                                                                                               'collectie '
+                                                                                                                               'groeit '
+                                                                                                                               'als '
+                                                                                                                               'passende '
+                                                                                                                               'voorspellingen '
+                                                                                                                               'worden '
+                                                                                                                               'opgeslagen.'})
 for english, dutch in zip(BIRDS+BATS,DUTCH_BIRDS+DUTCH_BATS,strict=True):
     TEXT[english['name']]=dutch[0]
     TEXT[english['note']]=dutch[1]
@@ -535,7 +585,7 @@ class DutchHTML(HTMLParser):
     HUMAN_ATTRIBUTES={'alt','title','placeholder','aria-label','data-species'}
     RAW={'script','style','pre','code','kbd','samp'}
     def __init__(self):
-        super().__init__(convert_charrefs=False)
+        super().__init__(convert_charrefs=True)
         self.parts=[];self.raw=[]
     def start(self,tag,attrs,ending):
         values=[]
@@ -550,7 +600,11 @@ class DutchHTML(HTMLParser):
     def handle_endtag(self,tag):
         self.parts.append('</'+tag+'>')
         if self.raw and self.raw[-1]==tag:self.raw.pop()
-    def handle_data(self,value):self.parts.append(value if self.raw else html.escape(translate(value),quote=False))
+    def handle_data(self,value):
+        if self.raw and self.raw[-1] in ('script', 'style'):
+            self.parts.append(value)
+        else:
+            self.parts.append(html.escape(value if self.raw else translate(value), quote=False))
     def handle_entityref(self,name):self.parts.append('&'+name+';')
     def handle_charref(self,name):self.parts.append('&#'+name+';')
     def handle_comment(self,data):self.parts.append('<!--'+data+'-->')

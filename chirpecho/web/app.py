@@ -316,8 +316,20 @@ def index():
         audio_dir = BIRD_AUDIO_ARCHIVE_DIR if bird else ECHO_AUDIO_ARCHIVE_DIR
         audio_name = Path(row.get('source_file') or '').name
         row['audio_available'] = bool(audio_name and (Path(audio_dir) / audio_name).is_file())
-    species = query('SELECT species, COUNT(*) AS calls, AVG(confidence) AS confidence '
-                    'FROM detections GROUP BY species ORDER BY calls DESC LIMIT 8')
+    # Resolve historical model labels against the current catalogue before
+    # ranking visitors, so adding a species also updates existing records.
+    visitors = {}
+    for row in query('SELECT species, COUNT(*) AS calls, AVG(confidence) AS confidence '
+                     'FROM detections GROUP BY species'):
+        creature = profile(row['species'], bird)
+        key = creature['scientific'] or creature['name']
+        visitor = visitors.setdefault(key, dict(species=creature['name'], calls=0, confidence=0))
+        visitor['calls'] += row['calls']
+        visitor['confidence'] += (row['confidence'] or 0) * row['calls']
+    for visitor in visitors.values():
+        visitor['confidence'] /= visitor['calls']
+    species = sorted(visitors.values(), key=lambda item: (-item['calls'], item['species']))[:8]
+    stats['species_count'] = len(visitors)
     hourly_rows = query("SELECT local_hour(detected_at) AS hour, COUNT(*) AS calls FROM detections "
                         "WHERE datetime(detected_at)>=datetime('now','-1 day') GROUP BY hour")
     counts = {row['hour']: row['calls'] for row in hourly_rows}
@@ -452,6 +464,12 @@ def species_guide():
         abort(400)
     bird = request.path.startswith('/chirp')
     catalogue = BIRD_SPECIES if bird else SPECIES
+    group_options = {item['group'].lower().replace(' ', '-'): item['group'] for item in catalogue}
+    group_options = dict(sorted(group_options.items(),
+                                key=lambda pair: translate(pair[1]) if language() == 'nl' else pair[1]))
+    species_group = request.args.get('group', 'all')
+    if species_group != 'all' and species_group not in group_options:
+        abort(400)
     labels = {normalize_label(value):item['number'] for item in catalogue for value in (item['name'], item['scientific'], item['scientific'] + '_' + item['name'])} if bird else LABELS
     entries = {item['number']: dict(item, calls=0, first=None, last=None, best=0, labels=[]) for item in catalogue}
     rows = query('SELECT species, COUNT(*) AS calls, MIN(detected_at) AS first, '
@@ -459,7 +477,7 @@ def species_guide():
     unmatched = 0
     pending_species = []
     for row in rows:
-        number = labels.get(normalize_label(row['species']))
+        number = profile(row['species'], True)['number'] if bird else labels.get(normalize_label(row['species']))
         if number is None:
             unmatched += row['calls']
             if bird:
@@ -476,10 +494,12 @@ def species_guide():
     recorded = sum(item['calls'] > 0 for item in entries.values())
     visible = [item for item in entries.values()
                if (not search or search.casefold() in ' '.join((item['name'], item['scientific'], item['group'], item['habitat'], translate(item['name']), translate(item['group']), translate(item['habitat']))).casefold())
+               and (species_group == 'all' or item['group'] == group_options[species_group])
                and (collection == 'all' or (item['calls'] > 0) == (collection == 'recorded'))
                and (rarity_filter == 'all' or item['rarity']['key'] == rarity_filter)]
     return render_template('index.html', tab='species', catalogue=visible, catalogue_total=len(catalogue),
                            recorded=recorded, unmatched=unmatched, pending_species=pending_species, search=search, collection=collection, rarity_filter=rarity_filter,
+                           species_group=species_group, group_options=group_options,
                            recorder=pipeline_status('chirp_recorder' if bird else 'recorder'), detector=pipeline_status('chirp_detector' if bird else 'detector'),
                            now=dt.datetime.now(ZONE))
 

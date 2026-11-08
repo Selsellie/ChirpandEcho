@@ -94,3 +94,5 @@ BAT_ART = [
 ('756044','c6b28a','48443e',16,112,25,'savi'),
 ('938474','cec1ac','615c57',13,128,23,'bent'),
 ]
+
+BIRD_ART.append(('92918a', 'd2c6b4', '777970', '333137', 'goose', 'pink-footed', 'A compact goose with a dark brown head and neck, pale grey back, pink feet and a short dark bill with a pink band. Winter flocks graze in open fields and grasslands.'))

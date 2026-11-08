@@ -40,9 +40,9 @@ appearance options.
 I borrowed Pokémon's **Pokédex** idea: discover a species and unlock its card.
 No tall grass required, just a microphone and some chatty neighbours.
 
-- **70 birds and 24 bats** in the starter field guides. See the
+- **71 birds and 24 bats** in the starter field guides. See the
   [full roster, model support and rarity tiers](SPECIES.md).
-- **94 individual illustrations** with lively Pokémon-inspired artwork on
+- **95 individual illustrations** with lively Pokémon-inspired artwork on
   transparent backgrounds. Undiscovered cards use matching silhouettes.
 - **Field notes to unlock:** a retained prediction reveals a species' colours
   and description. Bird cards link to eBird; bat cards link to species references.

@@ -63,6 +63,8 @@ BIRDS.extend([('Zeearend', 'Een enorme arend met brede gevingerde vleugels, een 
 
 BIRDS.append(('Kolgans', 'Een grijsbruine gans met een witte bles rond de roze snavel en opvallende zwarte dwarsstrepen over de buik van volwassen vogels. Op oranje poten graast hij in open graslanden, waar groepen in de winter samenkomen.'))
 
+BIRDS.append(('Kleine rietgans', 'Een compacte gans met een donkerbruine kop en hals, lichtgrijze rug, roze poten en een korte donkere snavel met een roze band. In de winter grazen groepen op akkers en graslanden.'))
+
 BATS = [
 ('Gewone dwergvleermuis','Een piepkleine vleermuis die vaak rond gebouwen jaagt. De roepen overlappen met die van andere dwergvleermuizen.'),
 ('Kleine dwergvleermuis','Een kleine dwergvleermuis die vaak bij water leeft. De roepen zijn doorgaans hoger dan die van de gewone dwergvleermuis.'),

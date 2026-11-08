@@ -10,8 +10,8 @@ from chirpecho.web.portraits import profile
 BIRD_COLLECTIONS = (
     ('tit-club', 'The tit club', 'Collect all five tits in this set, including the long-tailed tit.',
      ('Parus major', 'Cyanistes caeruleus', 'Periparus ater', 'Poecile palustris', 'Aegithalos caudatus')),
-    ('goose-parade', 'Goose parade', 'Collect the greylag, Canada and greater white-fronted goose.',
-     ('Anser anser', 'Branta canadensis', 'Anser albifrons')),
+    ('goose-parade', 'Goose parade', 'Collect the greylag, Canada, greater white-fronted and pink-footed goose.',
+     ('Anser anser', 'Branta canadensis', 'Anser albifrons', 'Anser brachyrhynchus')),
     ('owl-patrol', 'Owl patrol', 'Collect the tawny, little, long-eared and barn owl.',
      ('Strix aluco', 'Athene noctua', 'Asio otus', 'Tyto alba')),
     ('crow-crew', 'The crow crew', 'Collect the magpie, jackdaw, carrion crow, rook and jay.',
