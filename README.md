@@ -16,7 +16,7 @@ Saved predictions become a collection of species, recordings, timestamps,
 confidence scores and interactive spectrograms. Identification runs locally.
 Predictions are clues to review, rather than confirmed sightings or animal counts.
 
-## Find your way around 🧭
+## Find your way around
 
 | Tab | What you can explore |
 | --- | --- |
@@ -32,6 +32,8 @@ Chirp and Echo share a consistent introduction and navigation. Calendar,
 Milestones and Health bring both worlds together without a bird/bat selector.
 The interface supports **English and Dutch**, with **light, dark and system**
 appearance options.
+
+<img width="2542" height="1424" alt="image" src="https://github.com/user-attachments/assets/23d4e939-dd6f-4308-867e-b3d90c47643e" />
 
 ## A Pokédex outside the window 
 
@@ -53,81 +55,36 @@ The Bird Atlas lists them under **“Birds to add to the catalogue”**, ready f
 identification review and a future atlas entry. They do not automatically unlock
 or create a catalogue card. Non-bird model labels are excluded.
 
-## A diary from dawn to dusk 📅
+## A diary from dawn to dusk 
 
 The **Calendar** combines both archives into one listening diary. Browse weeks
 with the arrows or date picker, then select a day from the compact week strip.
 
-- **Your chosen day:** bird and bat prediction totals, with a simple hourly
-  activity chart showing when each was heard.
-- **Familiar encounter cards:** up to 30 recent predictions for that day, using
-  the same portraits, confidence scores, playback and signal links as Detections.
-- **An expandable weekly report:** Monday–Sunday totals, species count, active
-  days, the busiest day, first-time discoveries and the most-heard species.
-
-Dates follow the configured local time zone, Europe/Amsterdam by default.
-Reports include existing saved history. A quiet day can also mean the recorder
-was offline; the diary records predictions, not recording coverage.
-
-## Little discoveries, illustrated milestones 🏅
+## Little discoveries, illustrated milestones 
 
 The **Milestones** page brings together **37 illustrated achievements**. Cards
 use the same colourful bird and bat portraits as the collection, with progress
 bars and expandable checklists showing which species you have and which are
 still missing.
 
-**12 bird collecting sets** include the tit club, goose parade, owl patrol,
-crow crew, woodpecker duo, finch party, thrush choir, daytime birds of prey,
-pigeons and doves, sparrows, waterside birds and sky acrobats.
-
-**5 bat collecting sets** cover pipistrelles, open-air hunters, Myotis bats,
-long-eared bats and horseshoe bats. Bat checklists target species supported by
-the bundled classifier: 17 of the 24 species in the field guide.
-
-**20 listening achievements**, split between birds and bats, celebrate first
-predictions, growing collections, busy days, seven-day listening streaks,
-30 active days, 1,000 and 10,000 predictions, and completing each supported atlas.
-Bird and bat goals track their own progress, so bird recordings cannot unlock
-bat achievements.
-
-Each species counts once in a collecting set, even if it has been heard many
-times or stored under different recognised labels. Sets are playful collection
-themes; their checklists define the members.
-
-Reports and milestones use retained detection metadata. Clearing recordings or
-spectrograms for space preserves progress; explicitly deleting observations can
-change it.
+**12 bird collecting sets** 
+**5 bat collecting sets**
+**20 listening achievements**
 
 ## Take a look, then take a listen 
 
 Open an encounter's **Signal** to explore its spectrogram, recording time and
 frequency. Use **Listen** to replay the saved WAV while it remains available.
-The observation register adds model, sample rate, call duration, frequency,
-source filename and storage timestamp. Bird entries show the model analysis
-band, rather than a measured call-frequency range; older records may lack some
-metadata.
-
-Recordings with saved predictions have no age or archive-size limit. When disk
-space runs low, the oldest recordings are removed first, and spectrograms can
-also be cleared. Detection metadata stays. To remove an encounter explicitly,
-use its **⋯** menu and confirmation step.
 
 The **Artwork** gallery reveals the whole illustration collection for browsing,
 including undiscovered species. Switch between **Chirp · Birds** and
 **Echo · Bats**, search by species name, and open any image at full size.
-Compact cards show **five illustrations per row** on wide screens, with fewer
-columns on smaller devices.
 
 ## A new species has entered the chat 
 
 Optional Discord webhooks announce **only the first discovery of each species**.
 Birds and bats get different English messages with confidence and rarity stars.
 Birds outside the catalogue include a notice that an entry needs to be added.
-Existing records count as already discovered; repeat predictions do not trigger
-another welcome.
-
-Inference and recordings stay local. Discord receives notification metadata,
-never audio.
 
 ## Open the listening post 
 
