@@ -1,4 +1,4 @@
-<img width="197" height="67" alt="image" src="https://github.com/user-attachments/assets/25bd6dc3-bea4-4b25-831a-ca784a2977aa" />
+<img width="197" height="67" alt="image" src="docs/readme-logo.png" />
 
 **Birds by song. Bats by echo. A wildlife guestbook for my home.**
 
@@ -33,7 +33,7 @@ Milestones and Health bring both worlds together without a bird/bat selector.
 The interface supports **English and Dutch**, with **light, dark and system**
 appearance options.
 
-<img width="1651" height="1068" alt="image" src="https://github.com/user-attachments/assets/8be4a2f0-f3b9-46cc-af5a-ff012e2f2bbc" />
+<img width="1651" height="1068" alt="image" src="docs/readme-screenshot.png" />
 
 ## A Pokédex outside the window 
 
