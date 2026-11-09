@@ -106,8 +106,6 @@ URLs and other secrets outside the checkout.
 Thanks to BirdNET, BatDetect2, their researchers and the open-source tools behind
 this listening post. Model licences and attribution are in
 [THIRD_PARTY.md](THIRD_PARTY.md). The [artwork brief](scripts/artwork-brief.md)
-documents the illustration direction; [artwork-prompts.json](scripts/artwork-prompts.json)
-contains all generation and eye-revision prompts. The kolgans (Greater
-White-fronted Goose) has been redrawn from scratch with thin contours.
+documents the illustration direction.
 
 Happy chirping, happy echoing, and may your next visitor unlock a new card!
