@@ -10,6 +10,12 @@ _VERSIONS = {key: value['sha256'][:12] for key, value in json.loads(_MANIFEST.re
 
 def profile(label, bird=False):
     entries = BIRDS if bird else BATS
+    if bird:
+        scientific, separator, common = label.partition('_')
+        if scientific == 'Sylvia communis':
+            label = 'Curruca communis' + (separator + common if separator else '')
+        elif label == 'Greater Whitethroat':
+            label = 'Common Whitethroat'
     key = normalize_label(label)
     entry = next((item for item in entries if key in (normalize_label(item['name']), normalize_label(item['scientific']), normalize_label(item['scientific'] + '_' + item['name']))), None)
     if not entry and bird and '_' in label:

@@ -3,665 +3,1101 @@
     "source": "exec-bd037362-56b4-4d4a-b65e-590bb41f4884.png",
     "file": "bird-001-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "866c76eed9d9976f46051b29287fb9a318f532e1b9128176b76366d4f6e74cf4"
+    "height": 1200,
+    "sha256": "2b2b1bb1905c9360f2f95e018dc8655110748d5011fe87c0022395bab380a705",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-002": {
     "source": "exec-be8be49b-5895-4c79-9e39-731d0ae7035f.png",
     "file": "bird-002-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c029f1a08468ef6ea89f5f4c4b11ba3a4557e6612f81b7fbb6af9cb6f61abd76"
+    "height": 1200,
+    "sha256": "aa089b8c42dfaca19dddab8d28f914f8ffa7bd4badd989240db8c924f270a139",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-003": {
-    "source": "exec-70dad0be-e1fb-44e9-a005-4ac6fa5cb91e.png",
+    "source": "exec-6e220508-029c-4368-a97a-86e29d035e28.png",
     "file": "bird-003-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "fe26351f82b4e65b73300bafdfc1de2659265b79389e68b31006bc8593e85846"
+    "height": 1200,
+    "sha256": "ade88c7611a41aae369902eb2a72139b1500ed91a5bb996064d45f019a2145f0",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-004": {
-    "source": "exec-c1259b5d-d180-430b-b36f-7830b2695cfa.png",
+    "source": "exec-1f92f639-5c0b-4e86-9cd7-43f40bfb48c9.png",
     "file": "bird-004-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "59b03f676403c8529ab33ac8f663f86f850ddd9d5b65708bc2772c5a082e9c5e"
+    "height": 1200,
+    "sha256": "817316d3c75691c925c56b4dd280b1d04524abe20d888a2332ea1829fb80ef28",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-005": {
     "source": "exec-5e84f95a-5492-49af-9210-1de0d322cde9.png",
     "file": "bird-005-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "415f8be9317df254ed52537132325fcc575bb57b0b655713f964b0f526a28ec6"
+    "height": 1200,
+    "sha256": "7f53b14d1c206245a7525e97d1c282a063cdefe00ddfaab3d3015eb2d6fcc3f2",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-006": {
     "source": "exec-9b9a413e-a2db-4072-b711-bd7c010268d0.png",
     "file": "bird-006-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "837da8eeeb5ed1db003be9cbf242439977c860c30d765f98bdc0f1b31eab2ebc"
+    "height": 1200,
+    "sha256": "02f2a2837acd48a3950d21863f4acf7361c5720ae760b47d22c2c1e17053cc3e",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-007": {
     "source": "exec-e041aed1-e536-4834-9010-7602b7ef1915.png",
     "file": "bird-007-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "25ad035ffa97d2cd7202a73d2a1541e1add3a7a7e66ddceaa73bdb73b1d02dd4"
+    "height": 1200,
+    "sha256": "777c0a781c07f21c93ce5eb7a86e9a08578d1cf20483e882763ec46345383713",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-008": {
-    "source": "exec-cf87fd76-f091-417c-a1d3-993086051a0e.png",
+    "source": "exec-18cbf863-5d32-4fd5-8951-a3de46bf4a07.png",
     "file": "bird-008-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "fd9be21d66eb185ed7f906db9be53b4e451704d261471a016bd370fed6a99526"
+    "height": 1200,
+    "sha256": "4e8924cc356712a3495f4e55c9a5b4fb4f28b94935122ba0e978d53978098435",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-009": {
     "source": "exec-abbb6acb-7f83-49bb-908c-c8e8962b3a7a.png",
     "file": "bird-009-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "ccf77ecae51873f0c2de441976e059ef85e0fe4e203432361ac1bf5097c18512"
+    "height": 1200,
+    "sha256": "198e7d05ace2de69ade1d86ebe7a2b03f6bf9a51e9901f834e6c7c7eab3939ab",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-010": {
     "source": "exec-b74a8cde-9b76-4425-8ac7-29f7da4edc89.png",
     "file": "bird-010-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "30d9749d18cb326c686ad414dae66a1baa52408143e57f8729e00e2dea05896c"
+    "height": 1200,
+    "sha256": "dc36053eb258110d268ee0752aea3639e5bbbac6b2ab2ec5a9ff884f2fe087a5",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-011": {
     "source": "exec-ea3b8722-0733-47ee-a0d5-33b323fe60c7.png",
     "file": "bird-011-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "e71697f0431397edb62c8d1390ddf5ea9434f0c0c41178e45766db0ff6c59cad"
+    "height": 1200,
+    "sha256": "369a179fb5f94fab2130a836ba84ffbb2366e0cace9ce10a95bfe2a2a8e58be5",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-012": {
-    "source": "exec-eb0c5fb1-2605-4930-ad1f-6fb29e7eac58.png",
+    "source": "exec-2b3cf4fa-3e47-4ca9-824d-feb0798dda28.png",
     "file": "bird-012-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "fc6ee078133f13a8a101ab619f685a99238e6e2212aff930fd22545429048236"
+    "height": 1200,
+    "sha256": "bde52e1f259601e430ae71c0a53556508f39c5739f01dd0a0b55682b96743a6e",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-013": {
     "source": "exec-4d1a8e67-16fc-4032-bcd1-922e5489817b.png",
     "file": "bird-013-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "9f1a9dac97a89a8d78e5d92e28d1f9d10cd3abb9eebbc39061d30a9b67ca7b19"
+    "height": 1200,
+    "sha256": "6cfe5f837ce82a66d63fb6a381a8eea45e8ae5e6630a22f23894b703fbb3fb56",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-017": {
+    "source": "exec-236a45ab-3bf4-4d2e-a854-f419e95a4453.png",
     "file": "bird-017-pokemon.webp",
-    "approved_preview": true,
-    "width": 1536,
-    "height": 1024,
-    "sha256": "471d16386c3965b4024274c5154b333a81b8041949b25d936108fb2307b32854"
+    "width": 1200,
+    "height": 1200,
+    "sha256": "175326295bcaea35b2c800c8cbfcbb21885cc8f9ebf6b4c87554ce788d8b88cf",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-044": {
     "file": "bird-044-pokemon.webp",
-    "approved_preview": true,
-    "width": 1536,
-    "height": 1024,
-    "sha256": "52161b76c16030d30985d281432ad1aa57cef3222be5697872362d4ec0956fbe"
+    "approved_preview": false,
+    "width": 1200,
+    "height": 1200,
+    "sha256": "a6684f43e3a3c9af13c1d68b2e2210318e4a6a142af298c0a4df24b0d13bfe15",
+    "source": "exec-a1f3d835-c7e9-4cca-a0a6-72ca554462a6.png",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-014": {
     "source": "exec-611b1e25-191c-4450-9478-8ff3f3857201.png",
     "file": "bird-014-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c4b9918528ffc72a87f310b348eff47c866862f18c680bee1efb1973e703b5e8"
+    "height": 1200,
+    "sha256": "b46ed17b27974e3958ea02cb673d81b6cd600aabd2b87c170fa4cca26108ef31",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-015": {
     "source": "exec-6f227e9b-88da-46d9-af75-d4aa99b355a8.png",
     "file": "bird-015-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "bcd555927062585e93492669aa99ff11b47563521a882e8f583dcd6ca937bffc"
+    "height": 1200,
+    "sha256": "dbbeea9af7a7ad6d7a17aeb482be908da1cc53faa49fa594800e9f2e2da78e24",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-016": {
     "source": "exec-9ea1f277-3b23-4a56-864e-9622dab85aef.png",
     "file": "bird-016-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "5b22706a6c346143b3f309d68b57f681ba096ac56402fad085a20a1886531095"
+    "height": 1200,
+    "sha256": "1e7e5e7404a9b7e9b8ad3fe16ded4e792b909b0b38c88f01f007c4b9029cc062",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-018": {
-    "source": "exec-542ba8b0-b01a-483f-aceb-8e96e6a761ab.png",
+    "source": "exec-50e0ea2a-f2f6-4b22-a3e9-f147dcd9f90c.png",
     "file": "bird-018-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "6edf23535d3856f48bc10d5cc22504f209f15da0b113b07ad8812881c1004fdc"
+    "height": 1200,
+    "sha256": "19d9f636300656049d12c780a306d02a29041a7328b43218ecbfa9701b68d18d",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-019": {
-    "source": "exec-6691e218-0a88-46a1-89ac-fdbe9f87a43b.png",
+    "source": "exec-4a532623-e8b9-4d26-997b-a90843c23ecd.png",
     "file": "bird-019-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "dd88b50399259b710cc052fb5c35e790e1bfad1ee05f381bf4caf8dbaf978a67"
+    "height": 1200,
+    "sha256": "cddef181161d956286e28dae3cb5f78b42774074b64348ceb8edf720e588a4fe",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-020": {
-    "source": "exec-815ae8e3-934d-413a-bc0a-a71e33c3d11f.png",
+    "source": "exec-5c60e6da-be4f-43f8-9583-b0e405164253.png",
     "file": "bird-020-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "f804cbb35c51581422afc9fc2f696e7b5ba0b6b53ecd0855c0c9e2e7829b603b"
+    "height": 1200,
+    "sha256": "cc28c06c4234ea5db5934e4b11ea5cb07f3bf29ed1bea248ec8c4180cf97bf7e",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-021": {
-    "source": "exec-770eaba3-897a-408a-83cc-3cce9c7e88c5.png",
+    "source": "exec-da7e0153-810a-452c-8064-cb8b0aafab3b.png",
     "file": "bird-021-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "207a7eca88a87b8c517b360ea76f85237b29bb20f6dc4d8c8b3d654fc87e817e"
+    "height": 1200,
+    "sha256": "9d248039ae778f9f23f998a0eac2be18b8ab155a6119fe37575a424037017082",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-022": {
-    "source": "exec-06346972-58f8-4f50-bbf3-4b778208a4ee.png",
+    "source": "exec-67bfbdc0-ee2c-4c03-bb33-ddf276f86293.png",
     "file": "bird-022-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "bf161bc5c6df47d8b025f7d0302125b176445232026b74e567b4f3581286ce4d"
+    "height": 1200,
+    "sha256": "2362a5ee406dc83e2d7361d557bd525e3deaaf30b1e722b07de2476d28dd61fc",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-023": {
     "source": "exec-af374bf1-0806-475a-ab09-fd8046193883.png",
     "file": "bird-023-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "fdae63f0f0004c2e2a426def10126e2863da43cb4da0d7a74697010d70ee2c3f"
+    "height": 1200,
+    "sha256": "fa754b76977bbf549b05ba7b1b1005a00468657d7071c3565006660f5b2f2c88",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-024": {
-    "source": "exec-0b843f1e-e8b0-400c-9e3b-6e40fc216225.png",
+    "source": "exec-81ea7fc0-9504-4757-b45f-1b22ed0303c1.png",
     "file": "bird-024-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "0f63af3a42b141e7380d5e4b2b36a157a195163058717465d5557568f63ae0c9"
+    "height": 1200,
+    "sha256": "af9f697ce8cc51afc18cb6d4fc16e61662a784f60f206bef087b70b03194adf2",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-025": {
     "source": "exec-6889a849-9b9b-48e9-82d2-74f9d9d7d624.png",
     "file": "bird-025-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "d9b1a681ec0263640318ab4cce7cce0fbc33a152cc11dede213e43d64398d1ba"
+    "height": 1200,
+    "sha256": "8db538b0b77fe34c9133cc0ab8f64d90bc140debb01ca5eb34bbabc2c9abb766",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-026": {
     "source": "exec-b3410e12-de5c-42f0-b3bd-ab4fad4ab686.png",
     "file": "bird-026-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "316b8d02a609f4fa230da3d6752739ebf44140111f6e48fd23e10c0d5fafbda6"
+    "height": 1200,
+    "sha256": "8b8aa46fc9bf800dd8e03a5f455be676f23806b223d66338d79dfa98d4b767dd",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-027": {
     "source": "exec-06197c2c-f533-412d-9347-02e241059258.png",
     "file": "bird-027-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "a90bdd2a196ef38c4f0c2be1475f7790df5241b80faf5715bd456c604c57d95f"
+    "height": 1200,
+    "sha256": "69868818659e0b64cbee7a96a05aa67a8f88f03b6d7a0183263fecca15f20bbd",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-028": {
-    "source": "exec-1515e532-6a29-4f0d-aa76-bf8751390dc0.png",
+    "source": "exec-80dcadc0-e59a-4d2c-a1ff-2a665af71b17.png",
     "file": "bird-028-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "ede839149f8df43e6e59b6694792e34de97ded5064ab0b129e38a5eef15861bb"
+    "height": 1200,
+    "sha256": "e21a81d83ce70be2f7202a6659d6cc35890bf11367070c22b9350d1858a4ea76",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-029": {
-    "source": "exec-53990e80-9b61-40b6-aaed-95d4c673cac9.png",
+    "source": "exec-2bf2dbc1-98e2-4968-8562-335b433df6ec.png",
     "file": "bird-029-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "25bed8cd802117b59c78b8f06b3c4244a8bf5ad2aeb49534162a805ae1959407"
+    "height": 1200,
+    "sha256": "8433a8e44ddbe910a10ebcbed3250a553a7074e0896ea5a5a066d3f859201dc3",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-030": {
-    "source": "exec-b7f0fe96-f011-4b6f-b6d9-c9a8e1fcf2e8.png",
+    "source": "exec-b55b3068-7b25-4408-afd1-380745d36f30.png",
     "file": "bird-030-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "7bdc7d26c8593ba895bb0b1d06d8aa30d2e84168a88a6c974435c3875dedcb68"
+    "height": 1200,
+    "sha256": "23568951602738f09c0bb1f685689a4ffdd1d52ece0d11e0779e936ab7c21f73",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-031": {
     "source": "exec-ea5f8317-9698-45fd-a1cc-fcb29993059c.png",
     "file": "bird-031-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "721db80a4bc89d0a1c1ed66007c2cdaf3c1f986a50631d2dfdd31778b5f82bd0"
+    "height": 1200,
+    "sha256": "e8f00235d84813c10569cd3a56f84927e02ef793b42b6c722eb3e7d90c3a8cc1",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-032": {
-    "source": "exec-5661ebda-005b-4729-a8d6-a72c6f107366.png",
+    "source": "exec-159d69a5-d6f2-468d-91ee-7d1361e868aa.png",
     "file": "bird-032-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "a2798ddc2aaaff34d2f7ff6689a7a7eb40a42de5164eaa11cdbd9bef72bd963d"
+    "height": 1200,
+    "sha256": "0e7b2d3c26b65b290b8ef058c670153a37c51e0088fa926e4c6cc32808c6914f",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-033": {
-    "source": "exec-9b42cb4b-dc70-4aba-8174-c7d8a9c758e1.png",
+    "source": "exec-9235dd2c-3aa7-4d40-a615-c59fe2c45507.png",
     "file": "bird-033-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "944ac985058c9194ff6e230fa4f2fb2a9b6df853f265e15b309a312c32f6e43b"
+    "height": 1200,
+    "sha256": "01731f39e5bbe28525af8b2aa5c491c189665de10165d79b1851f18dd6ec097f",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-034": {
-    "source": "exec-d384d177-a97e-455e-a213-ab57b98954ac.png",
+    "source": "exec-4f080544-67db-4bce-9fee-539903ae87d5.png",
     "file": "bird-034-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "831f024cdcd77d32418202f06cce95a180333094a2f6f1eb9dfa3edfe20df0c0"
+    "height": 1200,
+    "sha256": "d1e729b0cb9c0507ffea05e1a1c7ac8db3e339d5d66fee583d534c26207d8b70",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-035": {
-    "source": "exec-a66a4c17-c0db-468f-8944-12e00008a515.png",
+    "source": "exec-016ada85-3297-4335-aa3f-34ec76a2bcdb.png",
     "file": "bird-035-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "6e493308b763a7ef32f1f4c7b4de74c1a64ff61b3dd294d354b53c19efe577fe"
+    "height": 1200,
+    "sha256": "d83d0a83a091f30f50a3e9d6626c59a3341b477260b579e492158b0fbd5b006e",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-036": {
-    "source": "exec-4825bcb9-20c0-4de3-9256-be0a1c1c03cc.png",
+    "source": "exec-2d9088f6-3ac7-4fc2-868c-691680cf6566.png",
     "file": "bird-036-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "97f3fbcf2215d38e2dbccc046ff07a95dbb07c4db002725ca37e3149dd927fe7"
+    "height": 1200,
+    "sha256": "4806b505a656a5bc2374119421c3840542880ecefb5f20b5276a06c66b3e6d96",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-037": {
     "source": "exec-d1a4b441-cc51-4de7-9507-280b10ce3ffa.png",
     "file": "bird-037-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c725df1b3e2f7a4eeb13d88af27bb1294a38d5b2516834d86013826ed9404ee0"
+    "height": 1200,
+    "sha256": "b8945be5ac803f3fd4341e332d074b991d53dc8e392ab221ea648e23d953294d",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-038": {
-    "source": "exec-f44bf32d-21be-44c6-aa06-0f48fe403286.png",
+    "source": "exec-f5aeb4d7-b7d7-4303-a10b-c982a4b9e311.png",
     "file": "bird-038-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "ecb253d95ee9f4eea94093f2f5bd69629c54e8182f3c5c19825d3016af58077e"
+    "height": 1200,
+    "sha256": "7537c963e037c2d478c07bfc09dec0f77cc6fab15f9c0f7b6395e8de7ddb3bb4",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-039": {
-    "source": "exec-1da8eef2-99d1-4933-9f32-1bc64605946d.png",
+    "source": "exec-924a030c-007f-4490-b9ee-92a1665134fb.png",
     "file": "bird-039-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "ac9694c019c51bb99d1fd4a175022cc5da9e5ca869391eb3e7457a0929a8d3e3"
+    "height": 1200,
+    "sha256": "e4289f2d5b0128b938fbe8c5329307098cfaafaddd941895f8a9a6aa193be722",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-040": {
     "source": "exec-a1036f1e-316f-40f6-8170-69fe5178c958.png",
     "file": "bird-040-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "d736ad24cdc33ad5e8256a91e0df31b0cf6299a78e1e222fdd024385faa4ed39"
+    "height": 1200,
+    "sha256": "fe6be2a066a90d0b259390d8a816ab0e6b71750ace2e4e2788f935dea7c5e082",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-041": {
     "source": "exec-18c293f9-af3d-4e3b-bdcd-8a26c36f7ea0.png",
     "file": "bird-041-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "9b7f890238b48247e611b02af63e63325c1fd06ced2dc238681623785cf65187"
+    "height": 1200,
+    "sha256": "308d8be175572637c6a5753f8ae5fc84d7cfaf60fd951e4f0e2602ba0f49421e",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-042": {
     "source": "exec-8198da70-fd3c-4cef-a2c4-3aedbbee86d1.png",
     "file": "bird-042-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c00e5d51bf7d7254fe4fcb3b531bea958a76ddfe5b75bceb6159d1fd357c11ce"
+    "height": 1200,
+    "sha256": "289ad806e003a88f33f56679bc4032c7dc217eaf998fcd040a7024772b79afdd",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-043": {
     "source": "exec-e4297477-4db6-4709-a332-39d52cbff491.png",
     "file": "bird-043-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "90c004a67042a7966e3607f493828eda226be4a932f0d7b48319639e460cfba2"
+    "height": 1200,
+    "sha256": "54af054f2da677873e4b4e0f2e8bdeb0ec54e0322df6435e72eb2e778ad07efa",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-045": {
-    "source": "exec-7d658e1d-2a63-4952-a5d8-39729fcf52dc.png",
+    "source": "exec-882accf8-11ed-4c36-be82-4948a8f5bee8.png",
     "file": "bird-045-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "707d78a10a591fc1bcd0e07bdec4628c0ac8642736bb79d819bcbadb30eac64a"
+    "height": 1200,
+    "sha256": "9b98d44ec2e01663a07c8940f60a7506de4f4f7ee543d2b94c4546af812bd053",
+    "pose": "standing",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-046": {
-    "source": "exec-ebcf8c16-f568-4c85-85d0-8a0515dbc3ff.png",
+    "source": "exec-7c5b65c0-342c-4081-9592-d0b2bf9f61a7.png",
     "file": "bird-046-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "d86ad61eff4d571004a20b90b36059a0b0e716891a3df0a5603d4774660bbe48"
+    "height": 1200,
+    "sha256": "39caa543066b971f9ba4749d882fd0f61842fb803da872360dff0d1e237b9c76",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-047": {
-    "source": "exec-c0c31e03-6903-494d-94c0-6e7e9de47555.png",
+    "source": "exec-c70df95f-7a47-45cb-8c6b-91c6edf86448.png",
     "file": "bird-047-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "61fcbc0818dd188477b02fe519eda576c18573e4bc23faae41c1ddfb55f80520"
+    "height": 1200,
+    "sha256": "b90a364616a5d0e6c927124273c506d3c5970f8c72851cb542370072e946b0ea",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-048": {
-    "source": "exec-fe865118-b387-481a-a2d1-e8a29bbe49b5.png",
+    "source": "exec-c7fa6366-6b86-4ce0-9436-e9e7e718445a.png",
     "file": "bird-048-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "88cd7040c054ee86df2d69ac73ff70179a14906dba2e4ce33ea1476aefd80904"
+    "height": 1200,
+    "sha256": "09ec97017cbfe4beb866380dd7d9d8de1c686873f4a81da32ee746f37c3ad87d",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-049": {
     "source": "exec-5e3b3123-b69d-49fd-aa91-e619c768dc55.png",
     "file": "bird-049-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "7fda9df9579da119355080745f2097a93fc6ed08538f6d93ccdd4a4a4ad723d2"
+    "height": 1200,
+    "sha256": "34f114c66c641f55c19da2faca6e014dcdf50dfe4420a70162636997e3b75692",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-050": {
     "source": "exec-001abc10-692b-49f7-86b2-6438ac501865.png",
     "file": "bird-050-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "4a89950468ddb65dd3724997a2c74f14215bf4b1c3cbcf49dfa38b32635d8ff5"
+    "height": 1200,
+    "sha256": "2e7838b3288c6e2cff86e75957a7f0b83bfffa2a53221050cdcea253808a12fc",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-051": {
     "source": "exec-39b9e16d-b476-478e-9432-99382000e696.png",
     "file": "bird-051-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "499c2695b3750eec000ede1aade19ff854379319299e09ac633c030ae31d018e"
+    "height": 1200,
+    "sha256": "f3461f652de8e95459f81e038504851a13bd24cfc0996021b28de225e330b2e1",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-052": {
-    "source": "exec-051aa772-8c03-47bf-81fb-cd0dc0f3002f.png",
+    "source": "exec-3a5e3e5a-1f75-4659-ac41-0e41cf4fc8ee.png",
     "file": "bird-052-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "1e127597d78d4efddc4350898e409c90df7e3acbfa939aa3b6399d7f6acb5039"
+    "height": 1200,
+    "sha256": "552334890bde16d13254658d4a2ad09425d5d05cd4b116dd152586c5cb5498dc",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-053": {
-    "source": "exec-66989d3e-69e0-43fe-af9a-059c9fea5b1a.png",
+    "source": "exec-8aeb226a-1bca-454e-b29a-7390047aab04.png",
     "file": "bird-053-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "f47358ad4cc35ce09374b7104d4a2b4fe7e41f32b334d7b1fbf2bd02d7a9a42b"
+    "height": 1200,
+    "sha256": "f9a2e06d19a2e6f70caa9da03abc8162a28ccba3a4a2fa5aaac79717b8aee29f",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-054": {
-    "source": "exec-a911cb03-7841-45b1-9502-ca696ab9944d.png",
+    "source": "exec-86e6cf76-f246-4886-8871-3624f1e0de19.png",
     "file": "bird-054-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "84c49ded57dda7b992ee0e4228967323445f88197b635ab71127a8af9e38009d"
+    "height": 1200,
+    "sha256": "7eab3810e7422297c270296ad776da05ee9bbe8170c9956bced506878389ca31",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-055": {
-    "source": "exec-d33798ef-10ff-42fc-8768-49b7dde89986.png",
+    "source": "exec-f5759869-064d-4f91-aeb2-57a52b321c18.png",
     "file": "bird-055-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "289ab3a82b86b17c7e3ab297fb96ef0e15e8129d27b718c591505023aeacc491"
+    "height": 1200,
+    "sha256": "9a5ae316bb5a3199bd4ccd73faa0fddec627f66ff9ddbad580d61feb5b5efc6b",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-056": {
     "source": "exec-a1b0cc68-8aff-40f8-bb5d-9d173b91a64d.png",
     "file": "bird-056-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "09b2de2808fe2a2317f4febd5497215a99d2ffb019353e17cf75ff95370f1a4b"
+    "height": 1200,
+    "sha256": "306b4ec2fc23ca2019bebb090927202e5fbb42add848fc8a0d288f9b75472aff",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-001": {
     "source": "exec-4c6eb933-16c1-4f13-9dcb-931c2fa5c378.png",
     "file": "bat-001-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "f1f482b7ac35f55be3ee017f5e2cf026e4ed899fa230e91fd02331fcb521b2e0"
+    "height": 1200,
+    "sha256": "555bf3bba409dddfb1287ac3e9330d70d085d4452ac1219ae7fb9166a7cd4dc5",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-002": {
     "source": "exec-7f148518-2525-4a62-a054-99fb2c03f302.png",
     "file": "bat-002-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "21da4bfcc974bb8638e21572d57ee86d94ca32b8cb2c29a4fbdc81a4f8d2d3e9"
+    "height": 1200,
+    "sha256": "561fa0156ea2c9ed973255e55a65561196fd4373af91be88d5b9328c271f0bae",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-003": {
     "source": "exec-fae7ed1b-c71e-4506-b94d-6a995157ee59.png",
     "file": "bat-003-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "185f8c31addccdbd5dd9101a8ae03c26fa3391e741ca0bb113ed2466b5840d8e"
+    "height": 1200,
+    "sha256": "faefa30ca710d8086cf17b9d960af61cd7ea3606ec746526fd29ba7d89d6423c",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-004": {
     "source": "exec-b7906cf7-800b-4581-9141-c4a12cec6f6e.png",
     "file": "bat-004-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "48c3809335729de45673f922f83144a0dd20213054dded54f2994512e8ad22b7"
+    "height": 1200,
+    "sha256": "badce856999931bcc48381d7d0bea9c229248825a90ccaccada5d40fe1682bae",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-005": {
     "source": "exec-3fd7e310-f3c2-400b-9d18-994d9d025ea9.png",
     "file": "bat-005-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "0c387cc6ee05fc29a2bc88bb0c9fd1997f7baf195572655e07958df1447dd7db"
+    "height": 1200,
+    "sha256": "efe0cdd9005b460d338bfbf814398e30e05fea41712207944e91b95f7cc26566",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-006": {
     "source": "exec-d9959710-7499-46a5-8bb3-bacc82c03a20.png",
     "file": "bat-006-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "5ff5f6a5370bcd19aab4f34a6f555196eb2a23619ff956dd4347a86e825081ee"
+    "height": 1200,
+    "sha256": "4cb3f3a66bd3d1bf7b2bf657596c62192b92e4ac2b6735568e410899a94a33b3",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-007": {
     "source": "exec-c405dae9-a01a-4c05-8680-73aae269ff12.png",
     "file": "bat-007-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c8ca7cc1928bd4a35066c7e8a0ad222ac7890b10e05984c3bd1e157c01f2e853"
+    "height": 1200,
+    "sha256": "6d91c2d1dc2c28b246df7cbe8d723f265bca2524ced32c3a526f6c42ca76d122",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-008": {
     "source": "exec-e809e45c-082c-487a-adb9-e331263b17fc.png",
     "file": "bat-008-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "56f9630bad49b48543261c616904446587f3b47efbbfec59fc14d8a9ec7ecb99"
+    "height": 1200,
+    "sha256": "c073fa5e5da05da4874e8774974d3ded2404eca36e757133a7d1d12a33fd0268",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-009": {
     "source": "exec-0b47c825-784c-42b6-84c6-ebaaf6a9d1b1.png",
     "file": "bat-009-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "64ea4ff71c9e960f73a7a46fe0b276e8567e1dd9f556ffbbe04f5e5f1ecf2f89"
+    "height": 1200,
+    "sha256": "f066888711db485c65fb6e9c167659afa94085d542c227d727b214a2cc363c59",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-010": {
     "source": "exec-fa8a41ea-8839-4b74-ad64-dfe5cf16dfa6.png",
     "file": "bat-010-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "923b1ff1e7dfc999e869d066460a2fc24586bbbb21e83b96b360bc4031a71472"
+    "height": 1200,
+    "sha256": "9d71af4c55b2d8027c8be90804ee061794d4f82c18f2790cb03c746fb2c82a92",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-011": {
     "source": "exec-b0bf8bb1-4495-44e6-baa3-66930dbd436a.png",
     "file": "bat-011-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "f466519bf627f82c008f49067465c2840d1c25d914265c0c68066ba47b65d33b"
+    "height": 1200,
+    "sha256": "bddece968a83f3846140a14cbec42664cbc581aaae9f5e106c9c9dac682b1faf",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-012": {
     "source": "exec-e3760d09-1085-4f5b-96ec-9b7414b5630b.png",
     "file": "bat-012-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "6f0147b306c6975ca41def3a3615070c531fd98d849911c96a56bd88af48efa6"
+    "height": 1200,
+    "sha256": "e4638b419497847b985247b8dd8fcc09e4ea5cb03abad0fb247f0e385c399e5b",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-013": {
     "source": "exec-27764d9b-5ce6-44ab-84df-2c8f59bc72a6.png",
     "file": "bat-013-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "6ab380370d6be154fb8685983494907a02bd14b6966174f29d2a7bac6d7a88dd"
+    "height": 1200,
+    "sha256": "c0519228f469dcb98dd62ab8c8581e3b6f1ddd5ef9976db7586a2d547a27086a",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-014": {
     "source": "exec-7b4eaa42-135a-49bc-be54-4905f774e07d.png",
     "file": "bat-014-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c961adc907a90003bb7a7e37593f304df3df96e96aa7a2aa0ff7626326446cbf"
+    "height": 1200,
+    "sha256": "24ce15f3ceb573d9d0ce3bf85294149efe7f69257a017cb1478c07612c7bdb05",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-015": {
     "source": "exec-3b9d52fa-a3ed-47fc-a669-d0482f79f317.png",
     "file": "bat-015-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "8a55136f6c2af817e885bcac220725111406e447e0548dfc89cf56a08fd7a614"
+    "height": 1200,
+    "sha256": "d44fb088dc2b1e2d8f19e728310346e8d8e8bd5ff991ffad8137e00feaffd20a",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-016": {
     "source": "exec-3618c505-3869-4b43-813f-aba270d4c85f.png",
     "file": "bat-016-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "90c22362d947f435e1337a956b65a5ef9564799a3dd08dae8dda26efd01a225c"
+    "height": 1200,
+    "sha256": "d58c3767ac0c76ea9daedf1817bed32d5e6bced454bc4a0e87a0f2f8d0edc9cf",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-017": {
     "source": "exec-7c42cf1d-9828-4cfe-ac03-7ad8457bfdb2.png",
     "file": "bat-017-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "1596b59a1bb81e8532b0a41f1e47f3c55d0a5fe69593e7f76682274260d5cb6c"
+    "height": 1200,
+    "sha256": "2b4e8b5dd679b53df406af092ebe3f8497c5c42be80f7f5cbfdcf3e8cac6e6ee",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-018": {
     "source": "exec-d7f49baf-8af2-4c5b-a6a3-1daa02ed2095.png",
     "file": "bat-018-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "e2b280e73c97c748f9b1516877809a3b96c75731e48da3a46f3a0bab51a047bb"
+    "height": 1200,
+    "sha256": "af385e3e639de1a75be3f7e2728a7afa7d0433a5d84163c06b17b5f6efa81f13",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-019": {
     "source": "exec-fe0aa9d1-6fe5-4856-a156-28c7441163b6.png",
     "file": "bat-019-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "bf02a66ec206bab16afd1bec90fc04e05bc2d2111a7f9a90e59d38632c4f19d4"
+    "height": 1200,
+    "sha256": "b4548c48022096b04848603d63bccbf0f96c196c4c4d639c7987fbd4960c701a",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-020": {
     "source": "exec-43fa22f9-6ebe-4a9f-94e0-938bcccc1053.png",
     "file": "bat-020-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c871790bc002c5512201042ae64fbd44c9f8bc95041d78b620c4dba452fc5922"
+    "height": 1200,
+    "sha256": "0a6a3bf29212df8224cf871222a82ed0d6735e651c823643afc5b2f5b048b82d",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-021": {
     "source": "exec-1430ce00-e5d1-40a4-b514-122bc78fcaa5.png",
     "file": "bat-021-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "0779d339ec28cd4dbf9f6cac722eff2a74d239de401083cc24993b8aaf84fedc"
+    "height": 1200,
+    "sha256": "17e2697739cd7d114f6e40036ca57ed2667f3354300bd7a8ad960685541312f0",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-022": {
     "source": "exec-cf92a980-7d42-436f-a604-8c9c44a7142b.png",
     "file": "bat-022-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "71f9e04bab6ec9ffea6fa0484429546f207dbe61cc80be3e2a9bcd0add58c0a2"
+    "height": 1200,
+    "sha256": "ac7452a0e8c388ba7d8803cddfe7f1ae65ad4c67499e42ef8e6732c96cb0e465",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-023": {
     "source": "exec-34511c17-68f0-43a2-a981-4c5643350938.png",
     "file": "bat-023-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "ac427749bef7d405394d4b3bc3d499deac286c9efbf69be34970450f99613139"
+    "height": 1200,
+    "sha256": "81c0c64d0cd8f8c1beb4e06fd59887a519e9e422e8a5180cc53fb62011d0e280",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bat-024": {
     "source": "exec-9c2a8f7f-5fe5-4e2a-9080-7d214b749aab.png",
     "file": "bat-024-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "8983426b22509e52f7512c35313386e683f26918410ea42c0b9a72eb93170bb9"
+    "height": 1200,
+    "sha256": "569d8bb0c3b41e3c427bb9f8e69bcdf54739d7d1b5e892eec06edfa64ba6cefe",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-057": {
     "source": "exec-906e30fb-0d65-4019-b931-476d03f948ca.png",
     "file": "bird-057-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "cb3d6f6f4ee360b7373d19280f4e3a9f9b818b4d869bc473bed88f2be33eb9aa"
+    "height": 1200,
+    "sha256": "acf37444a0a3092f988d76ba99378ab82236e9856ba1aaae4f1a2c42e6b44682",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-058": {
-    "source": "exec-0d37df21-f40b-46dd-8ede-bf176ee6be2b.png",
+    "source": "exec-d5e6728a-5676-40d4-a48d-e597f04f0a49.png",
     "file": "bird-058-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "7673b8cb2f45e5c8f546640cf9feecd31c67b79e1aa49875dd4711b315c038e5"
+    "height": 1200,
+    "sha256": "ced1eda077d1331a72c9e87f4aaaa9c42f51bd7e63bb19eaf785444ebc86dac5",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-059": {
     "source": "exec-9a02a7da-10fb-4b9f-a869-2c9538299b6b.png",
     "file": "bird-059-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c1dd627d6f872800a789de70bcd476c41bb155c0a57dc5f04b8a3c5cef869f6c"
+    "height": 1200,
+    "sha256": "8e5ba28f34a48d4761840a80f4dd94ed0db23e2911c97781d4040068f818428d",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-060": {
-    "source": "exec-f1b49d82-0dd7-435b-b592-62df6875eff3.png",
+    "source": "exec-283b9655-f65a-48a1-b1f4-98d1e722689e.png",
     "file": "bird-060-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "a1bd59c95c58b64fd21e800fc6ad03909eb7390b63aa6b9e0d72d60b85b9fe05"
+    "height": 1200,
+    "sha256": "63b199b3ecb0bc58a34e2d4a6e1de18d9abc831d27ad387b59a82406cbc5e605",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-061": {
     "source": "exec-d306b905-37f7-49ee-8291-8b3653c9d7fd.png",
     "file": "bird-061-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "fbd2aa11c0025c3b96157cc0c28dcbb96ff6d2318593c75c358f503cc5ebaf8f"
+    "height": 1200,
+    "sha256": "f74885b977c0b240efa4d228d62e39e0bfacb99afa874fad76b49cfdecf6eb89",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-062": {
     "source": "exec-625e8c3e-a6ec-41d2-827f-a3e70bedabb4.png",
     "file": "bird-062-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "3b18be1005d1d0b5cc50d5795de50d88d955f3a7656a9ac40f6cd31a56236ec5"
+    "height": 1200,
+    "sha256": "56d07b3b203bfba295b65d7314c17fe0884f3094cae98512f539bbb962f58202",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-063": {
-    "source": "exec-d117e980-6d0b-4272-bad6-4b7ce3df9a00.png",
+    "source": "exec-2d37d938-ae75-4f18-8d40-075f053f74e0.png",
     "file": "bird-063-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "94c288d8109ca6a4090cea7a99ac68ca44807d80e085353991032538fa0bf61c"
+    "height": 1200,
+    "sha256": "faa26ee1cd04286e0fb8ace24e0f25323be6759c11526ba0cbb5535a91204fea",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-064": {
     "source": "exec-ff196ded-705b-4385-9ab9-301ffd38af4a.png",
     "file": "bird-064-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "06e79c04a8b17b410c972d540c8d5919cbf5847650fe07c29f09d8a1cc789c63"
+    "height": 1200,
+    "sha256": "fa6b27c462b7203a4d3ac20b18538443ee95f17d190d909fb7cd07c0e633cef6",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-065": {
-    "source": "exec-6a7a9718-7f51-49e3-ad98-e2af48a5922e.png",
+    "source": "exec-7a6da2e3-91bf-4c11-a5d1-92d4e669d969.png",
     "file": "bird-065-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "dd2aaf6c57af28bee46764f77ed9d2ce6ab9771624c97d0e7d8dc3c1662de103"
+    "height": 1200,
+    "sha256": "a74dc9c6265d73cc8a4947e3640fc64727ccb4d145666f1794b94c3a235d2466",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-066": {
     "source": "exec-c7eaaf4d-3fcc-44a5-a3fa-3e2e3e7ecfec.png",
     "file": "bird-066-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "0932b345f764c53c2f0d8a712d2da30b215755679ca1329083fe64e1da847e31"
+    "height": 1200,
+    "sha256": "a0011357c78294136983ceca875eaab7146495e0ee568750dce567ab94dc98f7",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-067": {
     "source": "exec-e983350e-8b65-4e31-8876-5f73bb6f05ed.png",
     "file": "bird-067-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "1d8eb0b7784e77fb661913e7e15ce7b697325b7c9d20829345a1ccb6bf4a31a2"
+    "height": 1200,
+    "sha256": "f15eeafe43a93688bedc1a0a2269c8ebca001e8a455b71e2f1ec2998ddc1e816",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-068": {
-    "source": "exec-31391ba1-478a-42aa-ba1c-dc77ba21b066.png",
+    "source": "exec-b2a722b4-6e35-4cb9-b286-3b4d182af96c.png",
     "file": "bird-068-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "3f86229f6519d2d2c7fb3bfd0d6a83e46ee3b477fda6f522dcd7d86d4c9af77e"
+    "height": 1200,
+    "sha256": "5fea4b1ace9404d8193ac5c623706b15a44b5f8d1122f1ef88d7a20a38b7d6a3",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-069": {
     "source": "exec-a05958e2-8142-4e06-b381-2d1b57d9677a.png",
     "file": "bird-069-pokemon.webp",
     "width": 1200,
-    "height": 800,
-    "sha256": "c5f6e2cd4277dd4229a91ce9570e7aa9a88932efa9d95639385f66ddd9455f43"
+    "height": 1200,
+    "sha256": "728d0b37b8b292810fa349e57cecf4b340f77f50556d8e2d1f7e3d26546722b3",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
   },
   "bird-070": {
-    "source": "exec-a8b39ff5-1c4b-4476-8d25-8f7b7a545462.png",
+    "source": "exec-91e11fc9-aa56-47b0-96ce-7c7b6f5ea6b5.png",
     "file": "bird-070-pokemon.webp",
     "width": 1200,
-    "height": 1097,
-    "sha256": "0d624d05316bac6c2222ac6cbdae61c26f5c518c10987aa57195a3d1d2639735"
+    "height": 1200,
+    "sha256": "a4e8ef896dcd4d6dbeacb6e10886845e66c1fffbc49d3d3ef8a7e7d1d57f135d",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-071": {
-    "source": "exec-44a58622-a57f-4219-9003-bba17fab7051.png",
+    "source": "exec-eb1c0dbb-4338-481a-967e-bee20119da59.png",
     "file": "bird-071-pokemon.webp",
-    "width": 1145,
+    "width": 1200,
     "height": 1200,
-    "sha256": "622fe26f5d03b01b6f2ec143bf3cad058654bb00cf4bcf36d20a41c9ce3e22f1"
+    "sha256": "4beab7ea68fcfcca9e0cad706ce071f877cf968c3836c4e5b9e26ca14872613a",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-072": {
+    "source": "exec-302f88ce-2ce2-46bf-81c7-febce002d520.png",
+    "file": "bird-072-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "ac22f17caceda1823330fff451ecf8e16081266c0f892ceca38ca44450c3decf",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-073": {
+    "source": "exec-283553b4-65fd-491c-8578-f05ae05464e4.png",
+    "file": "bird-073-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "88e27280ac75909c5933a12fd274b8ebd2d5517ca783d38420546a90205e2271",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-074": {
+    "source": "exec-ba1cf6eb-5051-4305-b6bd-a3b60580051a.png",
+    "file": "bird-074-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "7fe6347cfd35730e3450700fd71db96424c5ff2393121a5f346dfc68014cc961",
+    "pose": "banking flight",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
+  },
+  "bird-075": {
+    "source": "exec-1dcf2b11-35bf-4ab5-9dc6-ecab8d214d85.png",
+    "file": "bird-075-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "ef4ab14bc2190395751d77e19dced2c8c953eac9b922ecf0d32cc3164d8545ec",
+    "pose": "gliding flight",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
+    "approved_preview": false
+  },
+  "bird-076": {
+    "source": "exec-961b9499-c934-439e-8829-6ceca44233bc.png",
+    "file": "bird-076-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "306ccdd25eb4695cdb4e21cbfda3e1aa62d7fe47573acc05128001c097e38c4f",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-077": {
+    "source": "exec-c3588c85-b728-44c0-824f-2d74ac1beee8.png",
+    "file": "bird-077-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "62179761a2aa00144b346dc7f43604d2f7f74de9c77d343d1579a685a54ec84b",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-078": {
+    "source": "exec-d73e7e32-7158-4c8b-9c7a-c98d487aba90.png",
+    "file": "bird-078-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "971e70c94a0d66af6e3f9a6fe268f7fc9b6cc64691bd04997b00796edd2b92ed",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-079": {
+    "source": "exec-f59e48d1-b38b-4a62-8188-d0bc8aadc2bb.png",
+    "file": "bird-079-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "61da024d8ad1e81626bb21ee8c455bfea0e3739f4a077f196b47f34d40c9f61d",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-080": {
+    "source": "exec-344c0a77-4755-499a-a80c-fa597cdd5fac.png",
+    "file": "bird-080-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "c97be855976cccb0be88400b6d90a902256857048f332d9216941a601d5f86c2",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-081": {
+    "source": "exec-a8929e5c-4531-4595-a248-adf10bf18ac9.png",
+    "file": "bird-081-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "8a1f2112c3362dc12889078355ade9ffa0dce1aa04978dc0d175c2462362edb6",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-082": {
+    "source": "exec-d3721a45-abd9-424d-b148-7c6b65bd1bb3.png",
+    "file": "bird-082-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "41392f4fcf281bc14e2bb59dde83197774f54276d63fe0662a24f91a9ab416c3",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-083": {
+    "source": "exec-07bf1e56-0b70-452d-b27b-2c69a6d2010e.png",
+    "file": "bird-083-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "01454ca3602501650ca84f02388d2409f0f19cec953be4b7c30ffb9e9369b664",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-084": {
+    "source": "exec-1d578970-1ac4-4c06-85cd-204b441ab433.png",
+    "file": "bird-084-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "56129494eeb71bc822466bb5bff473dac4ea8596310476e5c116fc188a56abe2",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-085": {
+    "source": "exec-055937b6-45b9-4a30-9072-5dad63e6ff9b.png",
+    "file": "bird-085-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "9cb6847e04a01dac1a01d383b6eccea49ebbe16c40c9564a082bc31269b77768",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-086": {
+    "source": "exec-e209254c-0b58-4643-9094-1b7525540d37.png",
+    "file": "bird-086-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "28188a4c3bf4bfbd08b0e434356006907c2142f7b7c29ffce198ceacf9ead717",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-087": {
+    "source": "exec-5a4141cf-a993-486f-b337-13402f0eba99.png",
+    "file": "bird-087-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "316440ecc04cc3f1808f995dff37b1e65ece375ce6b23a4bc1f331301c5e83d1",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-088": {
+    "source": "exec-369a6bb3-2e0a-4e27-b500-e342c471d4ae.png",
+    "file": "bird-088-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "c4c834726ca3e361ddf6a0baf0fbca55a603b2b220a44e24aabfa44e5a5d6ed3",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-089": {
+    "source": "exec-1513db1b-3d40-4eb5-a375-b8a80b96dff5.png",
+    "file": "bird-089-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "f152f0650905b654e77866803ddea99607fda8057240c03f967321657d5e5944",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-090": {
+    "source": "exec-c868d41c-3407-4757-8c1b-1f6b8993b132.png",
+    "file": "bird-090-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "890cba90b3ace58a141ead9a9ce6248471202bb1bbd3094b30cefc9436a1c198",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-091": {
+    "source": "exec-a5db7088-3877-49de-b675-af44041facd5.png",
+    "file": "bird-091-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "f2ef93de3981b9cded648ce4ff18d675ce76f7544de08c55dbb96c3b23b79229",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-092": {
+    "source": "exec-0bb27566-cb71-44b1-8103-342f7c994de1.png",
+    "file": "bird-092-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "25cf0f945f2a4408a1153e7e16c59177e6014d246362b121808516ffd8bbd944",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-093": {
+    "source": "exec-6ca5d61e-d900-490e-b3a9-f3ea92d1ed79.png",
+    "file": "bird-093-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "a02cebe7f7ef8414c0334b6f56a597c78ab9ca31bc0e0d544c5bae09017bdaf7",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-094": {
+    "source": "exec-25bfb579-e333-41f2-962a-847100df87a8.png",
+    "file": "bird-094-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "dc205a2e7809db7d7aa4472cc8bb2ffc1be224f8629dcc1ec62d40ae2c017966",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-095": {
+    "source": "exec-92497402-4b7d-46b6-8b74-e392b8616a39.png",
+    "file": "bird-095-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "e3e0a80e22a377f808d1bfc1d6511edc871140db0a23aebc1235e33436bad7c9",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-096": {
+    "source": "exec-48f1522d-fa6b-49f3-af4a-2d15b99eb80e.png",
+    "file": "bird-096-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "4eda289fb6e19479dddb95034d0d18f59003532bcf5b93599ad58fcec3445d2c",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-097": {
+    "source": "exec-b3713b5f-8cf2-441f-80b4-4ccc8a0b6c34.png",
+    "file": "bird-097-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "0f2ab131d33af5d88163e48218dbfd0e3544313c62d159f547502f7790ec8c2d",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-098": {
+    "source": "exec-5b560168-92bf-41dc-bfe9-46647ecb95f0.png",
+    "file": "bird-098-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "3388a77f32a8e6a299c6d2118922e4151386de035bcbc5f0dd59f20f1c4ee544",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   }
 }

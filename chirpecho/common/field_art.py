@@ -96,3 +96,41 @@ BAT_ART = [
 ]
 
 BIRD_ART.append(('92918a', 'd2c6b4', '777970', '333137', 'goose', 'pink-footed', 'A compact goose with a dark brown head and neck, pale grey back, pink feet and a short dark bill with a pink band. Winter flocks graze in open fields and grasslands.'))
+
+BIRD_ART.extend([
+('a7adb4', 'eeeeea', '202931', '343b40', 'heron', 'night-heron', 'A stocky heron with a black crown and back, grey wings, white underside and red eyes. Adults have slender white nape plumes and hunt along water edges at dusk and at night.'),
+('877665', 'cbbca6', '514538', '343137', 'goose', 'tundra-bean', 'A brown-grey goose with a dark head and neck, orange legs and a short stout black bill with an orange band. Winter flocks graze on grasslands and fields.'),
+])
+
+BIRD_ART.extend([('39b9cc', '55cbd1', '2769ac', '343b40', 'song', 'plain', 'A colourful bird with a turquoise head and belly, chestnut back and deep blue wings. It watches from exposed perches for large insects on open ground.'), ('ae7743', '43b9be', '549966', '333b3c', 'longtail', 'eye-stripe', 'A slender aerial insect hunter with a chestnut crown and back, yellow throat, turquoise belly and black eye stripe. Its long curved bill catches flying insects.'), ('263f40', 'f2eee3', '223238', 'c54e42', 'heron', 'black', 'A large shy bird with a glossy black head, neck and wings, white belly and red bill and legs. It feeds in shallow water and nests in quiet forests.')])
+
+BIRD_ART.extend([
+('999fa2', 'b7babc', '596166', '9b946c', 'heron', 'plain', 'Tall grey crane with long dark legs, black face and neck, white stripe behind the eye down the neck, red crown patch and drooping dark tail-like tertial feathers.'),
+('827363', 'c1b19a', '514c46', '373b38', 'swift', 'plain', 'Mottled grey-brown cryptic plumage, large dark eyes, tiny bill with wide gape, long folded wings and long barred tail, short legs.'),
+('282e32', '353c40', '20272c', 'c9bf9b', 'woodpecker', 'plain', 'Large entirely black woodpecker, adult male with full bright red crown, pale eyes, long pale ivory pointed bill, stiff tail and strong grasping feet.'),
+('8e795c', 'e7d7bf', '6d604c', '373d3d', 'song', 'plain', 'Adult male white-spotted bluethroat, brilliant blue throat with small white central spot, black and chestnut breast bands, brown back, cream eyebrow, rusty patches at tail base.'),
+('9faeb7', 'ecede7', '627580', '333c43', 'raptor', 'plain', 'Adult male Hen Harrier, pale blue-grey head and back, white underside, yellow eyes and legs, dark hooked bill, long wings with black tips, long barred tail and white rump.'),
+('9e8663', 'e8d8b8', '756145', 'a89679', 'slender', 'plain', 'Slim brown Tree Pipit, strongly streaked warm buff breast, finer streaks on flanks, pale belly, cream eyebrow, pinkish legs and relatively short curved hind claw.'),
+('335d5b', 'f0eee3', '2a4645', '343b3d', 'waterhen', 'plain', 'Northern Lapwing with long fine upward black crest, metallic green and purple back, black breast and face markings, white belly, pink legs and short dark bill.'),
+('a96a43', 'c58e65', '5d4434', 'b9aa75', 'raptor', 'plain', 'Red Kite with pale grey streaked head, rusty red-brown body, dark folded wings, yellow eyes and feet, hooked bill, very long deeply forked rusty tail fully visible.'),
+('928367', 'dfd3b8', '6e604a', '9f9075', 'slender', 'plain', 'Meadow Pipit, olive-brown streaked upperparts, pale buff breast and belly with dark streaks continuing boldly down flanks, thin bill, pinkish legs and long slender hind claw.'),
+('9f8663', 'e2d0ad', '766047', 'a28c6d', 'lark', 'plain', 'Small compact Woodlark, brown streaked plumage, bold cream eyebrows meeting behind head, short crest, short tail, buff streaked breast, black-and-white marking on folded wing edge.'),
+('655f55', '8d887c', '45453f', '303534', 'goose', 'plain', 'Dark-bellied Brent Goose, compact goose with black head neck and breast, small white patch on each side of neck, dark grey-brown body, white undertail, black bill and black webbed feet.'),
+('939b9d', 'e4e4dc', '515c64', '303738', 'goose', 'plain', 'Barnacle Goose, white face contrasting with black crown neck and breast, silver-grey back with black-and-white barred wings, pale belly, short black bill and black webbed feet.'),
+])
+
+BIRD_ART.extend([
+('293239', 'eeeeea', '242b30', '8796a0', 'duck', 'plain', 'Adult male Tufted Duck with glossy black head breast and back, clean white flanks, long drooping black crest, bright yellow eyes, blue-grey bill with black tip and dark webbed feet.'),
+('978e7a', 'ded3bb', '706957', '363b3c', 'tit', 'plain', 'Small Crested Tit, tall pointed black-and-white speckled crest, pale cheeks bordered with a black curved line, black bib, grey-brown back and buff-white belly.'),
+('91a54e', 'faf5e4', '6a843d', '8c8360', 'slender', 'plain', 'Wood Warbler with bright moss-green back, lemon-yellow face throat and long eyebrow, clean white belly, dark eye stripe, long folded wings and slim fine bill.'),
+('263b3c', '304140', '263136', 'a3a08b', 'heron', 'plain', 'Adult Great Cormorant, glossy black plumage with bronze scalloped wings, long neck, sturdy hooked grey bill with yellow skin at base, pale cheek and throat patches, black webbed feet and long stiff tail.'),
+('8f8b7e', 'c6c3b6', '69665b', '383b37', 'duck', 'plain', 'Adult male Gadwall, finely patterned grey body, brown head with steep forehead, black rear end, dark bill, chestnut shoulder and small white wing patch visible on folded wing, orange webbed feet.'),
+('a48b6b', 'd5c3a5', '73553f', 'c78379', 'goose', 'plain', 'Egyptian Goose with sandy buff head, distinct dark chocolate eye patches, dark neck ring and brown breast spot, grey-buff belly, chestnut back and folded wings with white patches, pink bill and long pink webbed feet.'),
+])
+
+BIRD_ART.append(('9a8062', 'e5d6c4', '68747c', 'b9a489', 'slender', 'plain', 'A lively hedgerow warbler with a bright white throat, grey male head, rusty wing panels and a long white-edged tail. It sings from scrub tops and makes brief fluttering song flights.'))
+
+BIRD_ART.append(('555b60', '989b9b', '292d31', 'c97543', 'slender', 'plain', 'An alert insect hunter of rocks, rooftops and buildings. The western male has a charcoal-black face and breast, slate-grey back, pale wing panel and a vivid rusty-red tail that frequently quivers.'))
+
+BIRD_ART.append(('eeeee9', 'ffffff', 'ccd3d7', '33393d', 'heron', 'plain', 'An elegant white heron with a long S-shaped neck, black legs and feet, and a yellow bill outside the breeding season. It stalks fish in shallow water and also hunts in wet grassland.'))
+BIRD_ART.append(('eeeee9', 'ffffff', 'ccd3d7', 'e9bd37', 'swan', 'whooper', 'A large white swan with a long upright neck, black feet and a yellow-and-black bill. The yellow forms a pointed wedge extending beyond the nostril. Winter flocks graze on wet grasslands and give loud trumpeting calls.'))

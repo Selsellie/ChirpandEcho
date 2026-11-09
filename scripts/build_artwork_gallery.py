@@ -16,6 +16,8 @@ manifest = json.loads(manifest_path.read_text())
 for number in (17, 44):
     key = f'bird-{number:03d}'
     destination = assets / (key + '-pokemon.webp')
+    if destination.exists() and not manifest.get(key, {}).get('approved_preview', False):
+        continue  # Preserve replacement artwork; previews are historical style references.
     shutil.copyfile(assets / (key + '-preview.webp'), destination)
     with Image.open(destination) as image:
         manifest[key] = dict(file=destination.name, approved_preview=True,

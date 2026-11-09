@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#172b32">
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='brand.svg') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png', v='1') }}">
+  <meta name="apple-mobile-web-app-title" content="Chirp &amp; Echo">
   <title>Chirp &amp; Echo · {{ mode_name }} · {{ ('Bird species' if mode == 'chirp' else 'Batlas') if tab == 'species' else 'Logs' if tab == 'logs' else 'Health' if tab == 'health' else 'Artwork' if tab == 'artwork' else 'Calendar' if tab == 'calendar' else 'Milestones' if tab == 'milestones' else 'Night watch' }}</title>
   <script>
   try{const theme=localStorage.getItem('bats-theme')||'system';document.documentElement.dataset.theme=theme==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):theme;}catch(e){}

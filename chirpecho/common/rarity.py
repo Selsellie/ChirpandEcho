@@ -20,6 +20,14 @@ BIRD_TIERS = (
 BIRD_TIERS += ('rare', 'rare', 'uncommon', 'epic', 'rare', 'uncommon', 'uncommon', 'uncommon')
 BIRD_TIERS += ('legendary', 'rare', 'rare', 'epic', 'rare')
 BIRD_TIERS += ('uncommon', 'rare')
+BIRD_TIERS += ('epic', 'rare')
+BIRD_TIERS += ('legendary', 'epic', 'legendary')
+BIRD_TIERS += ('epic', 'epic', 'epic', 'rare', 'epic', 'uncommon', 'uncommon', 'epic', 'uncommon', 'rare', 'rare', 'uncommon')
+BIRD_TIERS += ('uncommon', 'rare', 'rare', 'uncommon', 'uncommon', 'uncommon')
+BIRD_TIERS += ('uncommon',)
+BIRD_TIERS += ('uncommon',)
+BIRD_TIERS += ('uncommon',)
+BIRD_TIERS += ('rare',)  # Whooper Swan
 BAT_TIERS = (
     'common','uncommon','rare','uncommon','rare','uncommon',
     'uncommon','rare','rare','epic','legendary','legendary',

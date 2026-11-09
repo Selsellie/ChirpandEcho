@@ -9,6 +9,14 @@ from chirpecho.chirp.catalogue import SPECIES as BIRDS
 from chirpecho.echo.catalogue import SPECIES as BATS
 
 TEXT = {
+'Ducks, geese and swans':'Eenden, ganzen en zwanen',
+'Cranes, cormorants, rails and waders':'Kraanvogels, aalscholvers, rallen en steltlopers',
+'Bee-eaters, kingfishers and rollers':'Bijeneters, ijsvogels en scharrelaars',
+'Cuckoos and nightjars':'Koekoeken en nachtzwaluwen',
+'Long-eared bats and woodland specialists':'Grootoorvleermuizen en bosspecialisten',
+'Horseshoe and cave bats':'Hoefijzerneuzen en grotbewoners',
+
+'Finches':'Vinken','Tits':'Mezen','Others':'Overige',
 'Artwork':'Illustraties','The wildlife artwork collection':'De collectie dierenillustraties',
 'Browse the full collection. Open an illustration to see it at full size.':'Bekijk de volledige collectie. Open een illustratie om deze op volledig formaat te bekijken.',
 'Birds and bats':'Vogels en vleermuizen',
@@ -380,18 +388,20 @@ TEXT.update({'Collect familiar faces. Complete a set. Discover your next favouri
                                                                                                                                                                                                                         'voortgang '
                                                                                                                                                                                                                         'veranderen.',
  'The tit club': 'De mezenclub',
- 'Collect all five tits in this set, including the long-tailed tit.': 'Verzamel alle vijf mezen uit deze '
-                                                                      'set, inclusief de staartmees.',
+ 'Collect all six tits in this set, including the long-tailed tit.': 'Verzamel alle zes mezen uit deze set, inclusief de staartmees.',
+
  'Goose parade': 'Ganzenparade',
- 'Collect the greylag, Canada, greater white-fronted and pink-footed goose.':
-     'Verzamel de grauwe gans, Canadese gans, kolgans en kleine rietgans.',
+ 'Collect the greylag, Canada, greater white-fronted, pink-footed, tundra bean, brent, barnacle and Egyptian goose.': 'Verzamel de grauwe gans, Canadese gans, kolgans, kleine rietgans, toendrarietgans, rotgans, brandgans en nijlgans.',
+
+
  'Owl patrol': 'Uilenpatrouille',
  'Collect the tawny, little, long-eared and barn owl.': 'Verzamel de bosuil, steenuil, ransuil en kerkuil.',
  'The crow crew': 'De kraaienbende',
  'Collect the magpie, jackdaw, carrion crow, rook and jay.': 'Verzamel de ekster, kauw, zwarte kraai, roek '
                                                              'en gaai.',
  'Knock knock!': 'Klop, klop!',
- 'Collect the great spotted and green woodpecker.': 'Verzamel de grote bonte specht en groene specht.',
+ 'Collect the great spotted, green and black woodpecker.': 'Verzamel de grote bonte specht, groene specht en zwarte specht.',
+
  'Finch party': 'Vinkenfeest',
  'Collect the chaffinch, greenfinch, goldfinch, bullfinch, hawfinch and linnet.': 'Verzamel de vink, '
                                                                                   'groenling, putter, '
@@ -402,20 +412,20 @@ TEXT.update({'Collect familiar faces. Complete a set. Discover your next favouri
                                                                               'zanglijster, grote lijster, '
                                                                               'koperwiek en kramsvogel.',
  'Lords of the sky': 'Heersers van de lucht',
- 'Collect all six daytime birds of prey in this set.': 'Verzamel alle zes roofvogels uit deze set.',
+ 'Collect all eight daytime birds of prey in this set.': 'Verzamel alle acht dagroofvogels uit deze set.',
+
  'Pigeon post': 'Duivenpost',
  'Collect the wood pigeon, rock pigeon, stock dove and collared dove.': 'Verzamel de houtduif, stadsduif, '
                                                                         'holenduif en Turkse tortel.',
  'Sparrow pals': 'Mussenmaatjes',
  'Collect the house sparrow and tree sparrow.': 'Verzamel de huismus en ringmus.',
  'By the water': 'Aan de waterkant',
- 'Collect the mallard, heron, moorhen, coot, swan, stork and kingfisher.': 'Verzamel de wilde eend, blauwe '
-                                                                           'reiger, waterhoen, meerkoet, '
-                                                                           'knobbelzwaan, ooievaar en '
-                                                                           'ijsvogel.',
+ 'Collect the mallard, grey heron, night heron, moorhen, coot, mute swan, whooper swan, white stork, black stork, kingfisher, crane, lapwing, cormorant and great egret.': 'Verzamel de wilde eend, blauwe reiger, kwak, waterhoen, meerkoet, knobbelzwaan, wilde zwaan, ooievaar, zwarte ooievaar, ijsvogel, kraanvogel, kievit, aalscholver en grote zilverreiger.',
+
+
  'Sky acrobats': 'Luchtacrobaten',
- 'Collect the swift, barn swallow, house martin and common tern.': 'Verzamel de gierzwaluw, boerenzwaluw, '
-                                                                   'huiszwaluw en visdief.',
+ 'Collect the swift, barn swallow, house martin, common tern, bee-eater and nightjar.': 'Verzamel de gierzwaluw, boerenzwaluw, huiszwaluw, visdief, bijeneter en nachtzwaluw.',
+
  'A whole chorus': 'Een heel koor',
  'Record 10 different bird species.': 'Leg 10 verschillende vogelsoorten vast.',
  'The night club': 'De nachtclub',
@@ -542,8 +552,28 @@ TEXT.update({'Species type': 'Soortgroep',
  'Herons and storks': 'Reigers en ooievaars',
  'Rails and coots': 'Rallen en koeten',
  'Cuckoos': 'Koekoeken',
+ 'Rollers': 'Scharrelaars',
+ 'Bee-eaters': 'Bijeneters',
+ 'Flying colours': 'Vliegende kleuren',
+ 'Collect the kingfisher, roller, bee-eater and bluethroat.': 'Verzamel de ijsvogel, scharrelaar, bijeneter en blauwborst.',
+
+ 'Cranes': 'Kraanvogels',
+ 'Nightjars': 'Nachtzwaluwen',
+ 'Waders': 'Steltlopers',
+ 'Songs over the fields': 'Zang boven de velden',
+ 'Collect the skylark, woodlark, tree pipit and meadow pipit.': 'Verzamel de veldleeuwerik, boomleeuwerik, boompieper en graspieper.',
+ 'Cormorants': 'Aalscholvers',
+ 'Duck pond': 'Eendenvijver',
+ 'Collect the mallard, tufted duck and gadwall.': 'Verzamel de wilde eend, kuifeend en krakeend.',
+ 'Songs in the leaves': 'Zang in het bladerdek',
+ 'Collect the chiffchaff, willow warbler and wood warbler.': 'Verzamel de tjiftjaf, fitis en fluiter.',
  'Kingfishers': 'IJsvogels',
  'Songbirds': 'Zangvogels',
+ 'Sparrows': 'Mussen',
+ 'Rusty tails': 'Roestrode staarten',
+ 'Collect the bluethroat and black redstart.': 'Verzamel de blauwborst en zwarte roodstaart.',
+ 'Hedgerow voices': 'Stemmen uit de haag',
+ 'Collect the blackcap and common whitethroat.': 'Verzamel de zwartkop en grasmus.',
  'Try another name, species type, rarity, or collection status. Your collection grows when qualifying predictions are saved.': 'Probeer '
                                                                                                                                'een '
                                                                                                                                'andere '

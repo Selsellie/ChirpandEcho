@@ -516,7 +516,16 @@ def artwork():
             if search and search.casefold() not in ' '.join((item['name'], translate(item['name']), item['scientific'])).casefold():
                 continue
             entries.append(dict(item, kind=group, creature=profile(item['name'], group == 'bird')))
+    display_name = translate if language() == 'nl' else str
+    from chirpecho.web.artwork import artwork_group
+    entries.sort(key=lambda item: (artwork_group(item) == 'Others',
+                                   display_name(artwork_group(item)).casefold(),
+                                   display_name(item['name']).casefold()))
+    artwork_groups = {}
+    for item in entries:
+        artwork_groups.setdefault(artwork_group(item), []).append(item)
     return render_template('index.html', tab='artwork', artwork_entries=entries,
+                           artwork_groups=artwork_groups,
                            artwork_total=len(BIRD_SPECIES if kind == 'bird' else SPECIES), search=search, artwork_kind=kind,
                            recorder=pipeline_status('recorder'), detector=pipeline_status('detector'),
                            now=dt.datetime.now(ZONE))

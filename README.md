@@ -40,9 +40,9 @@ appearance options.
 I borrowed Pokémon's **Pokédex** idea: discover a species and unlock its card.
 No tall grass required, just a microphone and some chatty neighbours.
 
-- **71 birds and 24 bats** in the starter field guides. See the
+- **98 birds and 24 bats** in the starter field guides. See the
   [full roster, model support and rarity tiers](SPECIES.md).
-- **95 individual illustrations** with lively Pokémon-inspired artwork on
+- **122 individual illustrations** with lively Pokémon-inspired artwork on
   transparent backgrounds. Undiscovered cards use matching silhouettes.
 - **Field notes to unlock:** a retained prediction reveals a species' colours
   and description. Bird cards link to eBird; bat cards link to species references.
@@ -55,6 +55,8 @@ The Bird Atlas lists them under **“Birds to add to the catalogue”**, ready f
 identification review and a future atlas entry. They do not automatically unlock
 or create a catalogue card. Non-bird model labels are excluded.
 
+**I am updating the species list frequently as new species are discovered.**
+
 ## A diary from dawn to dusk 
 
 The **Calendar** combines both archives into one listening diary. Browse weeks
@@ -66,10 +68,6 @@ The **Milestones** page brings together **37 illustrated achievements**. Cards
 use the same colourful bird and bat portraits as the collection, with progress
 bars and expandable checklists showing which species you have and which are
 still missing.
-
-**12 bird collecting sets** 
-**5 bat collecting sets**
-**20 listening achievements**
 
 ## Take a look, then take a listen 
 

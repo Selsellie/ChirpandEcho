@@ -1,6 +1,6 @@
 # Species and collection rarity
 
-The collection contains 71 birds and 24 bats. Rarity is a fixed game tier,
+The collection contains 98 birds and 24 bats. Rarity is a fixed game tier,
 not a scientific measure of local occurrence or conservation status.
 
 ## Birds
@@ -78,6 +78,39 @@ not a scientific measure of local occurrence or conservation status.
 | #069 | Western Marsh Harrier | *Circus aeruginosus* | ★★★ Rare | Included |
 | #070 | Greater White-fronted Goose | *Anser albifrons* | ★★ Uncommon | Included |
 | #071 | Pink-footed Goose | *Anser brachyrhynchus* | ★★★ Rare | Included |
+| #072 | Black-crowned Night Heron | *Nycticorax nycticorax* | ★★★★ Epic | Included |
+| #073 | Tundra Bean Goose | *Anser serrirostris* | ★★★ Rare | Included |
+
+| #074 | European Roller | *Coracias garrulus* | ★★★★★ Legendary | Included |
+| #075 | European Bee-eater | *Merops apiaster* | ★★★★ Epic | Included |
+| #076 | Black Stork | *Ciconia nigra* | ★★★★★ Legendary | Included |
+
+| #077 | Common Crane | *Grus grus* | ★★★★ Epic | Included |
+| #078 | European Nightjar | *Caprimulgus europaeus* | ★★★★ Epic | Included |
+| #079 | Black Woodpecker | *Dryocopus martius* | ★★★★ Epic | Included |
+| #080 | Bluethroat | *Luscinia svecica* | ★★★ Rare | Included |
+| #081 | Hen Harrier | *Circus cyaneus* | ★★★★ Epic | Included |
+| #082 | Tree Pipit | *Anthus trivialis* | ★★ Uncommon | Included |
+| #083 | Northern Lapwing | *Vanellus vanellus* | ★★ Uncommon | Included |
+| #084 | Red Kite | *Milvus milvus* | ★★★★ Epic | Included |
+| #085 | Meadow Pipit | *Anthus pratensis* | ★★ Uncommon | Included |
+| #086 | Woodlark | *Lullula arborea* | ★★★ Rare | Included |
+| #087 | Brant | *Branta bernicla* | ★★★ Rare | Included |
+| #088 | Barnacle Goose | *Branta leucopsis* | ★★ Uncommon | Included |
+
+| #089 | Tufted Duck | *Aythya fuligula* | ★★ Uncommon | Included |
+| #090 | Crested Tit | *Lophophanes cristatus* | ★★★ Rare | Included |
+| #091 | Wood Warbler | *Phylloscopus sibilatrix* | ★★★ Rare | Included |
+| #092 | Great Cormorant | *Phalacrocorax carbo* | ★★ Uncommon | Included |
+| #093 | Gadwall | *Mareca strepera* | ★★ Uncommon | Included |
+| #094 | Egyptian Goose | *Alopochen aegyptiaca* | ★★ Uncommon | Included |
+
+| #095 | Common Whitethroat | *Curruca communis* | ★★ Uncommon | Included |
+
+| #096 | Black Redstart | *Phoenicurus ochruros* | ★★ Uncommon | Included |
+
+| #097 | Great Egret | *Ardea alba* | ★★ Uncommon | Included |
+| #098 | Whooper Swan | *Cygnus cygnus* | ★★★ Rare | Included |
 
 ## Bats
 

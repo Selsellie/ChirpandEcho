@@ -47,6 +47,33 @@ _ROWS = [
 ('Circus aeruginosus', 'Western Marsh Harrier'),
 ('Anser albifrons', 'Greater White-fronted Goose'),
 ('Anser brachyrhynchus', 'Pink-footed Goose'),
+('Nycticorax nycticorax', 'Black-crowned Night Heron'),
+('Anser serrirostris', 'Tundra Bean Goose'),
+('Coracias garrulus', 'European Roller'),
+('Merops apiaster', 'European Bee-eater'),
+('Ciconia nigra', 'Black Stork'),
+('Grus grus', 'Common Crane'),
+('Caprimulgus europaeus', 'European Nightjar'),
+('Dryocopus martius', 'Black Woodpecker'),
+('Luscinia svecica', 'Bluethroat'),
+('Circus cyaneus', 'Hen Harrier'),
+('Anthus trivialis', 'Tree Pipit'),
+('Vanellus vanellus', 'Northern Lapwing'),
+('Milvus milvus', 'Red Kite'),
+('Anthus pratensis', 'Meadow Pipit'),
+('Lullula arborea', 'Woodlark'),
+('Branta bernicla', 'Brant'),
+('Branta leucopsis', 'Barnacle Goose'),
+('Aythya fuligula', 'Tufted Duck'),
+('Lophophanes cristatus', 'Crested Tit'),
+('Phylloscopus sibilatrix', 'Wood Warbler'),
+('Phalacrocorax carbo', 'Great Cormorant'),
+('Mareca strepera', 'Gadwall'),
+('Alopochen aegyptiaca', 'Egyptian Goose'),
+('Curruca communis', 'Common Whitethroat'),
+('Phoenicurus ochruros', 'Black Redstart'),
+('Ardea alba', 'Great Egret'),
+('Cygnus cygnus', 'Whooper Swan'),
 ]
 
 # eBird species codes from the Cornell Lab's eBird taxonomy (v2026).
@@ -85,14 +112,24 @@ _EBIRD_CODES.update({'Accipiter nisus': 'eurspa1', 'Pyrrhula pyrrhula': 'eurbul'
 _EBIRD_CODES.update({'Haliaeetus albicilla': 'whteag', 'Alcedo atthis': 'comkin1', 'Sterna hirundo': 'comter', 'Pernis apivorus': 'euhbuz1', 'Circus aeruginosus': 'wemhar1'})
 _EBIRD_CODES['Anser albifrons'] = 'gwfgoo'
 _EBIRD_CODES['Anser brachyrhynchus'] = 'pifgoo'
+_EBIRD_CODES.update({'Nycticorax nycticorax': 'bcnher', 'Anser serrirostris': 'tubgoo1'})
+_EBIRD_CODES.update({'Coracias garrulus': 'eurrol1', 'Merops apiaster': 'eubeat1', 'Ciconia nigra': 'blasto1'})
+_EBIRD_CODES.update({'Grus grus': 'comcra', 'Caprimulgus europaeus': 'eurnig1', 'Dryocopus martius': 'blawoo1', 'Luscinia svecica': 'blueth', 'Circus cyaneus': 'norhar1', 'Anthus trivialis': 'trepip', 'Vanellus vanellus': 'norlap', 'Milvus milvus': 'redkit1', 'Anthus pratensis': 'meapip1', 'Lullula arborea': 'woolar1', 'Branta bernicla': 'brant', 'Branta leucopsis': 'bargoo'})
+_EBIRD_CODES.update({'Aythya fuligula': 'tufduc', 'Lophophanes cristatus': 'cretit2', 'Phylloscopus sibilatrix': 'woowar', 'Phalacrocorax carbo': 'grecor', 'Mareca strepera': 'gadwal', 'Alopochen aegyptiaca': 'egygoo'})
+_EBIRD_CODES['Curruca communis'] = 'grewhi1'
+_EBIRD_CODES['Phoenicurus ochruros'] = 'blared1'
+_EBIRD_CODES['Ardea alba'] = 'greegr'
+_EBIRD_CODES['Cygnus cygnus'] = 'whoswa'
 assert len(_EBIRD_CODES) == len(_ROWS)
 from urllib.parse import quote
 from chirpecho.common.field_art import BIRD_ART
 
 # Browsing groups for the field guide, rather than taxonomic ranks.
 _GENUS_GROUPS = {
+    'Passer': 'Sparrows',
     'Anser': 'Geese and swans', 'Branta': 'Geese and swans', 'Cygnus': 'Geese and swans',
-    'Anas': 'Ducks',
+    'Anas': 'Ducks', 'Aythya': 'Ducks', 'Mareca': 'Ducks',
+    'Alopochen': 'Geese and swans', 'Phalacrocorax': 'Cormorants',
     'Buteo': 'Birds of prey', 'Falco': 'Birds of prey', 'Accipiter': 'Birds of prey',
     'Haliaeetus': 'Birds of prey', 'Pernis': 'Birds of prey', 'Circus': 'Birds of prey',
     'Strix': 'Owls', 'Athene': 'Owls', 'Asio': 'Owls', 'Tyto': 'Owls',
@@ -101,8 +138,11 @@ _GENUS_GROUPS = {
     'Dendrocopos': 'Woodpeckers', 'Picus': 'Woodpeckers',
     'Apus': 'Swifts and swallows', 'Hirundo': 'Swifts and swallows', 'Delichon': 'Swifts and swallows',
     'Larus': 'Gulls and terns', 'Chroicocephalus': 'Gulls and terns', 'Sterna': 'Gulls and terns',
-    'Ardea': 'Herons and storks', 'Ciconia': 'Herons and storks',
+    'Ardea': 'Herons and storks', 'Nycticorax': 'Herons and storks', 'Ciconia': 'Herons and storks',
     'Gallinula': 'Rails and coots', 'Fulica': 'Rails and coots',
+    'Coracias': 'Rollers', 'Merops': 'Bee-eaters',
+    'Grus': 'Cranes', 'Caprimulgus': 'Nightjars', 'Dryocopus': 'Woodpeckers',
+    'Vanellus': 'Waders', 'Milvus': 'Birds of prey',
     'Cuculus': 'Cuckoos', 'Alcedo': 'Kingfishers',
 }
 

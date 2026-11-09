@@ -91,3 +91,41 @@ BATS = [
 ('Savis dwergvleermuis','Een zuidelijke soort uit delen van Frankrijk, met verblijfplaatsen in spleten van rotsen en muren.'),
 ('Langvleugelvleermuis','Lange smalle vleugels passen bij een snelle vlucht. Ondergrondse verblijfplaatsen zijn essentieel in de levenscyclus.'),
 ]
+
+BIRDS.extend([
+('Kwak', 'Een gedrongen reiger met een zwarte kruin en rug, grijze vleugels, witte onderzijde en rode ogen. Volwassen vogels hebben dunne witte sierveren aan de achterkop en jagen langs water in de schemering en nacht.'),
+('Toendrarietgans', 'Een bruingrijze gans met een donkere kop en hals, oranje poten en een korte stevige zwarte snavel met een oranje band. Wintergroepen grazen op graslanden en akkers.'),
+])
+
+BIRDS.extend([('Scharrelaar', 'Een kleurrijke vogel met een turquoise kop en buik, kastanjebruine rug en diepblauwe vleugels. Vanaf een uitkijkpost zoekt hij grote insecten op open terrein.'), ('Bijeneter', 'Een slanke insectenjager met een kastanjebruine kruin en rug, gele keel, turquoise buik en zwarte oogstreep. Met zijn lange gebogen snavel vangt hij vliegende insecten.'), ('Zwarte ooievaar', 'Een grote schuwe vogel met een glanzend zwarte kop, hals en vleugels, witte buik en rode snavel en poten. Hij zoekt voedsel in ondiep water en broedt in rustige bossen.')])
+
+BIRDS.extend([
+('Kraanvogel', 'Een grote grijze vogel met lange poten, een zwarte hals met witte zijstreep en een rode kruinvlek. Tijdens de trek klinken zijn trompetterende roepen hoog in de lucht.'),
+('Nachtzwaluw', 'Een meester in camouflage met grijsbruin gemarmerde veren, grote donkere ogen en een kleine snavel met brede bekopening. In de schemering jaagt hij op vliegende insecten.'),
+('Zwarte specht', 'Een grote zwarte specht met een lichte snavel en lichte ogen. Het mannetje heeft een geheel rode kruin; met zijn krachtige snavel hakt hij holtes in bomen.'),
+('Blauwborst', 'Een kleine zanger met een bruine rug en lichte wenkbrauw. Het mannetje heeft een felblauwe keel met een witte vlek en zwarte en roestbruine borstbanden.'),
+('Blauwe kiekendief', 'Een slanke roofvogel met lange vleugels en een witte stuit. Het volwassen mannetje is blauwgrijs met zwarte vleugelpunten; vrouwtjes zijn bruin gestreept.'),
+('Boompieper', 'Een bruingestreepte zanger met een warme borst, lichte buik en fijne flankstreepjes. Hij zingt vaak vanuit een boom en daalt met gespreide vleugels neer.'),
+('Kievit', 'Een weidevogel met een lange dunne kuif, groen-paars glanzende rug en witte buik. Zijn brede ronde vleugels vallen op tijdens buitelende baltsvluchten.'),
+('Rode wauw', 'Een sierlijke roofvogel met een lichtgrijze kop, roestbruin lichaam en diep gevorkte staart. Met lange vleugels en een beweeglijke staart zweeft hij boven open landschap.'),
+('Graspieper', 'Een kleine bruingestreepte vogel van open grasland en heide. De donkere strepen lopen door over borst en flanken; aan de achterteen zit een lange nagel.'),
+('Boomleeuwerik', 'Een compacte leeuwerik met een korte staart en brede lichte wenkbrauwen die achter op de kop samenkomen. Zijn melodieuze zang klinkt boven heide en open bosranden.'),
+('Rotgans', 'Een compacte gans met een zwarte kop en hals, kleine witte halsvlekken en een grijsbruin lichaam. Hij graast langs de kust op zeegras, zeekraal en gras.'),
+('Brandgans', 'Een zwart-witte gans met een wit gezicht, zwarte hals en zilvergrijze rug met donkere banden. Groepen grazen op graslanden en laten korte blaffende roepen horen.'),
+])
+
+BIRDS.extend([
+('Kuifeend', 'Een compacte duikeend met gele ogen en een afhangende kuif. Het mannetje heeft een zwarte kop en rug met helderwitte flanken; het vrouwtje is donkerbruin.'),
+('Kuifmees', 'Een kleine mees met een opvallende spitse zwart-witte kuif, lichte wangen en een zwarte keelvlek. Hij zoekt insecten en zaden tussen de takken van naaldbomen.'),
+('Fluiter', 'Een frisse boszanger met een mosgroene rug, gele keel en wenkbrauw en helderwitte buik. De versnellende zang klinkt als een muntje dat op een tafel uitrolt.'),
+('Aalscholver', 'Een donkere watervogel met een lange hals, haaksnavel en stevige zwemvliezen. Na het duiken zit hij vaak met gespreide vleugels op een paal of oever.'),
+('Krakeend', 'Een subtiel getekende grijze eend. Het mannetje heeft een bruine kop, donkere snavel en zwarte achterzijde; de witte vleugelvlek is bij beide geslachten herkenbaar.'),
+('Nijlgans', 'Een stevige gans met donkere oogvlekken, een bruine borstvlek en roze poten. In vlucht vallen de grote witte vleugelvelden op; hij leeft vaak bij open water en grasland.'),
+])
+
+BIRDS.append(('Grasmus', 'Een levendige zanger van hagen en struweel met een helderwitte keel, roestbruine vleugelpanelen en een lange staart met witte randen. Het mannetje heeft een grijze kop en zingt vanaf struiktoppen of tijdens een korte baltsvlucht.'))
+
+BIRDS.append(('Zwarte roodstaart', 'Een alerte insectenjager van rotsen, daken en gebouwen. Het mannetje heeft een zwarte kop en borst, leigrijze rug, lichte vleugelvlek en een opvallende roestrode staart die vaak trilt.'))
+
+BIRDS.append(('Grote zilverreiger', 'Een sierlijke witte reiger met een lange S-vormige hals, zwarte poten en voeten en buiten de broedtijd een gele snavel. Hij besluipt vissen in ondiep water en jaagt ook in nat grasland.'))
+BIRDS.append(('Wilde zwaan', 'Een grote witte zwaan met een lange rechte hals, zwarte poten en een geelzwarte snavel. Het geel loopt als een puntige wig tot voorbij het neusgat. Wintergroepen grazen op natte graslanden en laten luide trompetterende roepen horen.'))

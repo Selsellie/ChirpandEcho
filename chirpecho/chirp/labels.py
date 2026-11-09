@@ -21,6 +21,8 @@ def bird_labels(labels):
     accepted = {}
     for index, label in enumerate(labels):
         scientific, separator, common = label.partition('_')
+        if scientific == 'Sylvia communis':
+            scientific = 'Curruca communis'
         # Sound labels can contain underscores within the category itself.
         if (not scientific.strip() or not separator or not common or scientific.split()[0] in NON_BIRD_GENERA
                 or scientific in SOUNDS or common in SOUNDS
