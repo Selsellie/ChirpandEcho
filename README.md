@@ -31,9 +31,18 @@ Predictions are clues to review, rather than confirmed sightings or animal count
 Chirp and Echo share a consistent introduction and navigation. Calendar,
 Milestones and Health bring both worlds together without a bird/bat selector.
 The interface supports **English and Dutch**, with **light, dark and system**
-appearance options.
+appearance options. 
+
+The switch options **Chirp** and **Echo** makes the switch between birds and bats.
 
 <img width="1651" height="1068" alt="image" src="https://github.com/user-attachments/assets/8be4a2f0-f3b9-46cc-af5a-ff012e2f2bbc" />
+
+Open an encounter's **Signal** to explore its spectrogram, recording time and
+frequency. Use **Listen** to replay the saved WAV while it remains available.
+
+The **Artwork** gallery reveals the whole illustration collection for browsing,
+including undiscovered species. Switch between **Chirp · Birds** and
+**Echo · Bats**, search by species name, and open any image at full size.
 
 ## A Pokédex outside the window 
 
@@ -48,6 +57,12 @@ No tall grass required, just a microphone and some chatty neighbours.
   and description. Bird cards link to eBird; bat cards link to species references.
 - **Rarity stars:** Common, Uncommon, Rare, Epic and Legendary are collection-game
   tiers, rather than measures of local abundance or conservation status.
+- Both an atlas for birds and bats: Birdatlas - Batatlas.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/525056ff-c476-4ab1-9370-4c3f19611252" width="49%" height="350" style="object-fit: cover;" />
+  <img src="https://github.com/user-attachments/assets/85fa1852-05d4-4356-b048-a160028ec992" width="49%" height="350" style="object-fit: cover;" />
+</div>
 
 BirdNET can also recognise birds outside the starter catalogue. Qualifying bird
 predictions are saved and marked **“Not in catalogue — needs to be added.”**
@@ -63,34 +78,17 @@ appear under **Others** (**Overige** in Dutch), listed last. Other groups are
 alphabetised in the selected language. Combine this filter with search, rarity
 and collection status.
 
-## A diary from dawn to dusk 
+## A diary from dawn to dusk and little discoveries, illustrated milestones 
 
 The **Calendar** combines both archives into one listening diary. Browse weeks
 with the arrows or date picker, then select a day from the compact week strip.
-
-## Little discoveries, illustrated milestones 
 
 The **Milestones** page brings together **37 illustrated achievements**. Cards
 use the same colourful bird and bat portraits as the collection, with progress
 bars and expandable checklists showing which species you have and which are
 still missing.
 
-## Take a look, then take a listen 
-
-Open an encounter's **Signal** to explore its spectrogram, recording time and
-frequency. Use **Listen** to replay the saved WAV while it remains available.
-
-The **Artwork** gallery reveals the whole illustration collection for browsing,
-including undiscovered species. Switch between **Chirp · Birds** and
-**Echo · Bats**, search by species name, and open any image at full size.
-
-## A new species has entered the chat 
-
-Optional Discord webhooks announce **only the first discovery of each species**.
-Birds and bats get different English messages with confidence and rarity stars.
-Birds outside the catalogue include a notice that an entry needs to be added.
-
-## Open the listening post 
+## My setup to listen to our wing
 
 My setup runs on an **ARM64 Raspberry Pi with Linux, K3s and a Vleermic**.
 A shared container image powers microphone capture, both classifiers and the
@@ -100,6 +98,10 @@ See **[DEPLOYMENT.md](DEPLOYMENT.md)** for building the image, configuring the
 four services, microphone access, persistent storage, updates and optional
 Discord Secret configuration. Supply your own deployment manifests. Keep webhook
 URLs and other secrets outside the checkout.
+
+Optional Discord webhooks announce **only the first discovery of each species**.
+Birds and bats get different English messages with confidence and rarity stars.
+Birds outside the catalogue include a notice that an entry needs to be added.
 
 ## A nod to the wildlife detectives 💚
 
