@@ -24,6 +24,7 @@ dist/
 *.wav.processing
 *.wav.tmp
 *.png
+!/docs/**/*.png
 *.sqlite3*
 *.db
 *.db-wal
