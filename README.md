@@ -1,4 +1,4 @@
-<img width="197" height="67" alt="image" src="docs/readme-logo.png" />
+<img width="197" height="67" alt="Chirp &amp; Echo logo" src="docs/chirp-and-echo-logo.png" />
 
 **Birds by song. Bats by echo. A wildlife guestbook for my home.**
 
@@ -35,7 +35,7 @@ appearance options.
 
 The switch options **Chirp** and **Echo** makes the switch between birds and bats.
 
-<img width="1651" height="1068" alt="image" src="docs/readme-screenshot.png" />
+<img width="1651" height="1068" alt="Chirp bird detections dashboard with activity, statistics and recent encounters" src="docs/bird-detections-dashboard.png" />
 
 Open an encounter's **Signal** to explore its spectrogram, recording time and
 frequency. Use **Listen** to replay the saved WAV while it remains available.
@@ -60,8 +60,8 @@ No tall grass required, just a microphone and some chatty neighbours.
 - Both an atlas for birds and bats: Birdatlas - Batatlas.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/525056ff-c476-4ab1-9370-4c3f19611252" width="49%" height="350" style="object-fit: cover;" />
-  <img src="https://github.com/user-attachments/assets/85fa1852-05d4-4356-b048-a160028ec992" width="49%" height="350" style="object-fit: cover;" />
+  <img src="docs/bird-atlas.png" alt="Bird Atlas species collection" width="49%" height="350" style="object-fit: cover;" />
+  <img src="docs/bat-atlas.png" alt="Bat Atlas species collection" width="49%" height="350" style="object-fit: cover;" />
 </div>
 
 BirdNET can also recognise birds outside the starter catalogue. Qualifying bird

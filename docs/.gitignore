@@ -1,3 +1,0 @@
-# Keep README illustrations tracked despite the repository-wide PNG ignore rule.
-!readme-logo.png
-!readme-screenshot.png
