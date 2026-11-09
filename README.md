@@ -43,7 +43,7 @@ No tall grass required, just a microphone and some chatty neighbours.
 - **98 birds and 24 bats** in the starter field guides. See the
   [full roster, model support and rarity tiers](SPECIES.md).
 - **122 individual illustrations** with lively Pokémon-inspired artwork on
-  transparent backgrounds. Undiscovered cards use matching silhouettes.
+  transparent backgrounds with thin outlines. Undiscovered cards use matching silhouettes.
 - **Field notes to unlock:** a retained prediction reveals a species' colours
   and description. Bird cards link to eBird; bat cards link to species references.
 - **Rarity stars:** Common, Uncommon, Rare, Epic and Legendary are collection-game
@@ -56,6 +56,12 @@ identification review and a future atlas entry. They do not automatically unlock
 or create a catalogue card. Non-bird model labels are excluded.
 
 **I am updating the species list frequently as new species are discovered.**
+
+The **Species type** filter uses the same groups as the **Artwork** gallery,
+including dedicated **Finches** and **Tits** groups. Single-species bird types
+appear under **Others** (**Overige** in Dutch), listed last. Other groups are
+alphabetised in the selected language. Combine this filter with search, rarity
+and collection status.
 
 ## A diary from dawn to dusk 
 
@@ -100,6 +106,8 @@ URLs and other secrets outside the checkout.
 Thanks to BirdNET, BatDetect2, their researchers and the open-source tools behind
 this listening post. Model licences and attribution are in
 [THIRD_PARTY.md](THIRD_PARTY.md). The [artwork brief](scripts/artwork-brief.md)
-documents the illustration direction.
+documents the illustration direction; [artwork-prompts.json](scripts/artwork-prompts.json)
+contains all generation and eye-revision prompts. The kolgans (Greater
+White-fronted Goose) has been redrawn from scratch with thin contours.
 
 Happy chirping, happy echoing, and may your next visitor unlock a new card!

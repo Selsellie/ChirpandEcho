@@ -1,4 +1,4 @@
-"""Build review sheets and preserve the bookmark for the bilingual /artwork page."""
+"""Build review sheets for the bilingual /artwork page."""
 import hashlib
 import json
 import shutil
@@ -39,8 +39,4 @@ for start in range(0, len(items), 16):
         draw.text((x+8, y+158), item['name'], fill='#183138')
     sheet.save(f'/tmp/art-collection-{start//16}.jpg')
 
-(root / 'artwork-preview.html').write_text('''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/artwork"><title>Artwork · Chirp &amp; Echo</title></head>
-<body><p>The collection is now on the <a href="/artwork">Artwork page</a>.</p></body></html>
-''')
 print(f'Review sheets built for {len(items)} species. Public gallery: /artwork')

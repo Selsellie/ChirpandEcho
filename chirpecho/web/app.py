@@ -36,6 +36,15 @@ RARITY_OPTIONS = {key: value for key, value in TIERS.items() if key != 'unranked
 app.jinja_env.globals['rarity_options'] = RARITY_OPTIONS
 
 
+def observation_feed(where):
+    """Keep the newest matching record in each species' two-minute burst."""
+    return ("WITH ranked AS (SELECT d.*, LAG(unixepoch(detected_at)) OVER ("
+            "PARTITION BY species_key(species) ORDER BY detected_at DESC, id DESC) AS newer_at "
+            "FROM detections d WHERE " + where + "), "
+            "visible AS (SELECT * FROM ranked WHERE newer_at IS NULL "
+            "OR newer_at - unixepoch(detected_at) > 120) ")
+
+
 def selected_rarity():
     value = request.args.get('rarity', 'all')
     if value != 'all' and value not in RARITY_OPTIONS:
@@ -141,6 +150,11 @@ def query(sql, parameters=(), database=None):
     conn.row_factory = sqlite3.Row
     conn.create_function('local_day', 1, lambda value: local_time(value).date().isoformat() if local_time(value) else None)
     conn.create_function('local_hour', 1, lambda value: local_time(value).hour if local_time(value) else 0)
+    bird = request.path.startswith('/chirp')
+    def species_key(label):
+        creature = profile(label, bird)
+        return creature['scientific'] or creature['name']
+    conn.create_function('species_key', 1, species_key, deterministic=True)
     try:
         return [dict(row) for row in conn.execute(sql, parameters).fetchall()]
     except sqlite3.OperationalError as error:
@@ -302,12 +316,13 @@ def index():
             parameters.extend(matching)
         else:
             where += ' AND 0'
-    filtered = query('SELECT COUNT(*) AS total FROM detections WHERE ' + where, parameters)
+    feed = observation_feed(where)
+    filtered = query(feed + 'SELECT COUNT(*) AS total FROM visible', parameters)
     matched = filtered[0]['total'] if filtered else 0
     pages = max(1, math.ceil(matched / 24))
     page = min(page, pages)
-    detections = query('SELECT d.*, a.reason AS archive_reason FROM detections d '
-                       'LEFT JOIN image_archive a ON a.detection_id=d.id WHERE ' + where +
+    detections = query(feed + 'SELECT d.*, a.reason AS archive_reason FROM visible d '
+                       'LEFT JOIN image_archive a ON a.detection_id=d.id '
                        ' ORDER BY d.detected_at DESC LIMIT 24 OFFSET ?',
                        (*parameters, (page - 1) * 24))
     for row in detections:
@@ -464,9 +479,13 @@ def species_guide():
         abort(400)
     bird = request.path.startswith('/chirp')
     catalogue = BIRD_SPECIES if bird else SPECIES
-    group_options = {item['group'].lower().replace(' ', '-'): item['group'] for item in catalogue}
+    from chirpecho.web.artwork import artwork_group
+    kind = 'bird' if bird else 'bat'
+    species_types = {item['number']: artwork_group(dict(item, kind=kind)) for item in catalogue}
+    group_options = {group.lower().replace(' ', '-'): group for group in species_types.values()}
     group_options = dict(sorted(group_options.items(),
-                                key=lambda pair: translate(pair[1]) if language() == 'nl' else pair[1]))
+                                key=lambda pair: (pair[1] == 'Others',
+                                                  (translate(pair[1]) if language() == 'nl' else pair[1]).casefold())))
     species_group = request.args.get('group', 'all')
     if species_group != 'all' and species_group not in group_options:
         abort(400)
@@ -493,8 +512,8 @@ def species_guide():
             item['last'] = row['last']
     recorded = sum(item['calls'] > 0 for item in entries.values())
     visible = [item for item in entries.values()
-               if (not search or search.casefold() in ' '.join((item['name'], item['scientific'], item['group'], item['habitat'], translate(item['name']), translate(item['group']), translate(item['habitat']))).casefold())
-               and (species_group == 'all' or item['group'] == group_options[species_group])
+               if (not search or search.casefold() in ' '.join((item['name'], item['scientific'], item['group'], species_types[item['number']], item['habitat'], translate(item['name']), translate(item['group']), translate(species_types[item['number']]), translate(item['habitat']))).casefold())
+               and (species_group == 'all' or species_types[item['number']] == group_options[species_group])
                and (collection == 'all' or (item['calls'] > 0) == (collection == 'recorded'))
                and (rarity_filter == 'all' or item['rarity']['key'] == rarity_filter)]
     return render_template('index.html', tab='species', catalogue=visible, catalogue_total=len(catalogue),

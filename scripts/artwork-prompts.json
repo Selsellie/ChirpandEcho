@@ -1,0 +1,1122 @@
+{
+  "tool": "built-in image_gen; one image per species",
+  "style_reference": "Owner-approved Eurasian Jay #017 and Tawny Owl #044 original WebP previews, retained alongside collection assets. Use these as style references; preserve current species poses.",
+  "base_prompt": "One original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.",
+  "sizing": "1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.",
+  "pose_policy": "Preserve each existing portrait’s pose, facing direction, wing and foot positions, and tail angle unless its pose instruction below specifies otherwise. Pose references supply pose only; retain the target species’ own anatomy and distinguishing features.",
+  "bat_direction": "Use a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours.",
+  "portraits": [
+    {
+      "kind": "bird",
+      "number": 1,
+      "species": "Eurasian Blackbird",
+      "scientific": "Turdus merula",
+      "file": "bird-001-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE male Eurasian Blackbird (Turdus merula), the garden flautist, as an original creature-collecting game portrait. Image 1 existing blackbird is POSE REFERENCE ONLY: preserve its right-facing upward singing head, open bill, both wings spread outward and upward, long tail angled down-left, two feet lifted underneath in this lively airborne pose. Images 2 approved Jay and 3 approved Tawny Owl are STYLE REFERENCES ONLY: match their Pokémon/Pidgeotto-inspired crisp fine outlines, angular feather tufts, confident expressive character personality and layered graphic cel shading. Fresh polished drawing, all coal-black plumage with controlled charcoal highlights, golden yellow bill and golden eye ring around a lively dark brown eye, dark brown legs and small songbird feet. Retain recognisable blackbird proportions and long rounded tail, no white wing patches, no crow-sized bill. Exactly two wings and two legs, coherent natural anatomy. Bold feather shapes and clear cel-shaded layers rather than soft realistic texture. Thin clean ink contours, no thick sticker border. Full body, every exposed wingtip foot and tail inside square frame with generous transparent margins. One animal alone on genuinely transparent alpha background. No props, branches, acorn, scenery, gradient, glow, cast shadow, text, border or logo.",
+      "source": "exec-1f230937-8aad-4107-87d5-ecafa29debdc.png"
+    },
+    {
+      "kind": "bird",
+      "number": 2,
+      "species": "European Robin",
+      "scientific": "Erithacus rubecula",
+      "file": "bird-002-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: European Robin (Erithacus rubecula). Original field note: A small guardian with a bright orange face and breast. It watches for worms and insects, and sings even through the colder months.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 3,
+      "species": "Great Tit",
+      "scientific": "Parus major",
+      "file": "bird-003-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Great Tit (Parus major). Original field note: A bold woodland acrobat with white cheeks, a black cap and a dark stripe down its yellow belly. Its ringing song often sounds like a repeated two-note phrase.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 4,
+      "species": "Eurasian Blue Tit",
+      "scientific": "Cyanistes caeruleus",
+      "file": "bird-004-pokemon.webp",
+      "pose": "Stepping pose with a closed bill.",
+      "prompt": "Species: Eurasian Blue Tit (Cyanistes caeruleus). Original field note: A tiny canopy explorer in blue, yellow and white. It hangs upside down to inspect twigs for insects and readily visits garden feeders.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Stepping pose with a closed bill.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 5,
+      "species": "House Sparrow",
+      "scientific": "Passer domesticus",
+      "file": "bird-005-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: House Sparrow (Passer domesticus). Original field note: A sociable neighbour of houses and hedges. Males have a grey crown and black bib; this seed eater often gathers in chattering groups.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 6,
+      "species": "Eurasian Tree Sparrow",
+      "scientific": "Passer montanus",
+      "file": "bird-006-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Tree Sparrow (Passer montanus). Original field note: A chestnut-capped sparrow with a black spot on each pale cheek. It favours hedgerows, farmland and the edges of villages.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 7,
+      "species": "Common Chaffinch",
+      "scientific": "Fringilla coelebs",
+      "file": "bird-007-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Chaffinch (Fringilla coelebs). Original field note: A woodland singer with a descending flourish. Males show a blue-grey crown and pinkish breast, with bright white bars flashing across the wings.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 8,
+      "species": "European Greenfinch",
+      "scientific": "Chloris chloris",
+      "file": "bird-008-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: European Greenfinch (Chloris chloris). Original field note: An olive-green seed cracker with a chunky bill. Yellow edges flash along its wings and tail as it flies between hedges and feeders.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 9,
+      "species": "European Goldfinch",
+      "scientific": "Carduelis carduelis",
+      "file": "bird-009-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: European Goldfinch (Carduelis carduelis). Original field note: A thistle specialist dressed in red, black and gold. Its fine bill extracts small seeds, while a broad yellow wing stripe shines in flight.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 10,
+      "species": "Dunnock",
+      "scientific": "Prunella modularis",
+      "file": "bird-010-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Dunnock (Prunella modularis). Original field note: A quiet hedge wanderer with a slate-grey face and finely streaked brown back. It searches the ground for small insects beneath cover.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 11,
+      "species": "Eurasian Wren",
+      "scientific": "Troglodytes troglodytes",
+      "file": "bird-011-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Wren (Troglodytes troglodytes). Original field note: A tiny bird with a proudly cocked tail and a surprisingly powerful song. It slips through tangled vegetation in search of insects.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 12,
+      "species": "European Starling",
+      "scientific": "Sturnus vulgaris",
+      "file": "bird-012-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: European Starling (Sturnus vulgaris). Original field note: An iridescent flock dancer. Its plumage gleams green and purple, winter feathers carry pale spots, and its repertoire includes skilful imitations.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 13,
+      "species": "Eurasian Magpie",
+      "scientific": "Pica pica",
+      "file": "bird-013-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Magpie (Pica pica). Original field note: A black-and-white collector with a long, shimmering tail. It builds a large twig nest and explores lawns, fields and gardens for food.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 14,
+      "species": "Eurasian Jackdaw",
+      "scientific": "Corvus monedula",
+      "file": "bird-014-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Jackdaw (Corvus monedula). Original field note: A compact crow with a silver-grey nape and pale eyes. It lives socially and often nests in cavities, chimneys and old buildings.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 15,
+      "species": "Carrion Crow",
+      "scientific": "Corvus corone",
+      "file": "bird-015-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Carrion Crow (Corvus corone). Original field note: An all-black problem solver with a strong bill. It searches open ground for varied food and often patrols its territory in a pair.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 16,
+      "species": "Rook",
+      "scientific": "Corvus frugilegus",
+      "file": "bird-016-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Rook (Corvus frugilegus). Original field note: A farmland crow with a pale bare patch around the bill in adults. Rooks nest together in noisy treetop colonies called rookeries.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 17,
+      "species": "Eurasian Jay",
+      "scientific": "Garrulus glandarius",
+      "file": "bird-017-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Jay (Garrulus glandarius). Original field note: A woodland gardener with a pinkish-brown coat and a vivid blue wing panel. Buried acorns can grow into the next generation of oak trees.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 18,
+      "species": "Common Wood Pigeon",
+      "scientific": "Columba palumbus",
+      "file": "bird-018-pokemon.webp",
+      "pose": "Upright side-on stepping stance facing right, following Stock Dove #064 as pose reference only; one foot planted and the other lifted forward, tail sloping down-left.",
+      "prompt": "Species: Common Wood Pigeon (Columba palumbus). Original field note: A large pigeon with a soft pink breast, white neck patches and bold white wing flashes. Its deep cooing is a familiar woodland soundtrack.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Upright side-on stepping stance facing right, following Stock Dove #064 as pose reference only; one foot planted and the other lifted forward, tail sloping down-left.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 19,
+      "species": "Rock Pigeon",
+      "scientific": "Columba livia",
+      "file": "bird-019-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Rock Pigeon (Columba livia). Original field note: A cliff nester whose descendants thrive in towns. The classic plumage has two dark wing bars and a neck that glints green and purple.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 20,
+      "species": "Eurasian Collared Dove",
+      "scientific": "Streptopelia decaocto",
+      "file": "bird-020-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Collared Dove (Streptopelia decaocto). Original field note: A pale dove wearing a fine black half-collar. Its repeated three-part coo carries across gardens, farms and quiet streets.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 21,
+      "species": "Great Spotted Woodpecker",
+      "scientific": "Dendrocopos major",
+      "file": "bird-021-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Great Spotted Woodpecker (Dendrocopos major). Original field note: A black-and-white tree drummer with a red patch beneath the tail. Its strong bill chisels wood and its stiff tail braces against trunks.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 22,
+      "species": "European Green Woodpecker",
+      "scientific": "Picus viridis",
+      "file": "bird-022-pokemon.webp",
+      "pose": "Stand upright with both wings folded.",
+      "prompt": "Species: European Green Woodpecker (Picus viridis). Original field note: A green-backed woodpecker with a red crown and a laughing call. It spends much of its feeding time on the ground looking for ants.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Stand upright with both wings folded.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 23,
+      "species": "Eurasian Nuthatch",
+      "scientific": "Sitta europaea",
+      "file": "bird-023-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Nuthatch (Sitta europaea). Original field note: A blue-grey climber with a warm buff belly and a dark eye stripe. It can walk headfirst down trunks while probing crevices for food.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 24,
+      "species": "Short-toed Treecreeper",
+      "scientific": "Certhia brachydactyla",
+      "file": "bird-024-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Short-toed Treecreeper (Certhia brachydactyla). Original field note: A bark-patterned climber with a pale belly and a curved bill. It spirals up trunks, using its stiff tail as a prop.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 25,
+      "species": "Long-tailed Tit",
+      "scientific": "Aegithalos caudatus",
+      "file": "bird-025-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Long-tailed Tit (Aegithalos caudatus). Original field note: A tiny feather ball with a tail longer than its body. Family parties travel together through trees, calling softly as they forage.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 26,
+      "species": "Coal Tit",
+      "scientific": "Periparus ater",
+      "file": "bird-026-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Coal Tit (Periparus ater). Original field note: A small conifer visitor with a black cap, white cheeks and a white nape patch. It often carries seeds away to hide them for later.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 27,
+      "species": "Marsh Tit",
+      "scientific": "Poecile palustris",
+      "file": "bird-027-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Marsh Tit (Poecile palustris). Original field note: A neat black-capped woodland bird with pale cheeks and a small bib. It stores food and often stays close to its home woodland.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 28,
+      "species": "Goldcrest",
+      "scientific": "Regulus regulus",
+      "file": "bird-028-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Goldcrest (Goudhaan), Regulus regulus FROM SCRATCH for the Chirp & Echo atlas. Image 1 is the existing bird POSE REFERENCE ONLY; image 2 approved Jay and image 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired original creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character construction, not soft painted or realistic feather texture. Species identity and pose: Tiny compact olive-green bird, golden yellow crown stripe bordered in black on both sides, pale face, dark round eye, very fine short dark closed bill, two pale wing bars, pale belly. Right-facing stepping pose, both wings folded, one foot planted and other lifted forward, tail down-left. Retain natural species proportions, coherent anatomy, exactly two wings and two legs. Expressive proportionate eye with a tiny highlight. Full body with every exposed extremity inside square canvas with generous transparent margins. One animal alone on genuinely TRANSPARENT alpha background. No props, acorns, branches, scenery, ground, gradient, glow, halo, cast shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-0e11059c-e603-4819-b8b6-e631ec6b0a8d.png"
+    },
+    {
+      "kind": "bird",
+      "number": 29,
+      "species": "Song Thrush",
+      "scientific": "Turdus philomelos",
+      "file": "bird-029-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Song Thrush (Turdus philomelos). Original field note: A brown-backed singer with a cream breast dotted in dark arrowheads. It repeats short musical phrases and may break snail shells on a stone.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 30,
+      "species": "Mistle Thrush",
+      "scientific": "Turdus viscivorus",
+      "file": "bird-030-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Mistle Thrush (Grote lijster), Turdus viscivorus FROM SCRATCH for the Chirp & Echo atlas. Image 1 is the existing bird POSE REFERENCE ONLY; image 2 approved Jay and image 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired original creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character construction, not soft painted or realistic feather texture. Species identity and pose: Sturdy grey-brown thrush, pale cream breast and belly with bold dark ROUND spots, pale-edged folded wing feathers, brown eye, fine dark closed bill, pinkish brown legs. Upright standing facing right, both wings folded, tail angled upward-left, two feet planted. EXACTLY TWO wings total, do not add an extra folded wing. Retain natural species proportions, coherent anatomy, exactly two wings and two legs. Expressive proportionate eye with a tiny highlight. Full body with every exposed extremity inside square canvas with generous transparent margins. One animal alone on genuinely TRANSPARENT alpha background. No props, acorns, branches, scenery, ground, gradient, glow, halo, cast shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-6bb28111-8489-419b-912f-3ef67a5ddb91.png"
+    },
+    {
+      "kind": "bird",
+      "number": 31,
+      "species": "Redwing",
+      "scientific": "Turdus iliacus",
+      "file": "bird-031-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Redwing (Turdus iliacus). Original field note: A winter visitor with a cream eyebrow and rusty-red flanks. It searches fields and berry bushes, sometimes travelling on clear nights.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 32,
+      "species": "Fieldfare",
+      "scientific": "Turdus pilaris",
+      "file": "bird-032-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Fieldfare (Turdus pilaris). Original field note: A colourful thrush with a grey head, chestnut back and spotted breast. Winter flocks descend on fields, orchards and berry-bearing trees.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 33,
+      "species": "Eurasian Blackcap",
+      "scientific": "Sylvia atricapilla",
+      "file": "bird-033-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Blackcap (Sylvia atricapilla). Original field note: A grey woodland singer with a neat cap: black in males, warm brown in females. Its rich song can pour from deep inside leafy cover.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 34,
+      "species": "Common Chiffchaff",
+      "scientific": "Phylloscopus collybita",
+      "file": "bird-034-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Chiffchaff (Phylloscopus collybita). Original field note: An olive-brown leaf searcher named for its repeated chiff-chaff song. It flicks through foliage to catch tiny invertebrates.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 35,
+      "species": "Willow Warbler",
+      "scientific": "Phylloscopus trochilus",
+      "file": "bird-035-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Willow Warbler (Fitis), Phylloscopus trochilus FROM SCRATCH for the Chirp & Echo atlas. Image 1 is the existing bird POSE REFERENCE ONLY; image 2 approved Jay and image 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired original creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character construction, not soft painted or realistic feather texture. Species identity and pose: Olive-brown upperparts, pale cream eyebrow, soft yellow wash on throat and breast, off-white belly, slim fine bill and pale brown legs. Standing facing right, both wings folded, tail down-left, head lifted singing with open bill, both feet planted. Retain natural species proportions, coherent anatomy, exactly two wings and two legs. Expressive proportionate eye with a tiny highlight. Full body with every exposed extremity inside square canvas with generous transparent margins. One animal alone on genuinely TRANSPARENT alpha background. No props, acorns, branches, scenery, ground, gradient, glow, halo, cast shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-47a138e3-7917-4b9c-b064-c8f05533e576.png"
+    },
+    {
+      "kind": "bird",
+      "number": 36,
+      "species": "Common Cuckoo",
+      "scientific": "Cuculus canorus",
+      "file": "bird-036-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Cuckoo (Cuculus canorus). Original field note: A grey migrant with barred underparts and a long tail. The male gives the famous two-note call; females lay eggs in other birds’ nests.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 37,
+      "species": "Common Swift",
+      "scientific": "Apus apus",
+      "file": "bird-037-pokemon.webp",
+      "pose": "Airborne; preserve current flight pose.",
+      "prompt": "Species: Common Swift (Apus apus). Original field note: A dark aerial specialist with long, scythe-shaped wings. It catches insects on the wing and spends much of its life in flight.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Airborne; preserve current flight pose.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 38,
+      "species": "Barn Swallow",
+      "scientific": "Hirundo rustica",
+      "file": "bird-038-pokemon.webp",
+      "pose": "Airborne; preserve current flight pose, with exactly two wings.",
+      "prompt": "Species: Barn Swallow (Hirundo rustica). Original field note: A blue-backed insect hunter with a red throat and long forked tail. It sweeps over fields and often builds mud nests inside buildings.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Airborne; preserve current flight pose, with exactly two wings.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 39,
+      "species": "Common House Martin",
+      "scientific": "Delichon urbicum",
+      "file": "bird-039-pokemon.webp",
+      "pose": "Airborne; preserve current flight pose.",
+      "prompt": "Species: Common House Martin (Delichon urbicum). Original field note: A smart blue-black flier with a bright white rump and short forked tail. It builds enclosed mud nests beneath eaves.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Airborne; preserve current flight pose.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 40,
+      "species": "White Wagtail",
+      "scientific": "Motacilla alba",
+      "file": "bird-040-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: White Wagtail (Motacilla alba). Original field note: A slim walker in black, white and grey with a constantly bobbing tail. It chases small invertebrates across open ground and watersides.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 41,
+      "species": "Eurasian Skylark",
+      "scientific": "Alauda arvensis",
+      "file": "bird-041-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Skylark (Alauda arvensis). Original field note: A streaked field singer with a small crest. It delivers a long, bubbling song while hovering high above open farmland and grassland.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 42,
+      "species": "Common Buzzard",
+      "scientific": "Buteo buteo",
+      "file": "bird-042-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Buzzard (Buteo buteo). Original field note: A broad-winged hunter often seen circling above fields. Plumage ranges from very pale to dark brown; it watches for prey from convenient perches.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 43,
+      "species": "Common Kestrel",
+      "scientific": "Falco tinnunculus",
+      "file": "bird-043-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Kestrel (Falco tinnunculus). Original field note: A russet-backed falcon with dark spotting. It can hover facing into the wind while scanning rough grass for small mammals.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 44,
+      "species": "Tawny Owl",
+      "scientific": "Strix aluco",
+      "file": "bird-044-pokemon.webp",
+      "pose": "Preserve the current spread-wing pose with generous transparent space.",
+      "prompt": "Species: Tawny Owl (Strix aluco). Original field note: A round-headed woodland owl with dark eyes and mottled brown plumage. Its familiar night-time duet belongs to two birds calling to each other.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current spread-wing pose with generous transparent space.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 45,
+      "species": "Little Owl",
+      "scientific": "Athene noctua",
+      "file": "bird-045-pokemon.webp",
+      "pose": "Compact grounded standing pose with both wings folded, both short legs planted, head turned slightly toward the viewer and a compact short tail.",
+      "prompt": "Species: Little Owl (Athene noctua). Original field note: A compact owl with a stern expression and bright yellow eyes. It watches from posts and branches for insects and other small prey.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Compact grounded standing pose with both wings folded, both short legs planted, head turned slightly toward the viewer and a compact short tail.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 46,
+      "species": "Long-eared Owl",
+      "scientific": "Asio otus",
+      "file": "bird-046-pokemon.webp",
+      "pose": "Spread-wing pose following Tawny Owl #044 as pose reference only.",
+      "prompt": "Species: Long-eared Owl (Asio otus). Original field note: A slender owl with long ear tufts and orange eyes. It hunts open ground and may gather in shared winter roosts.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Spread-wing pose following Tawny Owl #044 as pose reference only.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 47,
+      "species": "Barn Owl",
+      "scientific": "Tyto alba",
+      "file": "bird-047-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Barn Owl (Tyto alba). Original field note: A pale night hunter with a heart-shaped face. It quarters grassland on quiet wings, listening for small mammals beneath the vegetation.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 48,
+      "species": "Mallard",
+      "scientific": "Anas platyrhynchos",
+      "file": "bird-048-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Mallard (Anas platyrhynchos). Original field note: A familiar dabbling duck of ponds and wetlands. A breeding male has a green head and chestnut breast; females wear mottled brown camouflage.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 49,
+      "species": "Grey Heron",
+      "scientific": "Ardea cinerea",
+      "file": "bird-049-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Grey Heron (Ardea cinerea). Original field note: A tall water-edge hunter with long legs and a dagger-like bill. It waits patiently before striking at fish and other small prey.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 50,
+      "species": "Common Moorhen",
+      "scientific": "Gallinula chloropus",
+      "file": "bird-050-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Moorhen (Gallinula chloropus). Original field note: A dark wetland walker with a red bill tipped yellow. It picks its way around reeds on long toes and flashes white undertail feathers.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 51,
+      "species": "Eurasian Coot",
+      "scientific": "Fulica atra",
+      "file": "bird-051-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Coot (Fulica atra). Original field note: A charcoal-coloured swimmer with a white bill and forehead shield. Broad lobes on its toes help it paddle through open water.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 52,
+      "species": "European Herring Gull",
+      "scientific": "Larus argentatus",
+      "file": "bird-052-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: European Herring Gull (Larus argentatus). Original field note: A large coastal gull with a grey back and pink legs in adults. Young birds start mottled brown and take several years to reach adult plumage.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 53,
+      "species": "Black-headed Gull",
+      "scientific": "Chroicocephalus ridibundus",
+      "file": "bird-053-pokemon.webp",
+      "pose": "Follow Barn Swallow #038 as pose reference only: horizontal body angled right, both wings sweeping down and outward, feet tucked and tail trailing left.",
+      "prompt": "Species: Black-headed Gull (Chroicocephalus ridibundus). Original field note: A lively smaller gull with a chocolate-brown hood in breeding season. In winter a dark ear spot remains on its otherwise white head.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Follow Barn Swallow #038 as pose reference only: horizontal body angled right, both wings sweeping down and outward, feet tucked and tail trailing left.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 54,
+      "species": "Greylag Goose",
+      "scientific": "Anser anser",
+      "file": "bird-054-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Greylag Goose (Anser anser). Original field note: A sturdy grey goose with an orange bill. It grazes in fields and wetlands, often travelling with a vocal family group.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 55,
+      "species": "Canada Goose",
+      "scientific": "Branta canadensis",
+      "file": "bird-055-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Canada Goose (Grote Canadese gans), Branta canadensis FROM SCRATCH for Chirp & Echo. Image 1 existing bird is POSE REFERENCE ONLY. Images 2 approved Jay and 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character, not soft realistic painted texture. Species and pose: Large brown goose, long BLACK head and neck, WHITE cheek and chinstrap confined to face under black bill, brown layered back and folded wings, pale buff breast and belly, white undertail, black webbed feet and brown eye. Upright standing facing right, wings folded, both feet planted, tail down-left. NO white front running down whole neck. Coherent natural anatomy, exactly two wings two legs, expressive proportionate eyes with tiny highlight. Full animal, every exposed extremity inside square canvas with generous transparent margins. One bird alone on genuinely TRANSPARENT alpha background. No props, acorn, branches, scenery, ground, gradient, glow, halo, shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-c6003f77-14cb-4797-8116-69dc2f57321b.png"
+    },
+    {
+      "kind": "bird",
+      "number": 56,
+      "species": "Mute Swan",
+      "scientific": "Cygnus olor",
+      "file": "bird-056-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Mute Swan (Cygnus olor). Original field note: A graceful white waterbird with a long curved neck. Adults have an orange bill with a black base; young swans begin grey-brown.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 57,
+      "species": "Eurasian Sparrowhawk",
+      "scientific": "Accipiter nisus",
+      "file": "bird-057-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Sparrowhawk (Accipiter nisus). Original field note: A woodland ambush hunter with short rounded wings and a very long barred tail. Adult males show slate-grey upperparts, orange-barred underparts and bright yellow eyes.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 58,
+      "species": "Eurasian Bullfinch",
+      "scientific": "Pyrrhula pyrrhula",
+      "file": "bird-058-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Eurasian Bullfinch (Pyrrhula pyrrhula). Original field note: A quiet seed eater with a sturdy build. Males wear a black cap and face, coral-pink breast, grey back, white rump and a short deep black bill.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 59,
+      "species": "Yellowhammer",
+      "scientific": "Emberiza citrinella",
+      "file": "bird-059-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Yellowhammer (Emberiza citrinella). Original field note: A bright farmland singer. Males have a lemon-yellow head and breast, streaked chestnut-brown back, rusty rump and a long tail with white outer edges.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 60,
+      "species": "Hawfinch",
+      "scientific": "Coccothraustes coccothraustes",
+      "file": "bird-060-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Hawfinch (Coccothraustes coccothraustes). Original field note: A powerful seed cracker with an enormous deep conical bill. Its warm chestnut head, black face and bib, buff body, grey nape and broad white wing patches make a striking combination.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 61,
+      "species": "White Stork",
+      "scientific": "Ciconia ciconia",
+      "file": "bird-061-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: White Stork (Ciconia ciconia). Original field note: A tall white wading bird with black flight feathers, a very long straight red bill and long red legs. It often soars on broad wings and clatters its bill at the nest.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 62,
+      "species": "Western Yellow Wagtail",
+      "scientific": "Motacilla flava",
+      "file": "bird-062-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Western Yellow Wagtail (Motacilla flava). Original field note: A slender yellow-bellied bird of damp meadows and farmland. A representative male shows a blue-grey head, olive back, bright yellow underparts and a long dark tail with white edges.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 63,
+      "species": "Common Linnet",
+      "scientific": "Linaria cannabina",
+      "file": "bird-063-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Linnet (Linaria cannabina). Original field note: A small lively finch of hedges and open ground. Breeding males have a grey head, crimson forehead and breast, warm chestnut back and fine dark bill; white wing and tail edges flash in flight.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 64,
+      "species": "Stock Dove",
+      "scientific": "Columba oenas",
+      "file": "bird-064-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Stock Dove (Columba oenas). Original field note: A compact blue-grey pigeon with a glossy green neck patch, dark eyes and two short dark wing bars. It lacks the white neck and wing patches of a wood pigeon and often nests in tree cavities.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 65,
+      "species": "White-tailed Eagle",
+      "scientific": "Haliaeetus albicilla",
+      "file": "bird-065-pokemon.webp",
+      "pose": "Follow European Honey-buzzard #068 as pose reference only: low aerodynamic glide, both wings extended laterally, feet tucked.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE White-tailed Eagle (Zeearend), Haliaeetus albicilla, FROM SCRATCH as an original creature-collecting game portrait. Images 1 approved Eurasian Jay and 2 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired crisp fine ink outlines, angular feather tufts, confident expressive personality and layered graphic cel shading. Do not copy their species, pose or props. Recognisable adult White-tailed Eagle: massive broad brown wings with long separated fingerlike primary feathers, broad wedge-shaped white tail, lighter buff grey-brown head and neck, heavy hooked golden yellow bill and cere, alert golden yellow iris, powerful yellow feet naturally tucked beneath body with dark talons. Anatomically coherent eagle with exactly two wings and two legs, naturally occluded limbs fine. POSE: low aerodynamic gliding flight viewed three quarters, both broad wings extended laterally as a matched functional pair, head facing right, feet tucked, white tail fanned behind. Follow European Honey-buzzard established low hunting glide as pose direction only, while retaining eagle's massive broad wings, heavy head and short wedge white tail. Fresh strong game creature character, not realistic painted texture. Thin crisp ink contours, no thick sticker border. Full animal and all wingtips comfortably inside square canvas with generous transparent margins. Genuinely transparent alpha background. No props, prey, acorn, scenery, ground, gradient, glow, cast shadow, text, border or logo.",
+      "refinement": "Use case: background-extraction. Preserve the exact eagle drawing, pose, plumage, thin outlines, face, wings, white tail, tucked feet and all colours. Remove ALL background and ALL coloured glow or haze surrounding the animal. The entire area outside the precise bird silhouette must be completely transparent alpha zero, including spaces between wing feathers and around the beak and tail. No halo, no soft fade, no gradient, no shadow, no backdrop, no newly drawn elements. Output only the intact eagle cutout with genuine clean transparency and comfortable margins.",
+      "source": "exec-775a9acd-94d9-4286-90b2-f20aa182f927.png"
+    },
+    {
+      "kind": "bird",
+      "number": 66,
+      "species": "Common Kingfisher",
+      "scientific": "Alcedo atthis",
+      "file": "bird-066-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Kingfisher (Alcedo atthis). Original field note: A compact waterside jewel with vivid turquoise-blue back and wings, an orange breast, white throat and cheek patch, short tail, tiny red feet and a long straight black dagger-like bill.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 67,
+      "species": "Common Tern",
+      "scientific": "Sterna hirundo",
+      "file": "bird-067-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Tern (Sterna hirundo). Original field note: A slender seabird with pale grey upperparts, white underside, a black cap, red legs and a narrow red bill with a black tip. Long pointed wings and a deeply forked tail support agile flight above water.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 68,
+      "species": "European Honey-buzzard",
+      "scientific": "Pernis apivorus",
+      "file": "bird-068-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: European Honey-buzzard (Pernis apivorus). Original field note: A woodland raptor with a small pigeon-like grey head, slender neck, long barred tail and broad wings. A representative male has brown upperparts, pale barred underside, yellow eyes and a dark bill.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 69,
+      "species": "Western Marsh Harrier",
+      "scientific": "Circus aeruginosus",
+      "file": "bird-069-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Western Marsh Harrier (Circus aeruginosus). Original field note: A long-winged wetland raptor with a long tail and yellow legs. A representative adult female is chocolate brown with a contrasting creamy crown, throat and shoulder patches; wings are held in a shallow V when gliding.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 70,
+      "species": "Greater White-fronted Goose",
+      "scientific": "Anser albifrons",
+      "file": "bird-070-pokemon.webp",
+      "pose": "Right-facing walking step, natural upright curved neck, both wings folded and one webbed foot lifted forward.",
+      "prompt": "Use case: stylized-concept. Completely redraw Greater White-fronted Goose (Kolgans), Anser albifrons, FROM SCRATCH as one original creature-collecting game portrait. Images 1 approved Eurasian Jay and 2 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired crisp fine ink outlines, angular tufts, confident expressive character design and clean layered cel shading. Create a fresh strong appealing goose character with an expressive alert brown eye and coherent goose proportions, not realistic painted feathers. Do not reference or recreate any earlier goose illustration. Grey-brown goose, distinctive white forehead surrounding base of closed pink bill, bold irregular black bars across adult pale belly, white undertail, orange legs and natural webbed feet. Compact rounded head on a naturally curved upright neck, broad body with both wings folded, layered graphic flight feathers, modest claws. Full body right-facing walking step with one webbed foot lifted forwards. Two wings two legs; no extra limbs. Thin crisp contours, no thick sticker border. No acorn, no props. Square canvas, comfortable transparent margins around every extremity. One animal only on genuinely transparent alpha background. No scenery, gradient, glow, cast shadow, text, border or logo. This is a fresh redraw in the approved game illustration style.",
+      "source": "exec-a94fc984-9d68-4192-8d43-4384e8ae7215.png"
+    },
+    {
+      "kind": "bird",
+      "number": 71,
+      "species": "Pink-footed Goose",
+      "scientific": "Anser brachyrhynchus",
+      "file": "bird-071-pokemon.webp",
+      "pose": "Walking with the head raised and both wings folded.",
+      "prompt": "Species: Pink-footed Goose (Anser brachyrhynchus). Original field note: A compact goose with a dark brown head and neck, pale grey back, pink feet and a short dark bill with a pink band. Winter flocks graze in open fields and grasslands.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Walking with the head raised and both wings folded.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 72,
+      "species": "Black-crowned Night Heron",
+      "scientific": "Nycticorax nycticorax",
+      "file": "bird-072-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Black-crowned Night Heron (Nycticorax nycticorax). Original field note: A stocky heron with a black crown and back, grey wings, white underside and red eyes. Adults have slender white nape plumes and hunt along water edges at dusk and at night.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 73,
+      "species": "Tundra Bean Goose",
+      "scientific": "Anser serrirostris",
+      "file": "bird-073-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Tundra Bean Goose (Anser serrirostris). Original field note: A brown-grey goose with a dark head and neck, orange legs and a short stout black bill with an orange band. Winter flocks graze on grasslands and fields.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 74,
+      "species": "European Roller",
+      "scientific": "Coracias garrulus",
+      "file": "bird-074-pokemon.webp",
+      "pose": "Airborne banking turn facing left, both wings extended and feet tucked.",
+      "prompt": "Species: European Roller (Coracias garrulus). Original field note: A colourful bird with a turquoise head and belly, chestnut back and deep blue wings. It watches from exposed perches for large insects on open ground.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Airborne banking turn facing left, both wings extended and feet tucked.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 75,
+      "species": "European Bee-eater",
+      "scientific": "Merops apiaster",
+      "file": "bird-075-pokemon.webp",
+      "pose": "Airborne glide facing right, body horizontal, both wings extended with a gentle bank, long tail streamers trailing left and feet tucked.",
+      "prompt": "Species: European Bee-eater (Merops apiaster). Original field note: A slender aerial insect hunter with a chestnut crown and back, yellow throat, turquoise belly and black eye stripe. Its long curved bill catches flying insects.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Airborne glide facing right, body horizontal, both wings extended with a gentle bank, long tail streamers trailing left and feet tucked.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 76,
+      "species": "Black Stork",
+      "scientific": "Ciconia nigra",
+      "file": "bird-076-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Black Stork (Ciconia nigra). Original field note: A large shy bird with a glossy black head, neck and wings, white belly and red bill and legs. It feeds in shallow water and nests in quiet forests.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 77,
+      "species": "Common Crane",
+      "scientific": "Grus grus",
+      "file": "bird-077-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Crane (Grus grus). Original field note: Tall grey crane with long dark legs, black face and neck, white stripe behind the eye down the neck, red crown patch and drooping dark tail-like tertial feathers.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 78,
+      "species": "European Nightjar",
+      "scientific": "Caprimulgus europaeus",
+      "file": "bird-078-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: European Nightjar (Caprimulgus europaeus). Original field note: Mottled grey-brown cryptic plumage, large dark eyes, tiny bill with wide gape, long folded wings and long barred tail, short legs.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 79,
+      "species": "Black Woodpecker",
+      "scientific": "Dryocopus martius",
+      "file": "bird-079-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Black Woodpecker (Dryocopus martius). Original field note: Large entirely black woodpecker, adult male with full bright red crown, pale eyes, long pale ivory pointed bill, stiff tail and strong grasping feet.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 80,
+      "species": "Bluethroat",
+      "scientific": "Luscinia svecica",
+      "file": "bird-080-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Bluethroat (Blauwborst), Luscinia svecica FROM SCRATCH for the Chirp & Echo atlas. Image 1 is the existing bird POSE REFERENCE ONLY; image 2 approved Jay and image 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired original creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character construction, not soft painted or realistic feather texture. Species identity and pose: Adult male WHITE-SPOTTED bluethroat: brilliant blue throat bib with one small white central spot, black then chestnut bands below, pale belly, brown back, cream eyebrow, rusty patches at tail base. Standing singing facing right, open fine dark bill, both wings folded, tail raised behind toward left, both feet planted. Retain natural species proportions, coherent anatomy, exactly two wings and two legs. Expressive proportionate eye with a tiny highlight. Full body with every exposed extremity inside square canvas with generous transparent margins. One animal alone on genuinely TRANSPARENT alpha background. No props, acorns, branches, scenery, ground, gradient, glow, halo, cast shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-79ae33be-0f50-456d-abeb-0f0e8ecf7428.png"
+    },
+    {
+      "kind": "bird",
+      "number": 81,
+      "species": "Hen Harrier",
+      "scientific": "Circus cyaneus",
+      "file": "bird-081-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Hen Harrier (Circus cyaneus). Original field note: Adult male Hen Harrier, pale blue-grey head and back, white underside, yellow eyes and legs, dark hooked bill, long wings with black tips, long barred tail and white rump.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 82,
+      "species": "Tree Pipit",
+      "scientific": "Anthus trivialis",
+      "file": "bird-082-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Tree Pipit (Anthus trivialis). Original field note: Slim brown Tree Pipit, strongly streaked warm buff breast, finer streaks on flanks, pale belly, cream eyebrow, pinkish legs and relatively short curved hind claw.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 83,
+      "species": "Northern Lapwing",
+      "scientific": "Vanellus vanellus",
+      "file": "bird-083-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Northern Lapwing (Vanellus vanellus). Original field note: Northern Lapwing with long fine upward black crest, metallic green and purple back, black breast and face markings, white belly, pink legs and short dark bill.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 84,
+      "species": "Red Kite",
+      "scientific": "Milvus milvus",
+      "file": "bird-084-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Red Kite (Milvus milvus). Original field note: Red Kite with pale grey streaked head, rusty red-brown body, dark folded wings, yellow eyes and feet, hooked bill, very long deeply forked rusty tail fully visible.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 85,
+      "species": "Meadow Pipit",
+      "scientific": "Anthus pratensis",
+      "file": "bird-085-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Meadow Pipit (Anthus pratensis). Original field note: Meadow Pipit, olive-brown streaked upperparts, pale buff breast and belly with dark streaks continuing boldly down flanks, thin bill, pinkish legs and long slender hind claw.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 86,
+      "species": "Woodlark",
+      "scientific": "Lullula arborea",
+      "file": "bird-086-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Woodlark (Lullula arborea). Original field note: Small compact Woodlark, brown streaked plumage, bold cream eyebrows meeting behind head, short crest, short tail, buff streaked breast, black-and-white marking on folded wing edge.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 87,
+      "species": "Brant",
+      "scientific": "Branta bernicla",
+      "file": "bird-087-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Dark-bellied Brent Goose (Rotgans), Branta bernicla FROM SCRATCH for Chirp & Echo. Image 1 existing bird is POSE REFERENCE ONLY. Images 2 approved Jay and 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character, not soft realistic painted texture. Species and pose: Compact goose, black head neck and breast, SMALL white patch at side of neck, dark grey-brown back and belly, white undertail, black short bill and black webbed feet, brown eye. Standing facing right, wings folded, both feet planted, tail left. NO broad white cheek patch. Coherent natural anatomy, exactly two wings two legs, expressive proportionate eyes with tiny highlight. Full animal, every exposed extremity inside square canvas with generous transparent margins. One bird alone on genuinely TRANSPARENT alpha background. No props, acorn, branches, scenery, ground, gradient, glow, halo, shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-0e70677b-59ae-4390-b939-d7ba9bc8fc0e.png"
+    },
+    {
+      "kind": "bird",
+      "number": 88,
+      "species": "Barnacle Goose",
+      "scientific": "Branta leucopsis",
+      "file": "bird-088-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Barnacle Goose (Brandgans), Branta leucopsis FROM SCRATCH for Chirp & Echo. Image 1 existing bird is POSE REFERENCE ONLY. Images 2 approved Jay and 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character, not soft realistic painted texture. Species and pose: WHITE face contrasting black crown, short black OPEN calling bill, black neck and breast, silver-grey back with BLACK-AND-WHITE barred folded wings, pale belly, black webbed feet and brown eye. Upright right-facing walking step, one foot lifted forwards, other planted, wings folded, tail down-left. Face itself white, not Canada goose chinstrap. Coherent natural anatomy, exactly two wings two legs, expressive proportionate eyes with tiny highlight. Full animal, every exposed extremity inside square canvas with generous transparent margins. One bird alone on genuinely TRANSPARENT alpha background. No props, acorn, branches, scenery, ground, gradient, glow, halo, shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-4296bad8-e630-46f3-950f-90a834dac55c.png"
+    },
+    {
+      "kind": "bird",
+      "number": 89,
+      "species": "Tufted Duck",
+      "scientific": "Aythya fuligula",
+      "file": "bird-089-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Tufted Duck (Kuifeend), Aythya fuligula FROM SCRATCH for Chirp & Echo. Image 1 existing bird is POSE REFERENCE ONLY. Images 2 approved Jay and 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character, not soft realistic painted texture. Species and pose: Adult male, glossy BLACK head breast and back, clean WHITE flanks, slim natural DROOPING BLACK crest trailing behind head, bright golden YELLOW irises and dark pupils, blue-grey CLOSED bill with BLACK tip, dark grey webbed feet. Compact duck body and short neck. Standing facing right, wings folded, both feet planted, short tail left. Subtle purple-black sheen, not purple body; no enormous fantasy hair. Coherent natural anatomy, exactly two wings two legs, expressive proportionate eyes with tiny highlight. Full animal, every exposed extremity inside square canvas with generous transparent margins. One bird alone on genuinely TRANSPARENT alpha background. No props, acorn, branches, scenery, ground, gradient, glow, halo, shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-a6f6f619-d69f-4382-8d5e-25b63baeaebb.png"
+    },
+    {
+      "kind": "bird",
+      "number": 90,
+      "species": "Crested Tit",
+      "scientific": "Lophophanes cristatus",
+      "file": "bird-090-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Crested Tit (Lophophanes cristatus). Original field note: Small Crested Tit, tall pointed black-and-white speckled crest, pale cheeks bordered with a black curved line, black bib, grey-brown back and buff-white belly.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 91,
+      "species": "Wood Warbler",
+      "scientific": "Phylloscopus sibilatrix",
+      "file": "bird-091-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Wood Warbler (Fluiter), Phylloscopus sibilatrix FROM SCRATCH for the Chirp & Echo atlas. Image 1 is the existing bird POSE REFERENCE ONLY; image 2 approved Jay and image 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired original creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character construction, not soft painted or realistic feather texture. Species identity and pose: Bright moss-green upperparts, lemon-yellow face throat and long eyebrow, clean WHITE lower belly, dark eye stripe, long folded wings, slim fine closed bill. Standing facing right, wings folded, both feet planted, tail down-left. Retain natural species proportions, coherent anatomy, exactly two wings and two legs. Expressive proportionate eye with a tiny highlight. Full body with every exposed extremity inside square canvas with generous transparent margins. One animal alone on genuinely TRANSPARENT alpha background. No props, acorns, branches, scenery, ground, gradient, glow, halo, cast shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-73f31d2b-9464-48df-ad8a-3e2b17d3147f.png"
+    },
+    {
+      "kind": "bird",
+      "number": 92,
+      "species": "Great Cormorant",
+      "scientific": "Phalacrocorax carbo",
+      "file": "bird-092-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Great Cormorant (Phalacrocorax carbo). Original field note: Adult Great Cormorant, glossy black plumage with bronze scalloped wings, long neck, sturdy hooked grey bill with yellow skin at base, pale cheek and throat patches, black webbed feet and long stiff tail.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 93,
+      "species": "Gadwall",
+      "scientific": "Mareca strepera",
+      "file": "bird-093-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Gadwall (Mareca strepera). Original field note: Adult male Gadwall, finely patterned grey body, brown head with steep forehead, black rear end, dark bill, chestnut shoulder and small white wing patch visible on folded wing, orange webbed feet.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 94,
+      "species": "Egyptian Goose",
+      "scientific": "Alopochen aegyptiaca",
+      "file": "bird-094-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Use case: stylized-concept. Completely redraw ONE Egyptian Goose (Nijlgans), Alopochen aegyptiaca FROM SCRATCH for Chirp & Echo. Image 1 existing bird is POSE REFERENCE ONLY. Images 2 approved Jay and 3 approved Tawny Owl are STYLE REFERENCES ONLY. Match their Pokémon/Pidgeotto-inspired creature-collecting game character design, crisp THIN ink contours, angular feather shapes, confident expressive personality and clear layered graphic CEL SHADING. Fresh appealing character, not soft realistic painted texture. Species and pose: Sandy buff head, DISTINCT DARK CHOCOLATE eye patch around brown eye, dark neck ring, brown breast spot, grey-buff belly, chestnut back and folded wings with WHITE patches, pink short CLOSED bill, long PINK legs with correctly WEBBED pink feet. Standing right, upright natural neck, wings folded, both feet planted, tail down-left. Natural goose head, proportionate feet, no raptor talons. Coherent natural anatomy, exactly two wings two legs, expressive proportionate eyes with tiny highlight. Full animal, every exposed extremity inside square canvas with generous transparent margins. One bird alone on genuinely TRANSPARENT alpha background. No props, acorn, branches, scenery, ground, gradient, glow, halo, shadow, text, border, logo or thick sticker outline.",
+      "source": "exec-013d90ef-6f96-4f18-8f9c-b4de7504fa64.png"
+    },
+    {
+      "kind": "bird",
+      "number": 95,
+      "species": "Common Whitethroat",
+      "scientific": "Curruca communis",
+      "file": "bird-095-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common Whitethroat (Curruca communis). Original field note: A lively hedgerow warbler with a bright white throat, grey male head, rusty wing panels and a long white-edged tail. It sings from scrub tops and makes brief fluttering song flights.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 96,
+      "species": "Black Redstart",
+      "scientific": "Phoenicurus ochruros",
+      "file": "bird-096-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Black Redstart (Phoenicurus ochruros). Original field note: An alert insect hunter of rocks, rooftops and buildings. The western male has a charcoal-black face and breast, slate-grey back, pale wing panel and a vivid rusty-red tail that frequently quivers.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 97,
+      "species": "Great Egret",
+      "scientific": "Ardea alba",
+      "file": "bird-097-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Great Egret (Ardea alba). Original field note: An elegant white heron with a long S-shaped neck, black legs and feet, and a yellow bill outside the breeding season. It stalks fish in shallow water and also hunts in wet grassland.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bird",
+      "number": 98,
+      "species": "Whooper Swan",
+      "scientific": "Cygnus cygnus",
+      "file": "bird-098-pokemon.webp",
+      "pose": "Proud trumpeting step with both wings folded.",
+      "prompt": "Species: Whooper Swan (Cygnus cygnus). Original field note: A large white swan with a long upright neck, black feet and a yellow-and-black bill. The yellow forms a pointed wedge extending beyond the nostril. Winter flocks graze on wet grasslands and give loud trumpeting calls.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Proud trumpeting step with both wings folded.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution."
+    },
+    {
+      "kind": "bat",
+      "number": 1,
+      "species": "Common pipistrelle",
+      "scientific": "Pipistrellus pipistrellus",
+      "file": "bat-001-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Common pipistrelle (Pipistrellus pipistrellus). Original field note: A tiny bat often encountered around buildings. Its calls overlap with those of other pipistrelles.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 2,
+      "species": "Soprano pipistrelle",
+      "scientific": "Pipistrellus pygmaeus",
+      "file": "bat-002-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Soprano pipistrelle (Pipistrellus pygmaeus). Original field note: A small pipistrelle associated with water. Its calls are generally higher pitched than those of the common pipistrelle.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 3,
+      "species": "Nathusius’ pipistrelle",
+      "scientific": "Pipistrellus nathusii",
+      "file": "bat-003-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Nathusius’ pipistrelle (Pipistrellus nathusii). Original field note: A migratory pipistrelle. Water-rich landscapes are important feeding areas.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 4,
+      "species": "Noctule",
+      "scientific": "Nyctalus noctula",
+      "file": "bat-004-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Noctule (Nyctalus noctula). Original field note: Long, narrow wings support fast flight above the treetops. Tree holes provide important roosts.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 5,
+      "species": "Leisler’s bat",
+      "scientific": "Nyctalus leisleri",
+      "file": "bat-005-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Leisler’s bat (Nyctalus leisleri). Original field note: A smaller relative of the noctule, with a fast flight and a strong association with tree roosts.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 6,
+      "species": "Serotine",
+      "scientific": "Eptesicus serotinus",
+      "file": "bat-006-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Serotine (Eptesicus serotinus). Original field note: A large bat that often roosts in buildings and feeds over pasture and along woodland edges.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 7,
+      "species": "Daubenton’s bat",
+      "scientific": "Myotis daubentonii",
+      "file": "bat-007-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Daubenton’s bat (Myotis daubentonii). Original field note: Often hunts low over smooth water, taking insects from the surface with its feet or tail membrane.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 8,
+      "species": "Natterer’s bat",
+      "scientific": "Myotis nattereri",
+      "file": "bat-008-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Natterer’s bat (Myotis nattereri). Original field note: An agile hunter that can pick prey from vegetation. A fringe of stiff hairs lines its tail membrane.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 9,
+      "species": "Whiskered bat",
+      "scientific": "Myotis mystacinus",
+      "file": "bat-009-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Whiskered bat (Myotis mystacinus). Original field note: A small bat closely resembling Brandt’s bat. Sound alone may not separate these species reliably.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 10,
+      "species": "Brandt’s bat",
+      "scientific": "Myotis brandtii",
+      "file": "bat-010-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Brandt’s bat (Myotis brandtii). Original field note: Very similar to the whiskered bat. A predicted label needs careful review rather than visual certainty.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 11,
+      "species": "Alcathoe bat",
+      "scientific": "Myotis alcathoe",
+      "file": "bat-011-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Alcathoe bat (Myotis alcathoe). Original field note: A tiny woodland bat recognised as a separate species in 2001. It resembles other small Myotis bats.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 12,
+      "species": "Bechstein’s bat",
+      "scientific": "Myotis bechsteinii",
+      "file": "bat-012-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Bechstein’s bat (Myotis bechsteinii). Original field note: Large ears help this woodland specialist listen for prey. Its quiet calls make acoustic detection difficult.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 13,
+      "species": "Brown long-eared bat",
+      "scientific": "Plecotus auritus",
+      "file": "bat-013-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Brown long-eared bat (Plecotus auritus). Original field note: Huge ears and quiet calls suit slow flight among foliage, where it can pick insects from leaves and bark.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 14,
+      "species": "Grey long-eared bat",
+      "scientific": "Plecotus austriacus",
+      "file": "bat-014-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Grey long-eared bat (Plecotus austriacus). Original field note: A long-eared species that can be confused with the brown long-eared bat. Acoustic labels need particular caution.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 15,
+      "species": "Barbastelle",
+      "scientific": "Barbastella barbastellus",
+      "file": "bat-015-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Barbastelle (Barbastella barbastellus). Original field note: Broad ears meet across its head. Small moths form an important part of its diet.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 16,
+      "species": "Greater horseshoe bat",
+      "scientific": "Rhinolophus ferrumequinum",
+      "file": "bat-016-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Greater horseshoe bat (Rhinolophus ferrumequinum). Original field note: A horseshoe-shaped noseleaf directs its calls. Buildings and underground sites provide roosts.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 17,
+      "species": "Lesser horseshoe bat",
+      "scientific": "Rhinolophus hipposideros",
+      "file": "bat-017-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Lesser horseshoe bat (Rhinolophus hipposideros). Original field note: A small horseshoe bat that wraps its wings around its body at rest. Its high calls can be difficult to capture.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 18,
+      "species": "Greater mouse-eared bat",
+      "scientific": "Myotis myotis",
+      "file": "bat-018-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Greater mouse-eared bat (Myotis myotis). Original field note: A large Myotis bat that hunts prey close to the ground. Included as a mainland European guide species.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 19,
+      "species": "Pond bat",
+      "scientific": "Myotis dasycneme",
+      "file": "bat-019-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Pond bat (Myotis dasycneme). Original field note: A water hunter with large feet used to scoop prey from the surface. Particularly relevant to Dutch waterways.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 20,
+      "species": "Parti-coloured bat",
+      "scientific": "Vespertilio murinus",
+      "file": "bat-020-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Parti-coloured bat (Vespertilio murinus). Original field note: Its dark back has distinctive silver-tipped hairs. It is a very rare species in the Netherlands.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 21,
+      "species": "Geoffroy’s bat",
+      "scientific": "Myotis emarginatus",
+      "file": "bat-021-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Geoffroy’s bat (Myotis emarginatus). Original field note: A notch in the outer ear and woolly fur are useful field features. Summer colonies may occupy quiet roof spaces.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 22,
+      "species": "Kuhl’s pipistrelle",
+      "scientific": "Pipistrellus kuhlii",
+      "file": "bat-022-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Kuhl’s pipistrelle (Pipistrellus kuhlii). Original field note: A pale wing margin is a characteristic feature. In France its range has expanded northwards.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 23,
+      "species": "Savi’s pipistrelle",
+      "scientific": "Hypsugo savii",
+      "file": "bat-023-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Savi’s pipistrelle (Hypsugo savii). Original field note: A southern species found in parts of France, roosting in rock and wall crevices.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    },
+    {
+      "kind": "bat",
+      "number": 24,
+      "species": "Schreibers’ bent-winged bat",
+      "scientific": "Miniopterus schreibersii",
+      "file": "bat-024-pokemon.webp",
+      "pose": "Preserve the current pose, facing direction, wing and foot positions, and tail angle.",
+      "prompt": "Species: Schreibers’ bent-winged bat (Miniopterus schreibersii). Original field note: Long, narrow wings suit fast flight. Underground roosts are central to its life cycle.\n\nOne original creature-collecting game portrait. Match the approved jay and owl's Pokémon/Pidgeotto-inspired crisp outlines, angular tufts, confident expressive poses and layered cel shading. Retain the species' real plumage or fur and distinguishing features. Full body, every exposed wingtip, ear, foot and tail inside the frame, with transparent margins. Naturally tucked feet and occluded wings are fine. One animal on a genuinely transparent background. No scenery, gradient, glow, cast shadow, text, border or logo.\n\nPose: Preserve the current pose, facing direction, wing and foot positions, and tail angle.\n\nSizing: 1200 × 1200 transparent canvas; target 24% visible silhouette area; maximum silhouette extent 1104 pixels; centred with transparent margins. Archived approved previews retain their original resolution.\n\nUse a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours."
+    }
+  ]
+}

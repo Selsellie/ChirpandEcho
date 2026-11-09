@@ -3,6 +3,16 @@
 The collection contains 98 birds and 24 bats. Rarity is a fixed game tier,
 not a scientific measure of local occurrence or conservation status.
 
+## Browsing groups
+
+The Species type filter and Artwork gallery share the groups defined by
+`chirpecho/web/artwork.py`, including separate Finches and Tits groups.
+Single-species bird types are collected under Others (Overige in Dutch),
+listed after the alphabetised groups. Ducks, geese and swans share one group;
+bat sections combine long-eared bats with woodland specialists and horseshoe
+bats with cave bats. Filtering and searching do not change group membership.
+These browsing groups do not change species identities, rarity or milestone sets.
+
 ## Birds
 
 | Entry | Species | Scientific name | Collection tier | Classifier |

@@ -1,12 +1,12 @@
 {
   "bird-001": {
-    "source": "exec-bd037362-56b4-4d4a-b65e-590bb41f4884.png",
+    "source": "exec-1f230937-8aad-4107-87d5-ecafa29debdc.png",
     "file": "bird-001-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "2b2b1bb1905c9360f2f95e018dc8655110748d5011fe87c0022395bab380a705",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "c2e5b0ed2e29930bc5adcc3218ae048d14feaee4b3116da199f2b3c9f77c02ff",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-002": {
     "source": "exec-be8be49b-5895-4c79-9e39-731d0ae7035f.png",
@@ -63,12 +63,14 @@
     "approved_preview": false
   },
   "bird-008": {
-    "source": "exec-18cbf863-5d32-4fd5-8951-a3de46bf4a07.png",
+    "source": "exec-5b824289-aa87-4403-8d45-6cbd1986195e.png",
     "file": "bird-008-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "4e8924cc356712a3495f4e55c9a5b4fb4f28b94935122ba0e978d53978098435",
+    "sha256": "accd63ff28235884751954c7a6fd0ddfb95c7ce5e4c063b223333d01c98e2cbb",
     "approved_preview": false,
+    "eye_revision_source": "exec-5b824289-aa87-4403-8d45-6cbd1986195e.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-009": {
@@ -130,8 +132,10 @@
     "approved_preview": false,
     "width": 1200,
     "height": 1200,
-    "sha256": "a6684f43e3a3c9af13c1d68b2e2210318e4a6a142af298c0a4df24b0d13bfe15",
-    "source": "exec-a1f3d835-c7e9-4cca-a0a6-72ca554462a6.png",
+    "sha256": "873a50010bf262acfd0965640ab318c3e40797b2d89bbed536f769f71cfdaa70",
+    "source": "exec-37ab2ca3-5b89-4e1f-8548-d7ee051a9155.png",
+    "eye_revision_source": "exec-37ab2ca3-5b89-4e1f-8548-d7ee051a9155.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-014": {
@@ -216,13 +220,15 @@
     "approved_preview": false
   },
   "bird-024": {
-    "source": "exec-81ea7fc0-9504-4757-b45f-1b22ed0303c1.png",
+    "source": "exec-5b33d882-c54d-4c75-9982-d3dd73cb8b67.png",
     "file": "bird-024-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "af9f697ce8cc51afc18cb6d4fc16e61662a784f60f206bef087b70b03194adf2",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "38b7a2766b5df65ea855f440708ef88dd12ed25bae919ffe522f5fd96d4101b7",
+    "approved_preview": false,
+    "eye_revision_source": "exec-5b33d882-c54d-4c75-9982-d3dd73cb8b67.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-025": {
     "source": "exec-6889a849-9b9b-48e9-82d2-74f9d9d7d624.png",
@@ -252,31 +258,33 @@
     "approved_preview": false
   },
   "bird-028": {
-    "source": "exec-80dcadc0-e59a-4d2c-a1ff-2a665af71b17.png",
+    "source": "exec-0e11059c-e603-4819-b8b6-e631ec6b0a8d.png",
     "file": "bird-028-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "e21a81d83ce70be2f7202a6659d6cc35890bf11367070c22b9350d1858a4ea76",
+    "sha256": "aca2d32c14cc94dbd3dc6eae4fb98c0cd95e18143d8e2c576eabe0dfb4e52d49",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-029": {
-    "source": "exec-2bf2dbc1-98e2-4968-8562-335b433df6ec.png",
+    "source": "exec-2d9633f0-a4ae-484e-83e4-8f2d8f8f1725.png",
     "file": "bird-029-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "8433a8e44ddbe910a10ebcbed3250a553a7074e0896ea5a5a066d3f859201dc3",
+    "sha256": "99f3422a1aa2bc281f0da5a82b924dfbe71573cdb41cce352bb8e33f7518a044",
     "approved_preview": false,
+    "eye_revision_source": "exec-2d9633f0-a4ae-484e-83e4-8f2d8f8f1725.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-030": {
-    "source": "exec-b55b3068-7b25-4408-afd1-380745d36f30.png",
+    "source": "exec-6bb28111-8489-419b-912f-3ef67a5ddb91.png",
     "file": "bird-030-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "23568951602738f09c0bb1f685689a4ffdd1d52ece0d11e0779e936ab7c21f73",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "38d73139485a8157bd2135660291021424a4ed5aa7be197f670f0f4b4448413f",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-031": {
     "source": "exec-ea5f8317-9698-45fd-a1cc-fcb29993059c.png",
@@ -306,20 +314,22 @@
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-034": {
-    "source": "exec-4f080544-67db-4bce-9fee-539903ae87d5.png",
+    "source": "exec-889219eb-34e4-4920-8c38-be161d4afd4b.png",
     "file": "bird-034-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "d1e729b0cb9c0507ffea05e1a1c7ac8db3e339d5d66fee583d534c26207d8b70",
+    "sha256": "f383e740b69ff6904cf3238c105ea67efb4f223439553c45204cf6529b8a501b",
     "approved_preview": false,
+    "eye_revision_source": "exec-889219eb-34e4-4920-8c38-be161d4afd4b.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-035": {
-    "source": "exec-016ada85-3297-4335-aa3f-34ec76a2bcdb.png",
+    "source": "exec-47a138e3-7917-4b9c-b064-c8f05533e576.png",
     "file": "bird-035-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "d83d0a83a091f30f50a3e9d6626c59a3341b477260b579e492158b0fbd5b006e",
+    "sha256": "049e8c5d9a908880be4ebe8c8bbf86e311109e0e4e3bb18da5b58d2503b6d33d",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
@@ -369,13 +379,15 @@
     "approved_preview": false
   },
   "bird-041": {
-    "source": "exec-18c293f9-af3d-4e3b-bdcd-8a26c36f7ea0.png",
+    "source": "exec-aca7d66d-ead7-45f0-98cb-52e917f61f95.png",
     "file": "bird-041-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "308d8be175572637c6a5753f8ae5fc84d7cfaf60fd951e4f0e2602ba0f49421e",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "83619f56c06b33133ed98c5a1942717f47801823fcc9324882969928bfbb4f62",
+    "approved_preview": false,
+    "eye_revision_source": "exec-aca7d66d-ead7-45f0-98cb-52e917f61f95.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-042": {
     "source": "exec-8198da70-fd3c-4cef-a2c4-3aedbbee86d1.png",
@@ -387,49 +399,59 @@
     "approved_preview": false
   },
   "bird-043": {
-    "source": "exec-e4297477-4db6-4709-a332-39d52cbff491.png",
+    "source": "exec-8b6fc41e-e45d-4bdd-9374-f7b45eebbf50.png",
     "file": "bird-043-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "54af054f2da677873e4b4e0f2e8bdeb0ec54e0322df6435e72eb2e778ad07efa",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "5c2e3ab14409d8c26da5f9abce944dcf91e512ba93d3108227c2b23cd0fa3c9a",
+    "approved_preview": false,
+    "eye_revision_source": "exec-8b6fc41e-e45d-4bdd-9374-f7b45eebbf50.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-045": {
-    "source": "exec-882accf8-11ed-4c36-be82-4948a8f5bee8.png",
+    "source": "exec-378a913e-cc10-4c2f-b5ab-4ca0a809fba1.png",
     "file": "bird-045-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "9b98d44ec2e01663a07c8940f60a7506de4f4f7ee543d2b94c4546af812bd053",
+    "sha256": "a330c868a557fb261e8311469bbf8cad46307228aa52b4f292218426ec110836",
     "pose": "standing",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "approved_preview": false,
+    "eye_revision_source": "exec-378a913e-cc10-4c2f-b5ab-4ca0a809fba1.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-046": {
-    "source": "exec-7c5b65c0-342c-4081-9592-d0b2bf9f61a7.png",
+    "source": "exec-57670d88-3890-42d6-b093-1d075bf8f06b.png",
     "file": "bird-046-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "39caa543066b971f9ba4749d882fd0f61842fb803da872360dff0d1e237b9c76",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "30d6b1eb93fcb723a98cbd709b22f3f841b9277c90687ffcb1f73a74ca12738e",
+    "approved_preview": false,
+    "eye_revision_source": "exec-57670d88-3890-42d6-b093-1d075bf8f06b.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-047": {
-    "source": "exec-c70df95f-7a47-45cb-8c6b-91c6edf86448.png",
+    "source": "exec-cb99338e-a0db-4e4f-9412-b4aa4eb5dde1.png",
     "file": "bird-047-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "b90a364616a5d0e6c927124273c506d3c5970f8c72851cb542370072e946b0ea",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "7c0cabccc14aee8ad4e70203b79b7ecf3dfcf5d816c6c23dbdc66cf5dc14037c",
+    "approved_preview": false,
+    "eye_revision_source": "exec-cb99338e-a0db-4e4f-9412-b4aa4eb5dde1.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-048": {
-    "source": "exec-c7fa6366-6b86-4ce0-9436-e9e7e718445a.png",
+    "source": "exec-f6bf0842-688a-42df-b1bc-20168bf22f7e.png",
     "file": "bird-048-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "09ec97017cbfe4beb866380dd7d9d8de1c686873f4a81da32ee746f37c3ad87d",
+    "sha256": "1912932e9f9259be663d3a22d677468226be984fadb40b8389dc7d2ee36064c5",
     "approved_preview": false,
+    "eye_revision_source": "exec-f6bf0842-688a-42df-b1bc-20168bf22f7e.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-049": {
@@ -478,20 +500,22 @@
     "approved_preview": false
   },
   "bird-054": {
-    "source": "exec-86e6cf76-f246-4886-8871-3624f1e0de19.png",
+    "source": "exec-642b6a2f-449b-4207-b1a8-37cfff9de909.png",
     "file": "bird-054-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "7eab3810e7422297c270296ad776da05ee9bbe8170c9956bced506878389ca31",
+    "sha256": "ee2026f45d29d2700112e12c9f3bbbe1a2044f3867b065f930f36be6b475bc42",
     "approved_preview": false,
+    "eye_revision_source": "exec-642b6a2f-449b-4207-b1a8-37cfff9de909.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-055": {
-    "source": "exec-f5759869-064d-4f91-aeb2-57a52b321c18.png",
+    "source": "exec-c6003f77-14cb-4797-8116-69dc2f57321b.png",
     "file": "bird-055-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "9a5ae316bb5a3199bd4ccd73faa0fddec627f66ff9ddbad580d61feb5b5efc6b",
+    "sha256": "469d3e7207782f5fe06da17be2def18399f6f61f3add506f2285342bc0bc92ac",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
@@ -505,22 +529,26 @@
     "approved_preview": false
   },
   "bat-001": {
-    "source": "exec-4c6eb933-16c1-4f13-9dcb-931c2fa5c378.png",
+    "source": "exec-1bd4cbe8-308b-450e-984d-5ea620ae4938.png",
     "file": "bat-001-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "555bf3bba409dddfb1287ac3e9330d70d085d4452ac1219ae7fb9166a7cd4dc5",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "81625d7d1dcc178dc291c96ad0ab2c6fa210d8723860bdcb7062417c5a937f4b",
+    "approved_preview": false,
+    "eye_revision_source": "exec-1bd4cbe8-308b-450e-984d-5ea620ae4938.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bat-002": {
-    "source": "exec-7f148518-2525-4a62-a054-99fb2c03f302.png",
+    "source": "exec-ec332a49-15da-47c5-b320-4f81f1cbd4ae.png",
     "file": "bat-002-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "561fa0156ea2c9ed973255e55a65561196fd4373af91be88d5b9328c271f0bae",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "1c27ec3139d3db08f4bd0b034237388c86c74e94c5afaf630de107828df6e8b7",
+    "approved_preview": false,
+    "eye_revision_source": "exec-ec332a49-15da-47c5-b320-4f81f1cbd4ae.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bat-003": {
     "source": "exec-fae7ed1b-c71e-4506-b94d-6a995157ee59.png",
@@ -586,22 +614,26 @@
     "approved_preview": false
   },
   "bat-010": {
-    "source": "exec-fa8a41ea-8839-4b74-ad64-dfe5cf16dfa6.png",
+    "source": "exec-42504f32-2283-4134-a771-feea48fea515.png",
     "file": "bat-010-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "9d71af4c55b2d8027c8be90804ee061794d4f82c18f2790cb03c746fb2c82a92",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "36b5e37da040ce2a550b5c3174130a40aa4d53abdb10b483da96a65a6266649e",
+    "approved_preview": false,
+    "eye_revision_source": "exec-42504f32-2283-4134-a771-feea48fea515.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bat-011": {
-    "source": "exec-b0bf8bb1-4495-44e6-baa3-66930dbd436a.png",
+    "source": "exec-de1d1dba-6ff7-4d65-bced-62c7804d8abf.png",
     "file": "bat-011-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "bddece968a83f3846140a14cbec42664cbc581aaae9f5e106c9c9dac682b1faf",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "99922d65ff2d690e6d8242362d187b180355ff253e6d98754753f77124395314",
+    "approved_preview": false,
+    "eye_revision_source": "exec-de1d1dba-6ff7-4d65-bced-62c7804d8abf.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bat-012": {
     "source": "exec-e3760d09-1085-4f5b-96ec-9b7414b5630b.png",
@@ -649,13 +681,15 @@
     "approved_preview": false
   },
   "bat-017": {
-    "source": "exec-7c42cf1d-9828-4cfe-ac03-7ad8457bfdb2.png",
+    "source": "exec-998fd0d9-efd5-43a7-968e-b4984556c4b3.png",
     "file": "bat-017-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "2b4e8b5dd679b53df406af092ebe3f8497c5c42be80f7f5cbfdcf3e8cac6e6ee",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "02b018179799b97f19167cabb510bdb8f724d0f3c0d71cc5060b657c0958515b",
+    "approved_preview": false,
+    "eye_revision_source": "exec-998fd0d9-efd5-43a7-968e-b4984556c4b3.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bat-018": {
     "source": "exec-d7f49baf-8af2-4c5b-a6a3-1daa02ed2095.png",
@@ -685,22 +719,26 @@
     "approved_preview": false
   },
   "bat-021": {
-    "source": "exec-1430ce00-e5d1-40a4-b514-122bc78fcaa5.png",
+    "source": "exec-dfbd1fc7-02d3-4e0d-8642-62e377a4baf2.png",
     "file": "bat-021-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "17e2697739cd7d114f6e40036ca57ed2667f3354300bd7a8ad960685541312f0",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "7a4b343ee23b85f516191151a2b1e13e12cd59c35ad2675ce595e41615ccc99a",
+    "approved_preview": false,
+    "eye_revision_source": "exec-dfbd1fc7-02d3-4e0d-8642-62e377a4baf2.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bat-022": {
-    "source": "exec-cf92a980-7d42-436f-a604-8c9c44a7142b.png",
+    "source": "exec-6f5aa930-d022-43dc-b713-91af3e4b9f3b.png",
     "file": "bat-022-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "ac7452a0e8c388ba7d8803cddfe7f1ae65ad4c67499e42ef8e6732c96cb0e465",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "f6b9066d4ee26bff09396b4e135b549dbda5087b318c6293b3009226e5036904",
+    "approved_preview": false,
+    "eye_revision_source": "exec-6f5aa930-d022-43dc-b713-91af3e4b9f3b.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bat-023": {
     "source": "exec-34511c17-68f0-43a2-a981-4c5643350938.png",
@@ -712,22 +750,26 @@
     "approved_preview": false
   },
   "bat-024": {
-    "source": "exec-9c2a8f7f-5fe5-4e2a-9080-7d214b749aab.png",
+    "source": "exec-0ba2e7fd-5a9e-4a2d-915d-4bcdd333d51d.png",
     "file": "bat-024-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "569d8bb0c3b41e3c427bb9f8e69bcdf54739d7d1b5e892eec06edfa64ba6cefe",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "04ac9697abb933fafaef5963877f294aaccb1eb2342fbaa3d6054fa89e7b5e99",
+    "approved_preview": false,
+    "eye_revision_source": "exec-0ba2e7fd-5a9e-4a2d-915d-4bcdd333d51d.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-057": {
-    "source": "exec-906e30fb-0d65-4019-b931-476d03f948ca.png",
+    "source": "exec-cf6cd612-e470-43f2-87a5-cb048366afc6.png",
     "file": "bird-057-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "acf37444a0a3092f988d76ba99378ab82236e9856ba1aaae4f1a2c42e6b44682",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "5117f00f5f3b2df1de20c9077e00463a12d7c6cc9886dc645deb5e0c7a15fe83",
+    "approved_preview": false,
+    "eye_revision_source": "exec-cf6cd612-e470-43f2-87a5-cb048366afc6.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-058": {
     "source": "exec-d5e6728a-5676-40d4-a48d-e597f04f0a49.png",
@@ -793,11 +835,11 @@
     "approved_preview": false
   },
   "bird-065": {
-    "source": "exec-7a6da2e3-91bf-4c11-a5d1-92d4e669d969.png",
+    "source": "exec-775a9acd-94d9-4286-90b2-f20aa182f927.png",
     "file": "bird-065-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "a74dc9c6265d73cc8a4947e3640fc64727ccb4d145666f1794b94c3a235d2466",
+    "sha256": "48b9b0fbfd86cccc29a38d93d93024f54324b057e4a533a6e2cc681d194a9bb1",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
@@ -820,13 +862,15 @@
     "approved_preview": false
   },
   "bird-068": {
-    "source": "exec-b2a722b4-6e35-4cb9-b286-3b4d182af96c.png",
+    "source": "exec-a8ff0cf5-098f-40c8-afc0-f8b2d1149b16.png",
     "file": "bird-068-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "5fea4b1ace9404d8193ac5c623706b15a44b5f8d1122f1ef88d7a20a38b7d6a3",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "sha256": "67d2db27aa0e3171e54666d822030b8e55fd815bbcf258018318bca95f0efa8f",
+    "approved_preview": false,
+    "eye_revision_source": "exec-a8ff0cf5-098f-40c8-afc0-f8b2d1149b16.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-069": {
     "source": "exec-a05958e2-8142-4e06-b381-2d1b57d9677a.png",
@@ -838,12 +882,13 @@
     "approved_preview": false
   },
   "bird-070": {
-    "source": "exec-91e11fc9-aa56-47b0-96ce-7c7b6f5ea6b5.png",
+    "source": "exec-a94fc984-9d68-4192-8d43-4384e8ae7215.png",
     "file": "bird-070-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "a4e8ef896dcd4d6dbeacb6e10886845e66c1fffbc49d3d3ef8a7e7d1d57f135d",
+    "sha256": "29d94cd88673f7eb27505c117211b8d1eb46b6c82437710eaa1743a7975897f4",
     "approved_preview": false,
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-071": {
@@ -884,22 +929,26 @@
     "approved_preview": false
   },
   "bird-075": {
-    "source": "exec-1dcf2b11-35bf-4ab5-9dc6-ecab8d214d85.png",
+    "source": "exec-1d1845f3-c009-4b08-96af-9673b5134277.png",
     "file": "bird-075-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "ef4ab14bc2190395751d77e19dced2c8c953eac9b922ecf0d32cc3164d8545ec",
+    "sha256": "0ea8a60bf5eac3f7d556e9d1754e567d64a34b32884d2b1976e28d2d8e118825",
     "pose": "gliding flight",
-    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square",
-    "approved_preview": false
+    "approved_preview": false,
+    "eye_revision_source": "exec-1d1845f3-c009-4b08-96af-9673b5134277.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-076": {
-    "source": "exec-961b9499-c934-439e-8829-6ceca44233bc.png",
+    "source": "exec-9a97f293-d9ad-4517-98ac-e30d7dc8b45b.png",
     "file": "bird-076-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "306ccdd25eb4695cdb4e21cbfda3e1aa62d7fe47573acc05128001c097e38c4f",
+    "sha256": "7c713c76c1985d10ae855aef1c149535183cc814a0611a3e0e085ec21230dcd4",
     "approved_preview": false,
+    "eye_revision_source": "exec-9a97f293-d9ad-4517-98ac-e30d7dc8b45b.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-077": {
@@ -930,11 +979,11 @@
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-080": {
-    "source": "exec-344c0a77-4755-499a-a80c-fa597cdd5fac.png",
+    "source": "exec-79ae33be-0f50-456d-abeb-0f0e8ecf7428.png",
     "file": "bird-080-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "c97be855976cccb0be88400b6d90a902256857048f332d9216941a601d5f86c2",
+    "sha256": "f0f133107a86f256edeee37b305d706a3a267a129af0c3fff023d8013b674df5",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
@@ -948,12 +997,14 @@
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-082": {
-    "source": "exec-d3721a45-abd9-424d-b148-7c6b65bd1bb3.png",
+    "source": "exec-8e33630e-e7e4-41b7-9f9e-c4c83eca585d.png",
     "file": "bird-082-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "41392f4fcf281bc14e2bb59dde83197774f54276d63fe0662a24f91a9ab416c3",
+    "sha256": "9d6ac2f881c79218dafcd3c945fcddbb8597e64651fd17151f37ccfa2084ce42",
     "approved_preview": false,
+    "eye_revision_source": "exec-8e33630e-e7e4-41b7-9f9e-c4c83eca585d.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-083": {
@@ -975,65 +1026,71 @@
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-085": {
-    "source": "exec-055937b6-45b9-4a30-9072-5dad63e6ff9b.png",
+    "source": "exec-95358d80-3ade-4def-ba6b-37237b7c6021.png",
     "file": "bird-085-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "9cb6847e04a01dac1a01d383b6eccea49ebbe16c40c9564a082bc31269b77768",
+    "sha256": "c61c8e9db12f4cbb03ef2ea58d8ffdb1adf2b9af57fac2e7fdd8df5d731bb75a",
     "approved_preview": false,
+    "eye_revision_source": "exec-95358d80-3ade-4def-ba6b-37237b7c6021.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-086": {
-    "source": "exec-e209254c-0b58-4643-9094-1b7525540d37.png",
+    "source": "exec-092d95dc-3a9b-4c10-a100-4afbb6ceca98.png",
     "file": "bird-086-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "28188a4c3bf4bfbd08b0e434356006907c2142f7b7c29ffce198ceacf9ead717",
+    "sha256": "e4273d5d3d24cb11b209ac1cfd96bffdd9df2667002b9dcb4a5e6ba984c0e716",
     "approved_preview": false,
+    "eye_revision_source": "exec-092d95dc-3a9b-4c10-a100-4afbb6ceca98.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-087": {
-    "source": "exec-5a4141cf-a993-486f-b337-13402f0eba99.png",
+    "source": "exec-0e70677b-59ae-4390-b939-d7ba9bc8fc0e.png",
     "file": "bird-087-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "316440ecc04cc3f1808f995dff37b1e65ece375ce6b23a4bc1f331301c5e83d1",
+    "sha256": "3bcf0ea47a1e87ff6703806a8c1cee004c504cb7b820be94acd1b11d6116b5e6",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-088": {
-    "source": "exec-369a6bb3-2e0a-4e27-b500-e342c471d4ae.png",
+    "source": "exec-4296bad8-e630-46f3-950f-90a834dac55c.png",
     "file": "bird-088-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "c4c834726ca3e361ddf6a0baf0fbca55a603b2b220a44e24aabfa44e5a5d6ed3",
+    "sha256": "72a4cae2bd10bf56d290696446dff5293a221432be8b604064b8b4bcbac77371",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-089": {
-    "source": "exec-1513db1b-3d40-4eb5-a375-b8a80b96dff5.png",
+    "source": "exec-a6f6f619-d69f-4382-8d5e-25b63baeaebb.png",
     "file": "bird-089-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "f152f0650905b654e77866803ddea99607fda8057240c03f967321657d5e5944",
+    "sha256": "9ba739b644b93ecfe5d78842d0d2d2d91921f298b9b6effbdaf90c71f58ab3bd",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-090": {
-    "source": "exec-c868d41c-3407-4757-8c1b-1f6b8993b132.png",
+    "source": "exec-8a77d351-686a-4431-953c-682c3e7414ae.png",
     "file": "bird-090-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "890cba90b3ace58a141ead9a9ce6248471202bb1bbd3094b30cefc9436a1c198",
+    "sha256": "484f4b9225e05798234ab3632bdb4572dbee76f99ac45d9e35aa5d03d5bfd808",
     "approved_preview": false,
+    "eye_revision_source": "exec-8a77d351-686a-4431-953c-682c3e7414ae.png",
+    "eye_style": "Visible white sclera around coloured iris and dark pupil; proportionate eye size",
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-091": {
-    "source": "exec-a5db7088-3877-49de-b675-af44041facd5.png",
+    "source": "exec-73f31d2b-9464-48df-ad8a-3e2b17d3147f.png",
     "file": "bird-091-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "f2ef93de3981b9cded648ce4ff18d675ce76f7544de08c55dbb96c3b23b79229",
+    "sha256": "b7b7660b218ac4c3a9dd0b436dd1fe4f964b7bd69a7ce1caaa6c642ccac34140",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
@@ -1056,11 +1113,11 @@
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },
   "bird-094": {
-    "source": "exec-25bfb579-e333-41f2-962a-847100df87a8.png",
+    "source": "exec-013d90ef-6f96-4f18-8f9c-b4de7504fa64.png",
     "file": "bird-094-pokemon.webp",
     "width": 1200,
     "height": 1200,
-    "sha256": "dc205a2e7809db7d7aa4472cc8bb2ffc1be224f8629dcc1ec62d40ae2c017966",
+    "sha256": "12ed2aa0948e206f738377a9ef2a09775281d74fd6e42084109fce4a99d627bd",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   },

@@ -132,7 +132,15 @@ WAV remains on disk; metadata remains visible after storage cleanup.
 
 Use **Logs** with the bird/bat switch to inspect each pipeline. **Health** shows
 both services and the **A lighter footprint** storage panel. The **Artwork** tab
-supports the same English/Dutch switch as the rest of the website.
+supports the same English/Dutch switch as the rest of the website. The Species
+type filter shares its groups with the Artwork gallery, including Finches, Tits
+and Others (Overige); single-species bird types appear in Others, listed last.
+Both use `artwork_group()` in `chirpecho/web/artwork.py`. Portraits display their source
+illustrations directly without an added outer-outline filter; undiscovered
+species retain their solid silhouettes. The kolgans portrait has been redrawn
+from scratch.
+Artwork prompts are consolidated in `scripts/artwork-prompts.json`. Include the
+updated templates, portrait and artwork manifest when rebuilding the image.
 
 ### Calendar and milestones
 
