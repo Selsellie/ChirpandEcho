@@ -1156,5 +1156,14 @@
     "sha256": "3388a77f32a8e6a299c6d2118922e4151386de035bcbc5f0dd59f20f1c4ee544",
     "approved_preview": false,
     "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
+  },
+  "bird-099": {
+    "source": "exec-f716f3c3-090e-44b0-85d6-50131299514c.png",
+    "file": "bird-099-pokemon.webp",
+    "width": 1200,
+    "height": 1200,
+    "sha256": "8cc867fc2540d114aa706ec64cf2c9aa5b1b6cf82286e84879f9a17bb5abb91b",
+    "approved_preview": false,
+    "framing": "Shared bird/bat optical scale: 24% silhouette area; 1104px maximum extent; centred on 1200px square"
   }
 }

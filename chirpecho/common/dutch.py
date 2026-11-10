@@ -129,3 +129,5 @@ BIRDS.append(('Zwarte roodstaart', 'Een alerte insectenjager van rotsen, daken e
 
 BIRDS.append(('Grote zilverreiger', 'Een sierlijke witte reiger met een lange S-vormige hals, zwarte poten en voeten en buiten de broedtijd een gele snavel. Hij besluipt vissen in ondiep water en jaagt ook in nat grasland.'))
 BIRDS.append(('Wilde zwaan', 'Een grote witte zwaan met een lange rechte hals, zwarte poten en een geelzwarte snavel. Het geel loopt als een puntige wig tot voorbij het neusgat. Wintergroepen grazen op natte graslanden en laten luide trompetterende roepen horen.'))
+
+BIRDS.append(('Notenkraker', 'Een voorraadverzamelaar van het bos met een chocoladebruin verenkleed vol witte stippen, donkere vleugels en een stevige rechte snavel. Hij verstopt noten en dennenzaden voor later en laat een rauwe ratelende roep horen.'))

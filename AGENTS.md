@@ -11,10 +11,12 @@ portraits, the artwork manifest and species documentation consistent as well.
 # Species browsing and artwork
 
 Keep the Species type filter and Artwork sections on the shared `artwork_group()`
-helper in `chirpecho/web/artwork.py`. Determine singleton bird types from the full
-catalogue and place them in Others (Overige), last after translated alphabetical
-groups. Preserve the dedicated Finches and Tits groups and the merged bird/bat
-sections. Filtering must not change group membership.
+helper in `chirpecho/web/artwork.py`. Preserve each bird's native species type
+in the catalogue and on its card (for example Starlings), and map that type to
+its broader browsing section (for example Crows, jays and starlings). Use the
+15 agreed bird sections and five bat sections documented in `SPECIES.md`.
+Sort sections alphabetically in the selected language. Filtering must not change
+group membership. Milestones remain independent scientific-name checklists.
 
 Keep all reusable and species-specific artwork prompts, including eye revisions,
 in `scripts/artwork-prompts.json`. Use `scripts/artwork-brief.md` for art direction

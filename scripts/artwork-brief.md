@@ -1,6 +1,6 @@
 # Wildlife character artwork
 
-The collection uses individual illustrations for 98 birds and 24 bats. The jay
+The collection uses individual illustrations for 99 birds and 24 bats. The jay
 and tawny owl previews approved by the owner are the style references. Their
 original WebP previews remain alongside the collection assets.
 

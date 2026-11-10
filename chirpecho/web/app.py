@@ -479,7 +479,7 @@ def species_guide():
         abort(400)
     bird = request.path.startswith('/chirp')
     catalogue = BIRD_SPECIES if bird else SPECIES
-    from chirpecho.web.artwork import artwork_group
+    from chirpecho.web.artwork import artwork_group, artwork_sort_key
     kind = 'bird' if bird else 'bat'
     species_types = {item['number']: artwork_group(dict(item, kind=kind)) for item in catalogue}
     group_options = {group.lower().replace(' ', '-'): group for group in species_types.values()}
@@ -516,6 +516,8 @@ def species_guide():
                and (species_group == 'all' or species_types[item['number']] == group_options[species_group])
                and (collection == 'all' or (item['calls'] > 0) == (collection == 'recorded'))
                and (rarity_filter == 'all' or item['rarity']['key'] == rarity_filter)]
+    display_name = translate if language() == 'nl' else str
+    visible.sort(key=lambda item: artwork_sort_key(dict(item, kind=kind), display_name))
     return render_template('index.html', tab='species', catalogue=visible, catalogue_total=len(catalogue),
                            recorded=recorded, unmatched=unmatched, pending_species=pending_species, search=search, collection=collection, rarity_filter=rarity_filter,
                            species_group=species_group, group_options=group_options,
@@ -536,10 +538,8 @@ def artwork():
                 continue
             entries.append(dict(item, kind=group, creature=profile(item['name'], group == 'bird')))
     display_name = translate if language() == 'nl' else str
-    from chirpecho.web.artwork import artwork_group
-    entries.sort(key=lambda item: (artwork_group(item) == 'Others',
-                                   display_name(artwork_group(item)).casefold(),
-                                   display_name(item['name']).casefold()))
+    from chirpecho.web.artwork import artwork_group, artwork_sort_key
+    entries.sort(key=lambda item: artwork_sort_key(item, display_name))
     artwork_groups = {}
     for item in entries:
         artwork_groups.setdefault(artwork_group(item), []).append(item)

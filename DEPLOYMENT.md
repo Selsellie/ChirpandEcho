@@ -133,9 +133,10 @@ WAV remains on disk; metadata remains visible after storage cleanup.
 Use **Logs** with the bird/bat switch to inspect each pipeline. **Health** shows
 both services and the **A lighter footprint** storage panel. The **Artwork** tab
 supports the same English/Dutch switch as the rest of the website. The Species
-type filter shares its groups with the Artwork gallery, including Finches, Tits
-and Others (Overige); single-species bird types appear in Others, listed last.
-Both use `artwork_group()` in `chirpecho/web/artwork.py`. Portraits display their source
+type filter shares the Artwork gallery's 16 bird and five bat browsing sections,
+alphabetised in the selected language. Both use `artwork_group()` in
+`chirpecho/web/artwork.py`; cards retain their native species type. The complete
+section list and counts are in `SPECIES.md`. Portraits display their source
 illustrations directly without an added outer-outline filter; undiscovered
 species retain their solid silhouettes. The kolgans portrait has been redrawn
 from scratch.
@@ -153,10 +154,11 @@ or “Choose another week” date picker to browse history.
 Dates use the website's configured `TZ` (Europe/Amsterdam by default); repeated
 hours during the autumn clock change are combined.
 
-The **Milestones** tab (`/milestones`) tracks 37 illustrated achievements across
-both collections. Twelve collecting sets cover tits, geese, owls, corvids,
+The **Milestones** tab (`/milestones`) tracks 43 illustrated achievements across
+both collections. Eighteen bird collecting sets cover tits, geese, owls, corvids,
 woodpeckers, finches, thrushes, daytime raptors, pigeons and doves, sparrows,
-waterside birds and aerial acrobats. Expand each checklist to see collected and
+waterside birds, aerial acrobats, colourful hunters, field singers, ducks,
+blue-and-red birds, scrub singers and leaf warblers. Expand each checklist to see collected and
 missing species. Five bat sets cover pipistrelles, open-air hunters, Myotis,
 long-eared bats and horseshoe bats. Bat targets use only the 17 species supported
 by the bundled classifier. Listening goals track bird and bat progress separately.

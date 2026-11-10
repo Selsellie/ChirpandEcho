@@ -28,6 +28,7 @@ BIRD_TIERS += ('uncommon',)
 BIRD_TIERS += ('uncommon',)
 BIRD_TIERS += ('uncommon',)
 BIRD_TIERS += ('rare',)  # Whooper Swan
+BIRD_TIERS += ('epic',)  # Spotted Nutcracker
 BAT_TIERS = (
     'common','uncommon','rare','uncommon','rare','uncommon',
     'uncommon','rare','rare','epic','legendary','legendary',

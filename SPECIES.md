@@ -1,17 +1,46 @@
 # Species and collection rarity
 
-The collection contains 98 birds and 24 bats. Rarity is a fixed game tier,
+The collection contains 99 birds and 24 bats. Rarity is a fixed game tier,
 not a scientific measure of local occurrence or conservation status.
 
 ## Browsing groups
 
-The Species type filter and Artwork gallery share the groups defined by
-`chirpecho/web/artwork.py`, including separate Finches and Tits groups.
-Single-species bird types are collected under Others (Overige in Dutch),
-listed after the alphabetised groups. Ducks, geese and swans share one group;
-bat sections combine long-eared bats with woodland specialists and horseshoe
-bats with cave bats. Filtering and searching do not change group membership.
-These browsing groups do not change species identities, rarity or milestone sets.
+The Species type filter and Artwork gallery share `artwork_group()` in
+`chirpecho/web/artwork.py`. Native species types remain on cards: a starling
+belongs to Starlings, while its browsing section is Crows, jays and starlings.
+Corvid cards use Crows, Magpies, Jays or Nutcrackers; wagtails and pipits
+use Wagtails and Pipits respectively, while retaining their shared browsing sections.
+Sections are alphabetised in the selected language. Within each section, cards
+are sorted by native species type, then species name, in the selected language,
+without additional type headers. Search and filters never
+change membership. There is no minimum or maximum section size or Others section.
+Species identities, rarity, stored labels and milestone checklists are independent.
+
+| Bird browsing section | Species |
+| --- | ---: |
+| Birds of prey and owls | 12 |
+| Crows, jays and starlings | 7 |
+| Pigeons and doves | 4 |
+| Ducks, geese and swans | 13 |
+| Herons, storks, cranes and lapwings | 7 |
+| Rails and coots | 2 |
+| Gulls, terns and cormorants | 4 |
+| Woodpeckers, nuthatches and treecreepers | 5 |
+| Swifts, swallows and nightjars | 4 |
+| Cuckoos, kingfishers, rollers and bee-eaters | 4 |
+| Tits, long-tailed tits and crests | 7 |
+| Finches, sparrows and buntings | 9 |
+| Thrushes and flycatchers | 8 |
+| Warblers, wrens and accentors | 7 |
+| Wagtails, pipits and larks | 6 |
+
+| Bat browsing section | Species |
+| --- | ---: |
+| Pipistrelles | 5 |
+| Open-air hunters | 4 |
+| Mouse-eared bats | 9 |
+| Long-eared bats and barbastelles | 3 |
+| Horseshoe and bent-winged bats | 3 |
 
 ## Birds
 
@@ -121,6 +150,7 @@ These browsing groups do not change species identities, rarity or milestone sets
 
 | #097 | Great Egret | *Ardea alba* | ★★ Uncommon | Included |
 | #098 | Whooper Swan | *Cygnus cygnus* | ★★★ Rare | Included |
+| #099 | Spotted Nutcracker | *Nucifraga caryocatactes* | ★★★★ Epic | Included |
 
 ## Bats
 

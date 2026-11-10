@@ -49,9 +49,9 @@ including undiscovered species. Switch between **Chirp · Birds** and
 I borrowed Pokémon's **Pokédex** idea: discover a species and unlock its card.
 No tall grass required, just a microphone and some chatty neighbours.
 
-- **98 birds and 24 bats** in the starter field guides. See the
+- **99 birds and 24 bats** in the starter field guides. See the
   [full roster, model support and rarity tiers](SPECIES.md).
-- **122 individual illustrations** with lively Pokémon-inspired artwork on
+- **123 individual illustrations** with lively Pokémon-inspired artwork on
   transparent backgrounds with thin outlines. Undiscovered cards use matching silhouettes.
 - **Field notes to unlock:** a retained prediction reveals a species' colours
   and description. Bird cards link to eBird; bat cards link to species references.
@@ -72,11 +72,12 @@ or create a catalogue card. Non-bird model labels are excluded.
 
 **I am updating the species list frequently as new species are discovered.**
 
-The **Species type** filter uses the same groups as the **Artwork** gallery,
-including dedicated **Finches** and **Tits** groups. Single-species bird types
-appear under **Others** (**Overige** in Dutch), listed last. Other groups are
-alphabetised in the selected language. Combine this filter with search, rarity
-and collection status.
+The **Species type** filter uses the same 16 bird and five bat browsing sections
+as the **Artwork** gallery, alphabetised in the selected language. Each species
+keeps its native type on its card: a starling is a **Starling**, shown in the
+**Crows, jays and starlings** browsing section. See [SPECIES.md](SPECIES.md) for
+all sections and counts. Combine the filter with search, rarity and collection
+status. Milestone collecting sets remain independent of browsing sections.
 
 ## A diary from dawn to dusk and little discoveries, illustrated milestones 
 

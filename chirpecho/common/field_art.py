@@ -134,3 +134,5 @@ BIRD_ART.append(('555b60', '989b9b', '292d31', 'c97543', 'slender', 'plain', 'An
 
 BIRD_ART.append(('eeeee9', 'ffffff', 'ccd3d7', '33393d', 'heron', 'plain', 'An elegant white heron with a long S-shaped neck, black legs and feet, and a yellow bill outside the breeding season. It stalks fish in shallow water and also hunts in wet grassland.'))
 BIRD_ART.append(('eeeee9', 'ffffff', 'ccd3d7', 'e9bd37', 'swan', 'whooper', 'A large white swan with a long upright neck, black feet and a yellow-and-black bill. The yellow forms a pointed wedge extending beyond the nostril. Winter flocks graze on wet grasslands and give loud trumpeting calls.'))
+
+BIRD_ART.append(('584232', '66503c', '242323', '303030', 'crow', 'white-spots', 'A woodland seed keeper with chocolate-brown plumage covered in white spots, dark wings and a strong straight bill. It stores nuts and pine seeds for later and gives a harsh rattling call.'))

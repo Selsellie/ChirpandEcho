@@ -6,6 +6,16 @@
   "pose_policy": "Preserve each existing portrait’s pose, facing direction, wing and foot positions, and tail angle unless its pose instruction below specifies otherwise. Pose references supply pose only; retain the target species’ own anatomy and distinguishing features.",
   "bat_direction": "Use a mammalian face and fur, with finger-supported wing membranes. Retain this species' characteristic ears, noseleaf where present, muzzle and colours.",
   "portraits": [
+{
+      "kind": "bird",
+      "number": 99,
+      "species": "Spotted Nutcracker",
+      "scientific": "Nucifraga caryocatactes",
+      "file": "bird-099-pokemon.webp",
+      "pose": "Standing three-quarter pose with naturally folded wings.",
+      "prompt": "Use case: stylized-concept. One Spotted Nutcracker (Nucifraga caryocatactes) full-body creature-collecting game portrait. Chocolate brown plumage with dense small white spots, dark brown cap, black wings, black tail with white tips, long strong straight dark bill, dark feet. Confident lively standing three-quarter pose with folded wings, two legs, natural anatomy. Pokémon/Pidgeotto-inspired crisp thin outlines, angular feather shapes, expressive dark eyes and layered cel shading. All feet, bill and tail inside square frame with generous transparent margins. One animal alone on genuinely transparent background. No scenery, props, gradient, glow, shadow, text, border or logo.",
+      "source": "exec-f716f3c3-090e-44b0-85d6-50131299514c.png"
+},
     {
       "kind": "bird",
       "number": 1,
